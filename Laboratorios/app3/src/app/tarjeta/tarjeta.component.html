@@ -1,0 +1,8 @@
+<div class="profile">
+    <div class="etiq">Nombre:</div><div class="profile__name">{{nombre}}</div><br/>
+    <div class="etiq">Telefono:</div><div class="profile__tfno">{{telefono}}</div><br/>
+    <div *ngIf="[email]!=''">
+      <div class="etiq" *ngIf="[email]!=''">Email:</div>
+      <div class="profile__email">{{email}}</div>
+    </div>
+  </div>
