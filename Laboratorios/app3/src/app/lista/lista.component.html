@@ -1,0 +1,18 @@
+<div class="box-lista">
+  Esto es una lista enlazada<br><br>
+
+  <strong>{{nombre1}}: </strong>
+  <select class="lista" [(ngModel)]="seleccionado">
+    <option selected> - </option>
+    <option *ngFor='let elem of parent'>{{elem}}</option>
+  </select>
+
+  <strong> {{nombre2}}: </strong>
+  <select class="lista">
+    <option *ngFor='let elem of todosElementos[parent.indexOf(seleccionado)]'>{{elem}}</option>
+  </select>
+
+  <br><br>
+
+  <ng-content></ng-content>
+</div>

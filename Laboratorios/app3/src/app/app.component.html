@@ -1,16 +1,16 @@
 <hello name="{{ name }}"></hello>
 
 <p>Componiento con varios componentes (al mismo nivel):</p>
-<app-hijo></app-hijo>  
-<app-hijo></app-hijo>  
+<app-hijo></app-hijo>
+<app-hijo></app-hijo>
 <app-nieto></app-nieto>
 
 <p>Usando componentes anidados:</p>
 <app-hijo>
-  <app-nieto x="1"></app-nieto>  
-  <app-nieto x="2"></app-nieto>  
+  <app-nieto x="1"></app-nieto>
+  <app-nieto x="2"></app-nieto>
   <app-nieto x="3"></app-nieto>
-</app-hijo>  
+</app-hijo>
 
 <p>AGENDA con contactos declarados estáticamente: <p>
 <div>
@@ -26,7 +26,18 @@
 
 <p>Accediento a propiedades de los Childs:</p>
 <app-poligono>
-  <app-punto x="1.0" y="10.0"></app-punto>  
-  <app-punto x="2.0" y="20.0"></app-punto>  
+  <app-punto x="1.0" y="10.0"></app-punto>
+  <app-punto x="2.0" y="20.0"></app-punto>
   <app-punto x="3.0" y="30.0"></app-punto>
-</app-poligono>  
+</app-poligono>
+
+
+<app-lista nombre1 = "Comunidad" nombre2 = "Provincia">
+<app-elem-lista id = 1 value = "Madrid"></app-elem-lista>
+<app-elem-lista id = 1 parent = 1 value = "Comunidad de Madrid"></app-elem-lista>
+<app-elem-lista id = 2 value = "Galicia"></app-elem-lista>
+<app-elem-lista id = 1 parent = 2 value = "A Coruña"></app-elem-lista>
+<app-elem-lista id = 2 parent = 2 value = "Lugo"></app-elem-lista>
+<app-elem-lista id = 3 parent = 2 value = "Ourense"></app-elem-lista>
+<app-elem-lista id = 4 parent = 2 value = "Pontevedra"></app-elem-lista>
+</app-lista>

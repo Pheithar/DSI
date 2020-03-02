@@ -9,10 +9,12 @@ import { NietoComponent } from './nieto/nieto.component';
 import { TarjetaComponent } from './tarjeta/tarjeta.component';
 import { PoligonoComponent } from './poligono/poligono.component';
 import { PuntoComponent } from './punto/punto.component';
+import { ListaComponent } from './lista/lista.component';
+import { ElemListaComponent } from './elem-lista/elem-lista.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, HijoComponent, NietoComponent, TarjetaComponent, PoligonoComponent, PuntoComponent ],
+  declarations: [ AppComponent, HelloComponent, HijoComponent, NietoComponent, TarjetaComponent, PoligonoComponent, PuntoComponent, ListaComponent, ElemListaComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
