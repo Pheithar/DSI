@@ -1,0 +1,6 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{3}% 
+\contentsline {section}{\numberline {2}Contexto de Dise\IeC {\~n}o}{3}% 
+\contentsline {section}{\numberline {3}Dise\IeC {\~n}o y Desarrollo de T\IeC {\'e}cnicas de Investigaci\IeC {\'o}n del Trabajo de Campo: Obtenci\IeC {\'o}n de Datos}{3}% 
+\contentsline {section}{\numberline {4}An\IeC {\'a}lisis de los datos}{3}% 
+\contentsline {section}{\numberline {5}Definici\IeC {\'o}n de Requisitos y Gu\IeC {\'\i }as para el Dise\IeC {\~n}o}{3}% 
