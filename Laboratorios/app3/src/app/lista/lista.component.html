@@ -2,14 +2,14 @@
   Esto es una lista enlazada<br><br>
 
   <strong>{{nombre1}}: </strong>
-  <select class="lista" [(ngModel)]="seleccionado">
+  <select class="lista" [(ngModel)]="values[0]" (change)="cambio1();">
     <option selected> - </option>
     <option *ngFor='let elem of parent'>{{elem}}</option>
   </select>
 
   <strong> {{nombre2}}: </strong>
-  <select class="lista">
-    <option *ngFor='let elem of todosElementos[parent.indexOf(seleccionado)]'>{{elem}}</option>
+  <select class="lista" [(ngModel)]="values[1]" (change)="cambio2();">
+    <option *ngFor='let elem of todosElementos[parent.indexOf(values[0])]'>{{elem}}</option>
   </select>
 
   <br><br>
