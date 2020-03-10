@@ -1,37 +1,3 @@
-<hello name="{{ name }}"></hello>
-
-<p>Componiento con varios componentes (al mismo nivel):</p>
-<app-hijo></app-hijo>
-<app-hijo></app-hijo>
-<app-nieto></app-nieto>
-
-<p>Usando componentes anidados:</p>
-<app-hijo>
-  <app-nieto x="1"></app-nieto>
-  <app-nieto x="2"></app-nieto>
-  <app-nieto x="3"></app-nieto>
-</app-hijo>
-
-<p>AGENDA con contactos declarados estáticamente: <p>
-<div>
-  <app-tarjeta nombre='ANA' telefono="91-111.11.11" email="email01"></app-tarjeta>
-  <app-tarjeta nombre='PEPE' telefono="91-222.11.11" email="email02"></app-tarjeta>
-  <app-tarjeta nombre2='CLARA' telefono="91-333.11.11"></app-tarjeta>
-</div>
-
-<p>AGENDA con contactos declarados dinámicamente</p>
-<div>
-<app-tarjeta *ngFor='let contacto of contactos' nombre='{{contacto[0]}}' email='{{contacto[1]}}'  telefono='{{contacto[2]}}'></app-tarjeta>
-</div>
-
-<p>Accediento a propiedades de los Childs:</p>
-<app-poligono>
-  <app-punto x="1.0" y="10.0"></app-punto>
-  <app-punto x="2.0" y="20.0"></app-punto>
-  <app-punto x="3.0" y="30.0"></app-punto>
-</app-poligono>
-
-
 <app-lista nombre1 = {{namelist1}} nombre2 = {{namelist2}} (cambios) = "update($event);">
 <app-elem-lista id = 1 value = "Comunidad de Madrid"></app-elem-lista>
 <app-elem-lista id = 1 parent = 1 value = "Madrid"></app-elem-lista>
@@ -41,6 +7,10 @@
 <app-elem-lista id = 3 parent = 2 value = "Ourense"></app-elem-lista>
 <app-elem-lista id = 4 parent = 2 value = "Pontevedra"></app-elem-lista>
 <app-elem-lista id = 3 value = "Cataluña"></app-elem-lista>
+<app-elem-lista id = 1 parent = 3 value = "Lleida"></app-elem-lista>
+<app-elem-lista id = 2 parent = 3 value = "Girona"></app-elem-lista>
+<app-elem-lista id = 3 parent = 3 value = "Barcelona"></app-elem-lista>
+<app-elem-lista id = 4 parent = 3 value = "Tarragona"></app-elem-lista>
 </app-lista>
 
 
