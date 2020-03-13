@@ -1,20 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, QueryList, ContentChild, ContentChildren } from '@angular/core';
 
-export interface PeriodicElement {
-  name: string;
-  tlf: number;
-  email: string;
-  type: string;
-  regular:string;
-  actions:string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {name: "Pepe Perez", tlf: 658585693, email: "potatomcpapa@me.li", type: "Trabajo", regular:"Sí", actions:"Edit, delete"},
-  {name: "Pablo Mármol", tlf: 634257816, email: "i<3rocks@bc.pb", type: "Personal", regular:"No", actions:"Edit, delete"},
-];
-
-
+import { ElementoComponent } from '../elemento/elemento.component';
 
 @Component({
   selector: 'app-directorio',
@@ -25,8 +11,11 @@ export class DirectorioComponent implements OnInit {
 
   @Input() nombre:string;
 
+  @ContentChildren(ElementoComponent) elementos!:QueryList<ElementoComponent>;
+
+
   displayedColumns: string[] = ['name', 'tlf', 'email', 'type', 'regular', 'actions'];
-  dataSource = ELEMENT_DATA;
+  dataSource = [];
 
   constructor() {
     this.nombre = "Directorio de ejemplo"
@@ -35,6 +24,12 @@ export class DirectorioComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ngAfterViewInit() {
+    for (let elem of this.elementos.toArray()){
+      this.dataSource.push(elem.table)
+    }
+    console.log(this.dataSource)
+  }
 
 
 }

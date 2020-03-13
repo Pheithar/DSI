@@ -3,17 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DirectorioComponent } from './components/directorio/directorio.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Material
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 
+// Componentes
+import { DirectorioComponent } from './components/directorio/directorio.component';
+import { ElementoComponent } from './components/elemento/elemento.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    DirectorioComponent
+    DirectorioComponent,
+    ElementoComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +25,7 @@ import {MatTableModule} from '@angular/material/table';
     BrowserAnimationsModule,
     // material
     MatCardModule,
-    MatTableModule    
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
