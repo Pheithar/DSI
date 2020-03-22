@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.1.20)  20 MAR 2020 12:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.1.20)  22 MAR 2020 13:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -337,21 +337,49 @@ LaTeX Info: Redefining \% on input line 1.
 \tf@toc=\write3
 \openout3 = `memoria.toc'.
 
- [2] [3]
+ [2] [3] [4] [5]
+<Images/edad_usuarios.png, id=30, 602.25pt x 372.39125pt>
+File: Images/edad_usuarios.png Graphic file (type png)
+<use Images/edad_usuarios.png>
+Package pdftex.def Info: Images/edad_usuarios.png  used on input line 221.
+(pdftex.def)             Requested size: 398.33858pt x 246.31311pt.
+<Images/frec_just.png, id=31, 719.68875pt x 421.575pt>
+File: Images/frec_just.png Graphic file (type png)
+<use Images/frec_just.png>
+Package pdftex.def Info: Images/frec_just.png  used on input line 232.
+(pdftex.def)             Requested size: 236.01561pt x 138.25175pt.
+<Images/frec_wall.png, id=32, 686.565pt x 421.575pt>
+File: Images/frec_wall.png Graphic file (type png)
+<use Images/frec_wall.png>
+Package pdftex.def Info: Images/frec_wall.png  used on input line 232.
+(pdftex.def)             Requested size: 236.01561pt x 144.91605pt.
 
+[6 <./Images/edad_usuarios.png>]
+<Images/utilizacion.png, id=37, 1057.9525pt x 463.7325pt>
+File: Images/utilizacion.png Graphic file (type png)
+<use Images/utilizacion.png>
+Package pdftex.def Info: Images/utilizacion.png  used on input line 247.
+(pdftex.def)             Requested size: 398.33858pt x 174.59978pt.
+<Images/ofrecer.png, id=38, 1057.9525pt x 463.7325pt>
+File: Images/ofrecer.png Graphic file (type png)
+<use Images/ofrecer.png>
+Package pdftex.def Info: Images/ofrecer.png  used on input line 251.
+(pdftex.def)             Requested size: 398.33858pt x 174.59978pt.
+ [7 <./Images/frec_just.png> <./Images/frec_wall.png> <./Images/utilizacion.png
+>] 
 AED: lastpage setting LastPage
-[4] (./memoria.aux
+[8 <./Images/ofrecer.png>] (./memoria.aux
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
 ) ) 
 Here is how much of TeX's memory you used:
- 3667 strings out of 492609
- 50004 string characters out of 6131462
- 140352 words of memory out of 5000000
- 7528 multiletter control sequences out of 15000+600000
+ 3692 strings out of 492609
+ 50584 string characters out of 6131462
+ 142352 words of memory out of 5000000
+ 7548 multiletter control sequences out of 15000+600000
  11267 words of font info for 24 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,45p,798b,359s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,11n,45p,798b,359s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf
 /fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/
 cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pf
@@ -360,10 +388,10 @@ fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb
 ></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/f
 onts/type1/public/cm-super/sfti1000.pfb>
-Output written on memoria.pdf (4 pages, 181595 bytes).
+Output written on memoria.pdf (8 pages, 291334 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 81 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
