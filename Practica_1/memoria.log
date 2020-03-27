@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.1.20)  26 MAR 2020 16:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.1.20)  27 MAR 2020 13:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -198,26 +198,34 @@ LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/helvet.sty
 Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
-)) (./memoria.aux
+))
+(/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen123
+\WF@size=\dimen124
+\c@WF@wrappedlines=\count104
+\WF@box=\box53
+\WF@everypar=\toks19
+Package: wrapfig 2003/01/31  v 3.6
+) (./memoria.aux
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
 )
 \openout1 = `memoria.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Info: Redefining \. on input line 38.
-LaTeX Info: Redefining \% on input line 38.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Info: Redefining \. on input line 48.
+LaTeX Info: Redefining \% on input line 48.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -255,20 +263,20 @@ LaTeX Info: Redefining \% on input line 38.
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 38.
+(lastpage)             ! on input line 48.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count104
-\scratchdimen=\dimen123
-\scratchbox=\box53
-\nofMPsegments=\count105
-\nofMParguments=\count106
-\everyMPshowfont=\toks19
-\MPscratchCnt=\count107
-\MPscratchDim=\dimen124
-\MPnumerator=\count108
-\makeMPintoPDFobject=\count109
-\everyMPtoPDFconversion=\toks20
+\scratchcounter=\count105
+\scratchdimen=\dimen125
+\scratchbox=\box54
+\nofMPsegments=\count106
+\nofMParguments=\count107
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count108
+\MPscratchDim=\dimen126
+\MPnumerator=\count109
+\makeMPintoPDFobject=\count110
+\everyMPtoPDFconversion=\toks21
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -317,20 +325,20 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 38.
-<Images/LogoUC3M.png, id=1, 337.26pt x 118.4425pt>
-File: Images/LogoUC3M.png Graphic file (type png)
-<use Images/LogoUC3M.png>
-Package pdftex.def Info: Images/LogoUC3M.png  used on input line 44.
-(pdftex.def)             Requested size: 227.62204pt x 79.9398pt.
+LaTeX Info: Redefining \selectfont on input line 48.
+<Images/logo_help.png, id=1, 231.11343pt x 246.1697pt>
+File: Images/logo_help.png Graphic file (type png)
+<use Images/logo_help.png>
+Package pdftex.def Info: Images/logo_help.png  used on input line 54.
+(pdftex.def)             Requested size: 227.62204pt x 242.45415pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 52.
+(Font)              <7> on input line 62.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 52.
+(Font)              <5> on input line 62.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Images/LogoUC3M.png>] (.
-/memoria.toc
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Images/logo_help.png>] (
+./memoria.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
@@ -338,165 +346,247 @@ LaTeX Info: Redefining \% on input line 1.
 \openout3 = `memoria.toc'.
 
  [2] [3] [4] [5]
-<Images/edad_usuarios.png, id=30, 602.25pt x 372.39125pt>
+[6] [7] [8]
+<Images/edad_usuarios.png, id=40, 602.25pt x 372.39125pt>
 File: Images/edad_usuarios.png Graphic file (type png)
 <use Images/edad_usuarios.png>
-Package pdftex.def Info: Images/edad_usuarios.png  used on input line 223.
+Package pdftex.def Info: Images/edad_usuarios.png  used on input line 296.
 (pdftex.def)             Requested size: 398.33858pt x 246.31311pt.
-<Images/frec_just.png, id=31, 719.68875pt x 421.575pt>
+<Images/frec_just.png, id=41, 719.68875pt x 421.575pt>
 File: Images/frec_just.png Graphic file (type png)
 <use Images/frec_just.png>
-Package pdftex.def Info: Images/frec_just.png  used on input line 234.
+Package pdftex.def Info: Images/frec_just.png  used on input line 307.
 (pdftex.def)             Requested size: 236.01561pt x 138.25175pt.
-<Images/frec_wall.png, id=32, 686.565pt x 421.575pt>
+<Images/frec_wall.png, id=42, 686.565pt x 421.575pt>
 File: Images/frec_wall.png Graphic file (type png)
 <use Images/frec_wall.png>
-Package pdftex.def Info: Images/frec_wall.png  used on input line 234.
+Package pdftex.def Info: Images/frec_wall.png  used on input line 307.
 (pdftex.def)             Requested size: 236.01561pt x 144.91605pt.
-
-[6 <./Images/edad_usuarios.png>]
-<Images/utilizacion.png, id=37, 1057.9525pt x 463.7325pt>
+ [9 <./Images/edad_usuarios.png> <./Images/frec_just.png> <./Images/frec_wall.p
+ng>]
+<Images/utilizacion.png, id=49, 1057.9525pt x 463.7325pt>
 File: Images/utilizacion.png Graphic file (type png)
 <use Images/utilizacion.png>
-Package pdftex.def Info: Images/utilizacion.png  used on input line 249.
+Package pdftex.def Info: Images/utilizacion.png  used on input line 322.
 (pdftex.def)             Requested size: 398.33858pt x 174.59978pt.
-<Images/ofrecer.png, id=38, 1057.9525pt x 463.7325pt>
+<Images/ofrecer.png, id=50, 1057.9525pt x 463.7325pt>
 File: Images/ofrecer.png Graphic file (type png)
 <use Images/ofrecer.png>
-Package pdftex.def Info: Images/ofrecer.png  used on input line 253.
+Package pdftex.def Info: Images/ofrecer.png  used on input line 326.
 (pdftex.def)             Requested size: 398.33858pt x 174.59978pt.
- [7 <./Images/frec_just.png> <./Images/frec_wall.png> <./Images/utilizacion.png
->]
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 271--271
+ [10 <./Images/utilizacion.png> <./Images/ofrecer.png>]
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 346--346
 []\T1/cmr/bx/n/10 Título| 
  []
 
 
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 275--275
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 350--350
 []\T1/cmr/bx/n/10 Descripción| 
  []
 
 
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 283--283
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 358--358
 []\T1/cmr/bx/n/10 Título| 
  []
 
 
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 287--287
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 362--362
 []\T1/cmr/bx/n/10 Descripción| 
  []
 
 
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 295--295
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 370--370
 []\T1/cmr/bx/n/10 Título| 
  []
 
 
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 299--299
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 374--374
 []\T1/cmr/bx/n/10 Descripción| 
  []
 
 
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 307--307
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 382--382
 []\T1/cmr/bx/n/10 Título| 
  []
 
 
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 311--311
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 386--386
 []\T1/cmr/bx/n/10 Descripción| 
  []
 
 
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 319--319
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 394--394
 []\T1/cmr/bx/n/10 Título| 
  []
 
 
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 323--323
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 398--398
 []\T1/cmr/bx/n/10 Descripción| 
  []
 
-[8 <./Images/ofrecer.png>]
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 331--331
+
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 406--406
 []\T1/cmr/bx/n/10 Título| 
  []
 
 
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 335--335
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 410--410
 []\T1/cmr/bx/n/10 Descripción| 
  []
 
 
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 343--343
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 418--418
 []\T1/cmr/bx/n/10 Título| 
  []
 
 
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 347--347
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 422--422
 []\T1/cmr/bx/n/10 Descripción| 
  []
 
 
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 362--362
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 430--430
 []\T1/cmr/bx/n/10 Título| 
  []
 
 
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 366--366
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 434--434
 []\T1/cmr/bx/n/10 Descripción| 
  []
 
-
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 374--374
+[11]
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 442--442
 []\T1/cmr/bx/n/10 Título| 
  []
 
 
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 378--378
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 446--446
 []\T1/cmr/bx/n/10 Descripción| 
  []
 
 
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 386--386
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 454--454
 []\T1/cmr/bx/n/10 Título| 
  []
 
 
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 390--390
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 458--458
 []\T1/cmr/bx/n/10 Descripción| 
  []
 
-[9] 
+
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 474--474
+[]\T1/cmr/bx/n/10 Título| 
+ []
+
+
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 478--478
+[]\T1/cmr/bx/n/10 Descripción| 
+ []
+
+
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 486--486
+[]\T1/cmr/bx/n/10 Título| 
+ []
+
+
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 490--490
+[]\T1/cmr/bx/n/10 Descripción| 
+ []
+
+
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 498--498
+[]\T1/cmr/bx/n/10 Título| 
+ []
+
+
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 502--502
+[]\T1/cmr/bx/n/10 Descripción| 
+ []
+
+
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 510--510
+[]\T1/cmr/bx/n/10 Título| 
+ []
+
+
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 514--514
+[]\T1/cmr/bx/n/10 Descripción| 
+ []
+
+
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 522--522
+[]\T1/cmr/bx/n/10 Título| 
+ []
+
+
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 526--526
+[]\T1/cmr/bx/n/10 Descripción| 
+ []
+
+[12]
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 534--534
+[]\T1/cmr/bx/n/10 Título| 
+ []
+
+
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 538--538
+[]\T1/cmr/bx/n/10 Descripción| 
+ []
+
+<Images/Rodolfo.jpg, id=62, 304.13625pt x 304.13625pt>
+File: Images/Rodolfo.jpg Graphic file (type jpg)
+<use Images/Rodolfo.jpg>
+Package pdftex.def Info: Images/Rodolfo.jpg  used on input line 556.
+(pdftex.def)             Requested size: 70.8018pt x 70.79912pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 573--574
+
+ []
+
+<Images/Tania.jpg, id=63, 301.125pt x 304.13625pt>
+File: Images/Tania.jpg Graphic file (type jpg)
+<use Images/Tania.jpg>
+Package pdftex.def Info: Images/Tania.jpg  used on input line 579.
+(pdftex.def)             Requested size: 70.8018pt x 71.50914pt.
+[13 <./Images/Rodolfo.jpg> <./Images/Tania.jpg>]
+<Images/Chumly.jpg, id=68, 225.84375pt x 225.84375pt>
+File: Images/Chumly.jpg Graphic file (type jpg)
+<use Images/Chumly.jpg>
+Package pdftex.def Info: Images/Chumly.jpg  used on input line 602.
+(pdftex.def)             Requested size: 70.8018pt x 70.80344pt.
+<Images/CasosUso.png, id=69, 521.95pt x 458.71375pt>
+File: Images/CasosUso.png Graphic file (type png)
+<use Images/CasosUso.png>
+Package pdftex.def Info: Images/CasosUso.png  used on input line 624.
+(pdftex.def)             Requested size: 227.62204pt x 200.04283pt.
+ [14 <./Images/Chumly.jpg> <./Images/CasosUso.png>] 
 AED: lastpage setting LastPage
-[10] (./memoria.aux
+[15] (./memoria.aux
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
-)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+) ) 
 Here is how much of TeX's memory you used:
- 3694 strings out of 492609
- 50607 string characters out of 6131462
- 147352 words of memory out of 5000000
- 7549 multiletter control sequences out of 15000+600000
+ 3781 strings out of 492609
+ 51848 string characters out of 6131462
+ 150598 words of memory out of 5000000
+ 7627 multiletter control sequences out of 15000+600000
  11968 words of font info for 25 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,11n,45p,798b,359s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/
-fonts/type1/public/cm-super/sfbi1000.pfb></usr/share/texmf/fonts/type1/public/c
-m-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb
-></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/f
-onts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm
--super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-</usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fo
-nts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-
-super/sfti1000.pfb>
-Output written on memoria.pdf (10 pages, 318983 bytes).
+ 41i,10n,45p,816b,359s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf
+/fonts/type1/public/cm-super/sfbi1000.pfb></usr/share/texmf/fonts/type1/public/
+cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pf
+b></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/
+fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/c
+m-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb
+></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/f
+onts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm
+-super/sfti1000.pfb>
+Output written on memoria.pdf (15 pages, 432487 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
+ 112 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,6 +1,16 @@
 \documentclass{uc3mpracticas}
 
+\usepackage{wrapfig}
 
+
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+            {-2.5ex\@plus -1ex \@minus -.25ex}%
+            {1.25ex \@plus .25ex}%
+            {\normalfont\normalsize\bfseries}}
+\makeatother
+\setcounter{secnumdepth}{4} % how many sectioning levels to assign numbers to
+\setcounter{tocdepth}{4}    % how many sectioning levels to show in ToC
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%                   Plantilla Prácticas UC3M                               %%%
@@ -19,7 +29,7 @@
   %Cabecera
   \headerpr[1]{Análisis y Estudio de Campo}{\textbf{H3lpMe}}{Diseño de Sistemas Interactivos}
   %Pie de Página
-  \footerpr{}{}{{\thepage} de \pageref{LastPage}}
+  \footerpr{\textbf{Universidad Carlos III de Madrid}}{}{{\thepage} de \pageref{LastPage}}
 }
 
 %Declarar formato de encabezado y pie del título e indice
@@ -41,9 +51,9 @@
 
 
   %Portada 1 (Centrado todo)
-  \centeredtitle{Images/LogoUC3M.png}{Grado en Ingeniería Informática}{Curso 2020}{Diseño de Sistemas Interactivos}{Análisis y Estudio de Campo: H3lpMe}
+  \centeredtitle{Images/logo_help.png}{Grado en Ingeniería Informática}{Curso 2020}{Diseño de Sistemas Interactivos}{Análisis y Estudio de Campo: H3lpMe}
 
-  \vspace{40mm}
+  \vspace{2mm}
 
   \begin{center}
     \line(1, 0){450}
@@ -74,6 +84,8 @@
 
   En la app, cualquier persona puede crearse un perfil indicando sus habilidades y capacidades, para que otros usuarios de la plataforma puedan solicitarlas cuando lo necesiten acordando un precio entre ellos.
 
+  \newpage
+
   \section{Contexto de Diseño}
 
   En un estudio previo, se pueden definir dos grupos de \textit{usuarios} principales:
@@ -95,20 +107,48 @@
 
   \begin{itemize}
     \item \textbf{Usuarios finales de la aplicación}, que ya hemos dividido previamente en dos grupos.
-    \item \textbf{Programadores y desarrolladores}, que son las personas ivolucradas en el desarrollo de ka aplicación. Deben conocer el funcionamiento de la aplicación completa, y son los encargados de que se cumplan las espectativas de los usuarios.
+    \item \textbf{Programadores y desarrolladores}, que son las personas involucradas en el desarrollo de la aplicación. Deben conocer el funcionamiento de la aplicación completa, y son los encargados de que se cumplan las expectativas de los usuarios.
     \item \textbf{Diseñadores}, que necesitan realizar prototipos y diseños que cuplan las necesidades de los usuarios, y sean intuitivos y completos.
   \end{itemize}
 
 
   \vspace{8mm}
 
+  El objetivo principal de la web es facilitar el día a día de las personas, además de generar oportunidades de empleo a tiempo parcial o puntual para cualquier persona en diferentes áreas.
+  Se pretende, de esta forma, que se puedan suplir  o cubrir diferentes necesidades o actividades mayoritariamente cotidianas de una manera simple y directa, con una comunicación directa entre solicitante y trabajador. La principal motivación es que muchas personas, de forma puntual, necesitan ayuda en alguna actividad cotidiana, por lo que podría haber un gran conjunto de personas interesadas en una aplicación como la que proponemos.
 
+  \vspace{4mm}
+
+  Por otro lado, las características  de ambos grupos de usuarios definidos es que se han encontrado con un mundo digitalizado en el que el uso de dispositivos móviles y ordenadores es diario y, además, el grupo de usuarios de mayor edad se ha dado cuenta de las ventajas que ha supuesto Internet por lo que podrían ver bastante útil el uso de esta aplicación ya que pueden disponer de los servicios que soliciten de forma inmediata. También, este grupo de personas tiene bastante interés en explorar los usos de los smartphones probando aplicaciones nuevas, instalándose muchas redes sociales, aplicaciones sobre ropa, comida, tiendas (por ejemplo, Amazon), etc.
+  Como necesidades y motivaciones hay que señalar que se han detectado que muchas personas pueden tener ciertas incidencias o querer determinados servicios en su vida cotidiana de forma puntual, por lo que nuestra aplicación puede cubrir estas necesidades que surgen a los usuarios en el día a día, de forma que, dichas incidencias o necesidades pueden resolverse de forma rápida e inmediata gracias a la aplicación web sin necesidad de tener que estar recurriendo a servicios que requieren contratos temporales. Sin embargo, en ningún caso estas necesidades podrían ser  de asistencia médica, etc… ya que esto sí debe ser suplido por un profesional cualificado y en centros o establecimientos creados con ese propósito.
+
+  \vspace{4mm}
+
+  En cambio, las tareas y actividades que realizan los usuarios potenciales son múltiples. Muchos de ellos consultan el periódico en su smartphone a través de aplicaciones, pìden comida a domicilio,  realizan compras en Amazon, Aliexpress, etc., utilizan redes sociales como Facebook, Instagram, Twitter y/o aplicaciones de mensajería instantánea como, por ejemplo, WhatsApp, etc. En definitiva, usan el smartphone para facilitar su día a día tanto como para trabajo, ocio, informarse de noticias, escuchar música, reproducir vídeos y entretener a sus posibles hijos con aplicaciones para niños.
+
+  \vspace{4mm}
+
+  Los recursos y artefactos digitales que utilizan las personas son smartphones, ordenadores, tablets y televisión. En cambio, los no digitales son publicidad puesta en los establecimientos o comercios y teléfonos sacados de internet o páginas de teléfonos. Para reparación de servicios contactan con particulares o empresas conocidos por publicidad o simplemente por el boca a boca de otras personas.
+
+  \vspace{4mm}
+
+  En lo que respecta al espacio físico, tecnológico y social, hay que señalar que la tecnología involucrada son dispositivos móviles (smartphones y tablets) y ordenadores. Además, casi todas las personas cuentan en sus casas con estos dispositivos y conexión a Internet. Con el auge de los Internet en los últimos años, los dispositivos móviles y el internet de las cosas, la mayoría de las personas de la sociedad están diariamente en contacto con internet. Además, las personas de entre 35 y 50 años, han notado del cambio de lo que supone  estar conectado a internet y de las ventajas del mismo, de hecho puede observarse que gente de esta edad  utilizan wearables como pulseras inteligentes, smartwatches, servicios en internet como Netflix, Amazon, Spotify, Apple Music... .
+
+  \vspace{4mm}
+
+  Por último, hay que señalar que el análisis de los datos extraídos en apartados posteriores nos ha llevado a tener una mejor perspectiva del diseño de la aplicación y de cómo ofrecer los servicios de los que hemos hablado ya que se ha detectado un gran número de personas que ven bastante utilidad en esta aplicación, por lo que esto conforma el conjunto de usuarios potenciales.
+
+  \newpage
 
   \section{Diseño y Desarrollo de Técnicas de Investigación del Trabajo de Campo: Obtención de Datos}
 
   Debido al estado de alarma en el que se encuentra el pais donde estamos relizando este estudio, hemos decidido usar dos técnicas de investigación que nos permiten la obtención de datos de manera telemática. Por esta razón hemos optado por un \textbf{cuestionario online} y \textbf{documentación y estado del arte} (\textit{state of art}).
 
+  \vspace{4mm}
+
   Por una parte, el cuestionario online ha sido desarrollado a través de la herramienta: \textit{Formularios de Google}. Esto permite una gran difusión en poco tiempo.
+
+  \vspace{4mm}
 
   Además, se realizará una investigación sobre el estado actual del arte, las aplicaciones actuales que ofrecen un servicio similar, y las posibles leyes que habrá que tener en cuenta a la hora de ofrecer los servicios de la aplicación al público.
 
@@ -148,17 +188,23 @@
 
   Este cuestionario ha sido desarrollado y creado por los 4 miembros del equipo, sin la asignación de ningún rol específico a parte del de la difusión del cuestionario por diversas plataformas y contactos.
 
+  \vspace{4mm}
+
   Con las preguntas buscamos conocer la opinión de los diferentes usuarios potenciales a los que pueda interesar la aplicación, así como poder identificar los perfiles de los usuarios primarios, secundarios y terciarios que pudiera tener. Dentro de los datos, esperamos obtener las respuestas de personas dentro de un rango de edad potencial para nuestra aplicación \textbf{(16-70)} para poder realizar un análisis completo y así diseñar la aplicación depurándola con las necesidades de los usuarios.
+
+  \vspace{4mm}
 
   Dentro de los datos que esperamos obtener, entendemos que no todos serán a favor de la aplicación, siendo del todo respetable y dentro de lo razonable. A pesar de ello, prescindiremos de los datos de los cuales no podamos obtener ideas o mejorar el software \textbf{(usuarios no potenciales)}, así como de las respuestas aparentemente falsas.
 
   \subsection{Documentacion y estado del arte}
 
-  Para establecer un contexto y estado del arte apropiados hemos decidido elegir 3 aplicaciones y sitios web que implementan parcialmente las funciones de nuestro software. Estas son \textbf{Wallapop}, que ofrece un servicio de compra venta entre usuarios sin intermediarios; \textbf{JustEat}, un servicio que actua de intermediario entre restaurantes y usuarios para ofrecer comida a domicilio; y \textbf{Milanuncios}, un sitio web que ofrece una amplia de servicios y productos en diferentes areas, siendo esta web la que más se asimila a nuestro software.
+  Para establecer un contexto y estado del arte apropiados hemos decidido elegir 4 aplicaciones y sitios web que implementan parcialmente las funciones de nuestro software. Estas son \textbf{Wallapop}, que ofrece un servicio de compra venta entre usuarios sin intermediarios; \textbf{JustEat}, un servicio que actua de intermediario entre restaurantes y usuarios para ofrecer comida a domicilio; \textbf{Milanuncios}, un sitio web que ofrece una amplia de servicios y productos en diferentes areas, siendo esta web la que más se asimila a nuestro software; y \textbf{Fiverr}, un sitio que ofrece servicios \textit{freelance} online.
 
     \subsubsection{Wallapop}
 
       Wallapop es una empresa española fundada en 2013, que ofrece una plataforma dedicada a la compra venta de productos de segunda mano entre usuarios a través de internet. La plataforma es accesible desde dispositivos móviles \textit{(Android e iOS)} y desde el sitio web online.
+
+      \vspace{4mm}
 
       Algunas de las características de Wallapop son:
 
@@ -183,6 +229,10 @@
 
     JustEat es una compañia de servicios fundada en 2001 dedicada a la distribución de comida a domicilio en varios formatos. Actua como intermediario entre los clientes y bares o restaurantes, cobrando una comisión por cada pedido. La plataforma es accesible desde su sitio web y a través de dispositivos móviles \textit{(Android e iOS)}.
 
+    \vspace{4mm}
+
+    Algunas de las características que tiene JustEat son:
+
       \begin{itemize}
         \item Busqueda por cercania
           Para realizar una busqueda lo primero que debes introducir es una direccion y te muestre los restaurantes mas cercanos que hay en tu zona
@@ -198,6 +248,10 @@
 
     Milanuncios es una empresa española creada en 2005. Es una plataforma en la cual un usuario puede poner un anuncio de cualquier area ofreciendo servicios o productos, siempre dentro de unos ámbitos legales y aceptados por la plataforma. Es accesible a través de su sito web y dispositivos móviles \textit{(Android e iOS)}.
 
+    \vspace{4mm}
+
+    Algunas de las características con la que cuenta Milanuncios son:
+
       \begin{itemize}
         \item Chat integrado
         \item Busqueda por cercania
@@ -207,10 +261,29 @@
 
       \end{itemize}
 
+    \subsubsection{Fiverr}
 
+    Fiverr es una empresa de origen israelí fundada en 2010 que ofrece servicios freelance profesionales y amateurs online para todo el mundo. Es accesible a través de su sitio web y dispositivos móviles \textit{(Android e iOS)}.
+
+    \vspace{4mm}
+
+    Algunas de las características que tiene Fiverr son:
+
+    \begin{itemize}
+      \item Chat integrado
+      \item Busqueda por cercania
+      \item Enfocado a los servicios freelance
+      \item Ayuda online en diferentes áreas
+      \item Valoraciones
+
+    \end{itemize}
+
+  \vspace{4mm}
 
   % REVISAR
   Como ya hemos indicado antes, por cuestiones excepcionales del estado de emergencia actual no se pueden realizar las técnicas de investigación directa, ni las entrevistas, ya que en una entrevista, además de las respuestas de los usuarios, es importante analizar las acciones, reacciones y demás mediciones, que no se pueden realizar correctamente en una entrevista online.
+
+  \newpage
 
   \section{Análisis de los datos}
 
@@ -258,6 +331,8 @@
 
 
   Con estos datos puede concluirse que la aceptación es bastante buena ya que hay un gran número de personas a las que les parece una buena opción aunque hay otro grupo (25\%)a los que no les convence del todo, pero que podrían darle una oportunidad. Por lo tanto, se trata de crear una aplicación que llame la atención de todos los usuarios, tanto de los más experimentados en otras apps como de los que menos, con el objetivo de englobarlos y que utilicen esta aplicación.
+
+  \newpage
 
   \section{Definición de Requisitos y Guías para el Diseño}
 
@@ -320,7 +395,7 @@
       \hline
       \textbf{Prioridad} & Alta & \textbf{Tipo} & Requisito Funcional de Usuario \\
       \hline
-      \textbf{Descripción} & \multicolumn{3}{|p{9cm}|}{La aplicación deberá permitir a los usuarios registrados solicitar servicios de otros usuarios.} \\
+      \textbf{Descripción} & \multicolumn{3}{|p{9cm}|}{La aplicación deberá permitir a los usuarios registrados solicitar servicios de \textit{H3lpers}.} \\
       \hline
     \end{tabular}
 
@@ -348,13 +423,50 @@
       \hline
     \end{tabular}
 
+    \vspace{1cm}
+
+    \begin{tabular}{|p{2cm}|p{2cm}|p{1cm}|p{6cm}|}
+      \hline
+      \textbf{ID} & RF-08 & \textbf{Título} & Valoraciones \\
+      \hline
+      \textbf{Prioridad} & Media & \textbf{Tipo} & Requisitos de Usabilidad y Experiencia de Usuario \\
+      \hline
+      \textbf{Descripción} & \multicolumn{3}{|p{9cm}|}{La aplicación deberá permitir a los usuarios que han recibido un servicio valorar al \textit{H3lper} que ofreció el servicio.} \\
+      \hline
+    \end{tabular}
+
+    \vspace{1cm}
+
+    \begin{tabular}{|p{2cm}|p{2cm}|p{1cm}|p{6cm}|}
+      \hline
+      \textbf{ID} & RF-09 & \textbf{Título} & Filtros de Búsqueda \\
+      \hline
+      \textbf{Prioridad} & Media & \textbf{Tipo} & Requisito Funcional de Datos \\
+      \hline
+      \textbf{Descripción} & \multicolumn{3}{|p{9cm}|}{La aplicación deberá permitir a los usuarios reducir los elememntos de la búsqueda a través de filtros por etiquetas y por nombre.} \\
+      \hline
+    \end{tabular}
+
+    \vspace{1cm}
+
+    \begin{tabular}{|p{2cm}|p{2cm}|p{1cm}|p{6cm}|}
+      \hline
+      \textbf{ID} & RF-10 & \textbf{Título} & Uso de la Moneda Virtual \\
+      \hline
+      \textbf{Prioridad} & Media & \textbf{Tipo} & Requisitos de Usabilidad y Experiencia de Usuario \\
+      \hline
+      \textbf{Descripción} & \multicolumn{3}{|p{9cm}|}{La aplicación deberá permitir a los usuarios registrados usar las \textit{H3lp Coin} para reducir el precio de los servicios.} \\
+      \hline
+    \end{tabular}
+
   \end{center}
-
-
 
   \vspace{1.5cm}
 
-  \subsection{Requisitos No Funcionales}
+
+
+
+  \subsubsection{Requisitos No Funcionales}
 
   \begin{center}
     \begin{tabular}{|p{2cm}|p{2cm}|p{1cm}|p{6cm}|}
@@ -390,19 +502,141 @@
       \textbf{Descripción} & \multicolumn{3}{|p{9cm}|}{La cuenta de los usuarios podrá ser accedida desde distintos dispositivos simultaneamente.} \\
       \hline
     \end{tabular}
+
+    \vspace{1cm}
+
+    \begin{tabular}{|p{2cm}|p{2cm}|p{1cm}|p{6cm}|}
+      \hline
+      \textbf{ID} & RNF-04 & \textbf{Título} & Creación de cuentas \\
+      \hline
+      \textbf{Prioridad} & Alta & \textbf{Tipo} & Requisito No Funcional de Datos \\
+      \hline
+      \textbf{Descripción} & \multicolumn{3}{|p{9cm}|}{En el registro de usuarios, los campos \textit{Usuario}, \textit{Contraseña} y \textit{Email} serán obligatorios.} \\
+      \hline
+    \end{tabular}
+
+    \vspace{1cm}
+
+    \begin{tabular}{|p{2cm}|p{2cm}|p{1cm}|p{6cm}|}
+      \hline
+      \textbf{ID} & RNF-05 & \textbf{Título} & Moneda Virtual \\
+      \hline
+      \textbf{Prioridad} & Media & \textbf{Tipo} & Requisitos de Usabilidad y Experiencia de Usuario \\
+      \hline
+      \textbf{Descripción} & \multicolumn{3}{|p{9cm}|}{Los usuarios podrán obtener \textit{H3lp Coins} por la realización de diferentes acciones.} \\
+      \hline
+    \end{tabular}
+
+    \vspace{1cm}
+
+    \begin{tabular}{|p{2cm}|p{2cm}|p{1cm}|p{6cm}|}
+      \hline
+      \textbf{ID} & RNF-06 & \textbf{Título} & Niveles \\
+      \hline
+      \textbf{Prioridad} & Media & \textbf{Tipo} & Requisitos de Usabilidad y Experiencia de Usuario \\
+      \hline
+      \textbf{Descripción} & \multicolumn{3}{|p{9cm}|}{Los usuarios registrados tendrán un nivel que irá aumentando con la realización de acciones.} \\
+      \hline
+    \end{tabular}
+
   \end{center}
 
   \vspace{1.5cm}
 
-  \subsection{Glosario}
+  \subsection{Transmisión de la Visión y el Propósito del Producto}
+
+  \subsubsection{Personas}
+
+  Para poder describir a algunos de los usuarios potenciales hemos elegido a 3 personas para describir sus perfiles y el uso que le darían a la plataforma.
+
+  \paragraph{Persona 1}
+
+  \begin{wrapfigure}{r}{0.2\textwidth}
+    \begin{center}
+      \includegraphics[width=0.15\textwidth]{Images/Rodolfo.jpg}
+    \end{center}
+  \end{wrapfigure}
+
+  \textbf{Nombre: }Juan José Ramirez del Río
+
+  \vspace{2mm}
+
+  \textbf{Edad: }51
+
+  \vspace{2mm}
+
+  \textbf{Perfil: }Juan José es un hombre casado y con 2 hijos, de 10 y 12 años. Estudió arquitectura en la universidad y ahora se dedica a proyectos por toda España. Debido a su trabajo, es un hombre ocupado que no puede pasar mucho tiempo en casa, aunque cuando tiene tiempo lo aprovecha al máximo para hacer actividades con su familia.
+  Juan José es responsable, profesional y tiene lo que se conoce como "don de gentes", lo que le permite relacionarse más facilmente con cualquier persona.
+
+  \vspace{2mm}
+
+  \textbf{Uso de la web: }Juan José, al igual que su mujer, debido a su trabajo, no puede pasar mucho tiempo en casa, y cuando está prefiere aprovechar el tiempo para pasarlo con sus hijos. Por ello, Juan José busca gente que pueda realizar servicios en su casa en momentos puntuales, tales como limpiar y cocinar. \\
+
+  \paragraph{Persona 2}
+
+  \begin{wrapfigure}{r}{0.2\textwidth}
+    \begin{center}
+      \includegraphics[width=0.15\textwidth]{Images/Tania.jpg}
+    \end{center}
+  \end{wrapfigure}
+
+  \textbf{Nombre: }Celia Gómez Linares
+
+ \vspace{2mm}
+
+ \textbf{Edad: }33
+
+ \vspace{2mm}
+
+ \textbf{Perfil: }Celia es una mujer cuya aficción y trabajo siempre ha sido la \textbf{programación}. Ya desde el colegio, empezó a estudiar por su cuenta todo lo relacionado con los ordenadores y en la universidad destacó por ser de las mejores de su promoción en Ingeniería de Software. Actualmente trabaja en una empresa de desarrollo de páginas web, aunque \textbf{tiene mucho tiempo libre} pues los horarios son muy flexibles.
+ Celia es una persona emprendedora y optimista, le gustan los retos y disfruta experimentando.
+
+ \vspace{2mm}
+
+ \textbf{Uso de la web: }Celia ha decidido intentar generar otra fuente de ingresos en su tiempo libre, por ello busca \textbf{anunciar sus servicios} como programadora y diseñadora web en alguna plataforma que le permita tener un trato directo con el cliente y establecer los términos del trabajo.
+
+  \paragraph{Persona 3}
+
+  \begin{wrapfigure}{r}{0.2\textwidth}
+    \begin{center}
+      \includegraphics[width=0.15\textwidth]{Images/Chumly.jpg}
+    \end{center}
+  \end{wrapfigure}
+
+  \textbf{Nombre: }Chan Li Qizheng
+
+  \vspace{2mm}
+
+  \textbf{Edad: }24
+
+  \vspace{2mm}
+
+  \textbf{Perfil: }Chan es una estudiante china de intercambio de \textbf{periodismo}. LLeva 3 meses en España y le encanta la cultura y la gastronomía, y a pesar de que aún no domina el idioma, gracia a un curso que hizo años atrás de castellano, puede conversar de manera fluida. Al no tener matriculadas muchas asignaturas \textbf{tiene tiempo libre} para poder conocer e investigar el pais y conocer cosas nuevas.
+  Chan es alegre y divertida, siempre buscando cosas que hacer y sitios nuevos que visitar.
+
+  \vspace{2mm}
+
+  \textbf{Uso de la web: }Chan quiere aprovechar al máximo su tiempo en España, por ello está buscando algún \textbf{guía turístico} que le enseñe los mejores sitios de su zona. A su vez, también quiere aprovechar y ofrecer sus \textbf{servicios como traductora y profesora} particular de su idioma natal, el chino. Por ello busca un sitio web que le permita ambas cosas de una manera cómoda.
+
+
+  \subsubsection{Casos de Uso}
+
+  \imgcenter{Images/CasosUso.png}
+
+
+  \newpage
+
+  \section{Glosario}
 
   \begin{itemize}
+    \item \textbf{\textit{H3lp Coins}}: vocabulario técnico de la aplicación. Moneda virtual que sirve para realizar diferentes compras o descuentos dentro de la aplicación.
     \item \textbf{\textit{H3lper}}: vocabulario técnico de la aplicación. Usuario que puede ofrecer y publicar servicios en la aplicación.
     \item \textbf{Identificarze como usuarios}: introducir los datos de usuario y contraseña validos para iniciar sesión en la aplicación.
     \item \textbf{Perfil}: página de la aplicación personalizada específicamente para un usuario, y que recoge toda su información.
-    \item \textbf{Publicar un servicio}: hacer visible a todos los usuarios un servicio concreto.  
+    \item \textbf{Publicar un servicio}: hacer visible a todos los usuarios un servicio concreto.
     \item \textbf{\textit{Responsive}}: técnica de diseño web que busca la correcta visualización de una misma página en distintos dispositivos.
     \item \textbf{Servicios}: En el contexto de esta aplicación, se considera servicio a toda acción o trabajo especializado ofrecido por los usuarios.
+    \item \textbf{Valorar}: En el contexto de esta aplicación, otorgar una puntuación a la persona que ofrece el servicio a valorar, en una escala de 0 a 5.
   \end{itemize}
 
 
