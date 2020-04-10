@@ -1,0 +1,167 @@
+\documentclass{uc3mpracticas}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                   Plantilla Prácticas UC3M                               %%%
+%%%                Universidad Carlos III de Madrid                          %%%
+%%%                   Alejandro Valverde Mahou                               %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Permitir cabeceras y pie de páginas personalizados
+\pagestyle{fancy}
+
+%Path por defecto de las imágenes
+\graphicspath{ {./images/} }
+
+%Declarar formato de encabezado y pie de página de las páginas del documento
+\fancypagestyle{doc}{
+  %Cabecera
+  \headerpr[1]{Práctica Optativa: \textbf{Gamificación}}{\textbf{}}{Diseño de Sistemas Interactivos}
+  %Pie de Página
+  \footerpr{\textbf{Universidad Carlos III de Madrid}}{}{{\thepage} de \pageref{LastPage}}
+}
+
+%Declarar formato de encabezado y pie del título e indice
+\fancypagestyle{titu}{%
+  %Cabecera
+  \headerpr{}{}{}
+  %Pie de Página
+  \footerpr{}{}{}
+}
+
+
+\appto\frontmatter{\pagestyle{titu}}
+\appto\mainmatter{\pagestyle{doc}}
+
+
+\begin{document}
+  %Comienzo formato título
+  \frontmatter
+
+
+  \centeredtitle{Images/LogoUC3M.png}{Grado en Ingeniería Informática}{Curso 2020}{Diseño de Sistemas Interactivos}{Práctica Optativa: \textbf{Gamificación}}
+
+    \vspace{50mm}
+
+    \begin{center}
+      \line(1, 0){450}
+    \end{center}
+
+    \authorsright{Alejandro Parrado Rivas}{100383453}{Adrián Sanz Gómez}{100383473}{Alejandro Valverde Mahou}{100383383}{Andrés Vinagre Blanco}{100383414}
+
+    \newpage
+
+
+    %Índice
+    \tableofcontents
+
+  \newpage
+
+  %Comienzo formato documento general
+  \mainmatter
+
+  \section{Habitica}
+
+  \textit{Habitica} es una página web y aplicación móvil de administración de tareas en línea, que, con el objetivo de ganar más público, diferenciarse de la competencia y mantener a los usuarios interesados, usan la gamificación, tomando la forma de un juego de rol.
+
+  \imgcenter{Images/habitica.png}
+
+  La interfaz completa está representada como si se tratara de un juego de rol clásico, donde las misiones de nuestro personaje son las distintas tareas que tenemos que realizar. Estas tareas son editables, y personalizables, y se pueden organizar por categorías.
+
+  \vspace{4mm}
+
+  Hemos elegido analizar esta página web debido a que está directamente enfocada a la gamificación, y la usa en todos los aspectos que puede. Algunos de estos aspectos gamificados son:
+
+  \subsection{Perfil de usuario}
+
+  \imgcenter{Images/profile.png}
+
+  El perfil de los usuarios tiene un avatar elegido por el usuario, nombre real y \textit{nickname}. También le acompaña una barra de salud y de experiencia. Por último, indica el nivel y especialidad del usuario.
+
+  \vspace{2mm}
+
+  Este perfil permite a los usuarios indentificarse dentro de la aplicación, y ayuda a generar un sentimiento de mejora, con la experiencia y el nivel. La barra de nivel se rellena cuando se cumplen las tareas, por lo que los usuarios se ven incitados a realizar estas tareas, con el propósito de aumentar el nivel. La barra de salud va bajando según los usuarios completan tareas que los propios usuarios han definido como negativas. El avatar favorece este sentimiento de identificaación del usuario, porque es personalizable, y según se consiguen nuevos objetos, estos aparecen visualmente en el avatar.
+
+  \vspace{3mm}
+
+  La incorporación de un apartado para el perfil es lo que diferenecia a esta aplicación de otras aplicaciones de administración de tareas, porque permite al usuario sentir progreso, mejora y recompensa. Esto favorece que los usuarios usen la aplicación, y la revisen regularmente para aumentar su nivel y conseguir las recompensas y desbloqueables que eso acarrea. Esta técnica parece bastante útil y ha permitido el crecimiento de la aplicación.
+
+  \subsection{Moneda Virtual y Mercado}
+
+  \imgcenter{Images/coins.png}
+
+  Otra forma de hacer que los usuarios tengan interés por completar las tareas es ofreciendo recompensas en forma de moneda virtual, que puede ser utilizada en el mercado para conseguir distintos objetos para nuestro inventario. Existen dos tipos de monedas. Las \textit{monedas de oro}, que se utilizan para comprar la mayoría de objetos y las \textit{gemas}, que se usan para comprar los objetos \textit{premiun}.
+
+  \vspace{2mm}
+
+  Al igual que la experiencia, y con la promesa de una recompensa, esta moneda virtual potencia el deseo de realizar las tareas por parte de los usuarios, dado que recibirán una recompensa a cambio.
+
+  \vspace{3mm}
+
+  Esta forma de otorgar recompensas a los usuarios por el uso de la aplicación hace que estos deseen seguir usandola, por el sentimiento de progreso, mejora y recompensa. Sería una técnica que podría dar buenos resultados en nuestra aplicación, siempre que se pueda aplicar de forma controlada, ya que los usuarios intentarán conseguir el máximo de monedas con el menor esfuerzo posible.
+
+  \imgcenter{Images/market.png}
+
+  La moneda virtual no tiene ninguna utilidad, si no se puede gastar con nada. Para eso existe la función de mercado, donde los usuarios pueden ganar sus monedas en mejoras, decoraciones o diferentes ventajas que facilitan y mejoran la experiencia.
+
+  \vspace{2mm}
+
+  Estos objetos que pueden ser conseguidos en el mercado cumplen en \textit{Habitica} una función meramente estética, pues la aplicación no quiere facilitar las tareas del mundo real, pues entonces el propósito entero de la aplicación desaparecería. La web también permite la implementación de un sistema de recompensas autoimpuestas, donde los usuarios pueden gastar sus monedas virtuales en recompensas elegidas por los usuarios. Por ejemplo: nosotros decidimos que si gastamos 30 monedas de oro virtuales, podemos jugar al ordenador durante 30 minutos. Esta forma de recompensa autoimpuesta permite que la aplicación gane un gran valor, ya que te permite no solo comprar mejoras dentro de la aplicación, sino que las mejoras también se sienten en el mundo real.
+
+  \subsection{Logros}
+
+  \imgcenter{Images/logros.png}
+
+  Los logros es una forma de demostrar que los usuarios han cumplido ciertos objetivos. Estos logros normalmente pueden ser compartidos con otros usuarios.
+
+  \vspace{2mm}
+
+  La aplicación utiliza los logros como otro tipo de recompensa o estímulo, de forma similar a la experiencia. También indica aquellos logros todavía no cumplidos, para que el usuario intente completarlos.
+
+  \vspace{3mm}
+
+  Esta forma de estímulo marca el progreso de los usuarios dentro de la aplicación, de una forma distinta a los niveles. Es una forma de progreso basada en hitos, y es una forma muy común y eficaz de 'enganchar' a los usuarios a una aplicación.
+
+  \subsection{Amigos y Comunidad}
+
+  \imgcenter{Images/community.png}
+
+  La comunidad es un aspecto muy importante en la competitividad y mejora en muchos juegos, pero en las aplicaciones suele tener un aspecto más cercano a la cordialidad, permitiendo a los nuevos usuarios aprender el funcionamiento y estructura de la aplicación, guiados por los usuarios más veteranos.
+
+  \vspace{2mm}
+
+  La aplicación usa un poco de estos dos mundos, con chats de discusión donde se enseña a los nuevos usuarios, se comparten tareas y trabajos, o sencillamente se charla. Esto lo combina con un sistema de amigo donde se puede compartir la puntuación, nivel o logros conseguidos, en una forma de crear una rivalidad amistosa entre usuarios.
+
+  \subsection{Reflesxión General}
+
+  \textit{Habitica} es la página web gamificada por excelencia. Como usuarios, hemos sentido las ganas de seguir utilizando la aplicación, y hemos acabdo haciendo tareas que no nos apetecía o nos daba pereza solo con el propósito de conseguir puntos en la aplicación, por lo cual, en nuestro caso a cumplido su objetivo. Por lo general parece un método de gamificación muy bien implementado. No llega a ser repetitivo, al menos en nuestro caso, y es entretenido y lo suficientemente adictivo como para querer seguir usándolo, pero no como para quedarte en la aplicación indefinidamente, ya que justo lo que pretende la aplicación es que los usuarios sean productivos. Hemos podido sacar varias ideas que tenemos pensado implementar en nuetro proyecto, con el onjetivo de que funcionen tan bien como les ha funcionado a  \textit{Habitica}.
+
+
+  \section{Nuestra aplicación: H3lp Me}
+
+  \subsection{Perfil: Nivel}
+
+  Hemos pensado en implementar un sistema por el cual se pueda ir subiendo niveles con el uso de la aplicación. Para subir de nivel, se podrán seguir diferentes acciones: Solicitar un servicio, ofrecer un servicio, puntuar a otro usuario, recibir puntuaciones positivas...
+
+  \vspace{2mm}
+
+  Esto permitirá a los usuarios de la aplicación mostrar su prestigio y conocimiento de la aplicación. Además, recompensará a los usuarios que sean activos en la comunidad, es decir, que valoren a los otros usuarios, y también a aquellos que ofrezcan buenos servicios, ya que recibiran valoraciones elevadas.
+
+  \vspace{2mm}
+
+  Esta forma de otorgar experiencia basándose en recompensas se ha decidido por dos motivos principales:
+
+  \begin{itemize}
+    \item Se pretende crear una comunidad respetuosa y saludable, donde todos los usuarios se vean incentivados a ser buenas personas y a comportarse de forma adecuada, recompensandoles con puntos de experiencia, y penalizando los comportamientos negativos e inadecuados.
+    \item Generar una sensación de apego hacia el usuario creado en la aplicación, ya que para subir de nivel tienes que esforzarte, y ningún usuario querrá perder su progreso en la aplicación.
+  \end{itemize}
+
+  
+
+
+
+
+
+
+\end{document}

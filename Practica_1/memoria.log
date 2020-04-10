@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.1.20)  27 MAR 2020 13:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.1.20)  5 APR 2020 17:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -350,226 +350,337 @@ LaTeX Info: Redefining \% on input line 1.
 <Images/edad_usuarios.png, id=40, 602.25pt x 372.39125pt>
 File: Images/edad_usuarios.png Graphic file (type png)
 <use Images/edad_usuarios.png>
-Package pdftex.def Info: Images/edad_usuarios.png  used on input line 296.
+Package pdftex.def Info: Images/edad_usuarios.png  used on input line 325.
 (pdftex.def)             Requested size: 398.33858pt x 246.31311pt.
-<Images/frec_just.png, id=41, 719.68875pt x 421.575pt>
+ [9]
+<Images/frec_just.png, id=44, 719.68875pt x 421.575pt>
 File: Images/frec_just.png Graphic file (type png)
 <use Images/frec_just.png>
-Package pdftex.def Info: Images/frec_just.png  used on input line 307.
+Package pdftex.def Info: Images/frec_just.png  used on input line 334.
 (pdftex.def)             Requested size: 236.01561pt x 138.25175pt.
-<Images/frec_wall.png, id=42, 686.565pt x 421.575pt>
+<Images/frec_wall.png, id=45, 686.565pt x 421.575pt>
 File: Images/frec_wall.png Graphic file (type png)
 <use Images/frec_wall.png>
-Package pdftex.def Info: Images/frec_wall.png  used on input line 307.
+Package pdftex.def Info: Images/frec_wall.png  used on input line 334.
 (pdftex.def)             Requested size: 236.01561pt x 144.91605pt.
- [9 <./Images/edad_usuarios.png> <./Images/frec_just.png> <./Images/frec_wall.p
-ng>]
-<Images/utilizacion.png, id=49, 1057.9525pt x 463.7325pt>
+<Images/utilizacion.png, id=46, 1057.9525pt x 463.7325pt>
 File: Images/utilizacion.png Graphic file (type png)
 <use Images/utilizacion.png>
-Package pdftex.def Info: Images/utilizacion.png  used on input line 322.
+Package pdftex.def Info: Images/utilizacion.png  used on input line 349.
 (pdftex.def)             Requested size: 398.33858pt x 174.59978pt.
-<Images/ofrecer.png, id=50, 1057.9525pt x 463.7325pt>
+ [10 <./Images/edad_usuarios.png> <./Images/frec_just.png> <./Images/frec_wall.
+png>]
+<Images/ofrecer.png, id=53, 1057.9525pt x 463.7325pt>
 File: Images/ofrecer.png Graphic file (type png)
 <use Images/ofrecer.png>
-Package pdftex.def Info: Images/ofrecer.png  used on input line 326.
+Package pdftex.def Info: Images/ofrecer.png  used on input line 353.
 (pdftex.def)             Requested size: 398.33858pt x 174.59978pt.
- [10 <./Images/utilizacion.png> <./Images/ofrecer.png>]
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 346--346
+ [11 <./Images/utilizacion.png> <./Images/ofrecer.png>]
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 373--373
 []\T1/cmr/bx/n/10 Título| 
  []
 
 
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 350--350
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 377--377
 []\T1/cmr/bx/n/10 Descripción| 
  []
 
 
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 358--358
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 385--385
 []\T1/cmr/bx/n/10 Título| 
  []
 
 
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 362--362
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 389--389
 []\T1/cmr/bx/n/10 Descripción| 
  []
 
 
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 370--370
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 397--397
 []\T1/cmr/bx/n/10 Título| 
  []
 
 
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 374--374
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 401--401
 []\T1/cmr/bx/n/10 Descripción| 
  []
 
 
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 382--382
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 409--409
 []\T1/cmr/bx/n/10 Título| 
  []
 
 
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 386--386
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 413--413
 []\T1/cmr/bx/n/10 Descripción| 
  []
 
 
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 394--394
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 421--421
 []\T1/cmr/bx/n/10 Título| 
  []
 
 
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 398--398
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 425--425
 []\T1/cmr/bx/n/10 Descripción| 
  []
 
 
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 406--406
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 433--433
 []\T1/cmr/bx/n/10 Título| 
  []
 
 
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 410--410
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 437--437
 []\T1/cmr/bx/n/10 Descripción| 
  []
 
 
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 418--418
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 445--445
 []\T1/cmr/bx/n/10 Título| 
  []
 
 
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 422--422
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 449--449
 []\T1/cmr/bx/n/10 Descripción| 
  []
 
 
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 430--430
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 457--457
 []\T1/cmr/bx/n/10 Título| 
  []
 
 
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 434--434
-[]\T1/cmr/bx/n/10 Descripción| 
- []
-
-[11]
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 442--442
-[]\T1/cmr/bx/n/10 Título| 
- []
-
-
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 446--446
-[]\T1/cmr/bx/n/10 Descripción| 
- []
-
-
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 454--454
-[]\T1/cmr/bx/n/10 Título| 
- []
-
-
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 458--458
-[]\T1/cmr/bx/n/10 Descripción| 
- []
-
-
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 474--474
-[]\T1/cmr/bx/n/10 Título| 
- []
-
-
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 478--478
-[]\T1/cmr/bx/n/10 Descripción| 
- []
-
-
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 486--486
-[]\T1/cmr/bx/n/10 Título| 
- []
-
-
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 490--490
-[]\T1/cmr/bx/n/10 Descripción| 
- []
-
-
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 498--498
-[]\T1/cmr/bx/n/10 Título| 
- []
-
-
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 502--502
-[]\T1/cmr/bx/n/10 Descripción| 
- []
-
-
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 510--510
-[]\T1/cmr/bx/n/10 Título| 
- []
-
-
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 514--514
-[]\T1/cmr/bx/n/10 Descripción| 
- []
-
-
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 522--522
-[]\T1/cmr/bx/n/10 Título| 
- []
-
-
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 526--526
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 461--461
 []\T1/cmr/bx/n/10 Descripción| 
  []
 
 [12]
-Overfull \hbox (2.53969pt too wide) in paragraph at lines 534--534
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 469--469
 []\T1/cmr/bx/n/10 Título| 
  []
 
 
-Overfull \hbox (1.90097pt too wide) in paragraph at lines 538--538
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 473--473
 []\T1/cmr/bx/n/10 Descripción| 
  []
 
-<Images/Rodolfo.jpg, id=62, 304.13625pt x 304.13625pt>
+
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 481--481
+[]\T1/cmr/bx/n/10 Título| 
+ []
+
+
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 485--485
+[]\T1/cmr/bx/n/10 Descripción| 
+ []
+
+
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 493--493
+[]\T1/cmr/bx/n/10 Título| 
+ []
+
+
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 497--497
+[]\T1/cmr/bx/n/10 Descripción| 
+ []
+
+
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 505--505
+[]\T1/cmr/bx/n/10 Título| 
+ []
+
+
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 509--509
+[]\T1/cmr/bx/n/10 Descripción| 
+ []
+
+
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 517--517
+[]\T1/cmr/bx/n/10 Título| 
+ []
+
+
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 521--521
+[]\T1/cmr/bx/n/10 Descripción| 
+ []
+
+
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 529--529
+[]\T1/cmr/bx/n/10 Título| 
+ []
+
+
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 533--533
+[]\T1/cmr/bx/n/10 Descripción| 
+ []
+
+
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 539--539
+[]\T1/cmr/bx/n/10 Título| 
+ []
+
+
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 543--543
+[]\T1/cmr/bx/n/10 Descripción| 
+ []
+
+
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 549--549
+[]\T1/cmr/bx/n/10 Título| 
+ []
+
+
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 553--553
+[]\T1/cmr/bx/n/10 Descripción| 
+ []
+
+
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 561--561
+[]\T1/cmr/bx/n/10 Título| 
+ []
+
+
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 565--565
+[]\T1/cmr/bx/n/10 Descripción| 
+ []
+
+[13]
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 573--573
+[]\T1/cmr/bx/n/10 Título| 
+ []
+
+
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 577--577
+[]\T1/cmr/bx/n/10 Descripción| 
+ []
+
+
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 585--585
+[]\T1/cmr/bx/n/10 Título| 
+ []
+
+
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 589--589
+[]\T1/cmr/bx/n/10 Descripción| 
+ []
+
+
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 606--606
+[]\T1/cmr/bx/n/10 Título| 
+ []
+
+
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 610--610
+[]\T1/cmr/bx/n/10 Descripción| 
+ []
+
+
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 618--618
+[]\T1/cmr/bx/n/10 Título| 
+ []
+
+
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 622--622
+[]\T1/cmr/bx/n/10 Descripción| 
+ []
+
+
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 630--630
+[]\T1/cmr/bx/n/10 Título| 
+ []
+
+
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 634--634
+[]\T1/cmr/bx/n/10 Descripción| 
+ []
+
+
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 642--642
+[]\T1/cmr/bx/n/10 Título| 
+ []
+
+
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 646--646
+[]\T1/cmr/bx/n/10 Descripción| 
+ []
+
+
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 654--654
+[]\T1/cmr/bx/n/10 Título| 
+ []
+
+
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 658--658
+[]\T1/cmr/bx/n/10 Descripción| 
+ []
+
+
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 667--667
+[]\T1/cmr/bx/n/10 Título| 
+ []
+
+
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 671--671
+[]\T1/cmr/bx/n/10 Descripción| 
+ []
+
+[14]
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 679--679
+[]\T1/cmr/bx/n/10 Título| 
+ []
+
+
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 683--683
+[]\T1/cmr/bx/n/10 Descripción| 
+ []
+
+
+Overfull \hbox (2.53969pt too wide) in paragraph at lines 691--691
+[]\T1/cmr/bx/n/10 Título| 
+ []
+
+
+Overfull \hbox (1.90097pt too wide) in paragraph at lines 695--695
+[]\T1/cmr/bx/n/10 Descripción| 
+ []
+
+<Images/Rodolfo.jpg, id=69, 304.13625pt x 304.13625pt>
 File: Images/Rodolfo.jpg Graphic file (type jpg)
 <use Images/Rodolfo.jpg>
-Package pdftex.def Info: Images/Rodolfo.jpg  used on input line 556.
+Package pdftex.def Info: Images/Rodolfo.jpg  used on input line 713.
 (pdftex.def)             Requested size: 70.8018pt x 70.79912pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 573--574
+Underfull \hbox (badness 10000) in paragraph at lines 730--731
 
  []
 
-<Images/Tania.jpg, id=63, 301.125pt x 304.13625pt>
+<Images/Tania.jpg, id=70, 301.125pt x 304.13625pt>
 File: Images/Tania.jpg Graphic file (type jpg)
 <use Images/Tania.jpg>
-Package pdftex.def Info: Images/Tania.jpg  used on input line 579.
+Package pdftex.def Info: Images/Tania.jpg  used on input line 736.
 (pdftex.def)             Requested size: 70.8018pt x 71.50914pt.
-[13 <./Images/Rodolfo.jpg> <./Images/Tania.jpg>]
-<Images/Chumly.jpg, id=68, 225.84375pt x 225.84375pt>
+[15 <./Images/Rodolfo.jpg> <./Images/Tania.jpg>]
+<Images/Chumly.jpg, id=74, 225.84375pt x 225.84375pt>
 File: Images/Chumly.jpg Graphic file (type jpg)
 <use Images/Chumly.jpg>
-Package pdftex.def Info: Images/Chumly.jpg  used on input line 602.
+Package pdftex.def Info: Images/Chumly.jpg  used on input line 759.
 (pdftex.def)             Requested size: 70.8018pt x 70.80344pt.
-<Images/CasosUso.png, id=69, 521.95pt x 458.71375pt>
-File: Images/CasosUso.png Graphic file (type png)
-<use Images/CasosUso.png>
-Package pdftex.def Info: Images/CasosUso.png  used on input line 624.
-(pdftex.def)             Requested size: 227.62204pt x 200.04283pt.
- [14 <./Images/Chumly.jpg> <./Images/CasosUso.png>] 
+<Images/DiagramaUso.png, id=75, 703.62875pt x 563.10374pt>
+File: Images/DiagramaUso.png Graphic file (type png)
+<use Images/DiagramaUso.png>
+Package pdftex.def Info: Images/DiagramaUso.png  used on input line 781.
+(pdftex.def)             Requested size: 227.62204pt x 182.15591pt.
+ [16 <./Images/Chumly.jpg> <./Images/DiagramaUso.png>] 
 AED: lastpage setting LastPage
-[15] (./memoria.aux
+[17] (./memoria.aux
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
 ) ) 
 Here is how much of TeX's memory you used:
  3781 strings out of 492609
- 51848 string characters out of 6131462
- 150598 words of memory out of 5000000
+ 51863 string characters out of 6131462
+ 153599 words of memory out of 5000000
  7627 multiletter control sequences out of 15000+600000
  11968 words of font info for 25 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -583,10 +694,10 @@ m-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb
 ></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/f
 onts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm
 -super/sfti1000.pfb>
-Output written on memoria.pdf (15 pages, 432487 bytes).
+Output written on memoria.pdf (17 pages, 444552 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+ 118 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

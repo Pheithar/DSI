@@ -1,0 +1,117 @@
+\documentclass{uc3mpracticas}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                   Plantilla Prácticas UC3M                               %%%
+%%%                Universidad Carlos III de Madrid                          %%%
+%%%                   Alejandro Valverde Mahou                               %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Permitir cabeceras y pie de páginas personalizados
+\pagestyle{fancy}
+
+%Path por defecto de las imágenes
+\graphicspath{ {./images/} }
+
+%Declarar formato de encabezado y pie de página de las páginas del documento
+\fancypagestyle{doc}{
+  %Cabecera
+  \headerpr[1]{Práctica Optativa: \textbf{Gamificación}}{\textbf{}}{Diseño de Sistemas Interactivos}
+  %Pie de Página
+  \footerpr{\textbf{Universidad Carlos III de Madrid}}{}{{\thepage} de \pageref{LastPage}}
+}
+
+%Declarar formato de encabezado y pie del título e indice
+\fancypagestyle{titu}{%
+  %Cabecera
+  \headerpr{}{}{}
+  %Pie de Página
+  \footerpr{}{}{}
+}
+
+
+\appto\frontmatter{\pagestyle{titu}}
+\appto\mainmatter{\pagestyle{doc}}
+
+
+\begin{document}
+  %Comienzo formato título
+  \frontmatter
+
+
+  \centeredtitle{Images/LogoUC3M.png}{Grado en Ingeniería Informática}{Curso 2020}{Diseño de Sistemas Interactivos}{Práctica Optativa: \textbf{Gamificación}}
+
+    \vspace{50mm}
+
+    \begin{center}
+      \line(1, 0){450}
+    \end{center}
+
+    \authorsright{Alejandro Parrado Rivas}{100383453}{Adrián Sanz Gómez}{100383473}{Alejandro Valverde Mahou}{100383383}{Andrés Vinagre Blanco}{100383414}
+
+    \newpage
+
+
+    %Índice
+    \tableofcontents
+
+  \newpage
+
+  %Comienzo formato documento general
+  \mainmatter
+
+  \section{Habitica}
+
+  \textit{Habitica} es una página web y aplicación móvil de administración de tareas en línea, que, con el objetivo de ganar más público, diferenciarse de la competencia y mantener a los usuarios interesados, usan la gamificación, tomando la forma de un juego de rol.
+
+  \imgcenter{Images/habitica.png}
+
+  La interfaz completa está representada como si se tratara de un juego de rol clásico, donde las misiones de nuestro personaje son las distintas tareas que tenemos que realizar. Estas tareas son editables, y personalizables, y se pueden organizar por categorías.
+
+  \vspace{4mm}
+
+  Hemos elegido analizar esta página web debido a que está directamente enfocada a la gamificación, y la usa en todos los aspectos que puede. Algunos de estos aspectos gamificados son:
+
+  \subsection{Perfil de usuario}
+
+  \imgcenter{Images/profile.png}
+
+  El perfil de los usuarios tiene un avatar elegido por el usuario, nombre real y \textit{nickname}. También le acompaña una barra de salud y de experiencia. Por último, indica el nivel y especialidad del usuario.
+
+  \vspace{2mm}
+
+  Este perfil permite a los usuarios indentificarse dentro de la aplicación, y ayuda a generar un sentimiento de mejora, con la experiencia y el nivel. La barra de nivel se rellena cuando se cumplen las tareas, por lo que los usuarios se ven incitados a realizar estas tareas, con el propósito de aumentar el nivel. La barra de salud va bajando según los usuarios completan tareas que los propios usuarios han definido como negativas. El avatar favorece este sentimiento de identificaación del usuario, porque es personalizable, y según se consiguen nuevos objetos, estos aparecen visualmente en el avatar.
+
+  \vspace{3mm}
+
+  La incorporación de un apartado para el perfil es lo que diferenecia a esta aplicación de otras aplicaciones de administración de tareas, porque permite al usuario sentir progreso, mejora y recompensa. Esto favorece que los usuarios usen la aplicación, y la revisen regularmente para aumentar su nivel y conseguir las recompensas que eso acarrea. Esta técnica parece bastante útil y ha permitido el crecimiento de la aplicación.
+
+  \subsection{Moneda Virtual}
+
+  \imgcenter{Images/coins.png}
+
+  Otra forma de hacer que los usuarios tengan interés por completar las tareas es ofreciendo recompensas en forma de moneda virtual, que puede ser utilizada en el mercado para conseguir distintos objetos para nuestro inventario. Existen dos tipos de monedas. Las \textit{monedas de oro}, que se utilizan para comprar la mayoría de objetos y las \textit{gemas}, que se usan para comprar los objetos \textit{premiun}.
+
+  \vspace{2mm}
+
+  Al igual que la experiencia, y con la promesa de una recompensa, esta moneda virtual potencia el deseo de realizar las tareas por parte de los usuarios, dado que recibirán una recompensa si lo hacen
+
+  \subsection{Inventario y Mercado}
+
+  \imgcenter{Images/inventory.png}
+  \imgcenter{Images/market.png}
+
+  \subsection{Amigos y Comunidad}
+
+  \imgcenter{Images/friends.png}
+  \imgcenter{Images/community.png}
+
+
+
+
+
+
+
+
+\end{document}
