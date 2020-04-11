@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.1.20)  11 APR 2020 17:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.1.20)  11 APR 2020 18:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -375,18 +375,72 @@ LaTeX Info: Redefining \% on input line 1.
  [2]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 11.39996pt on input line 66.
+<Images/DSIinicio.png, id=15, 1927.2pt x 1084.05pt>
+File: Images/DSIinicio.png Graphic file (type png)
+<use Images/DSIinicio.png>
+Package pdftex.def Info: Images/DSIinicio.png  used on input line 68.
+(pdftex.def)             Requested size: 227.62204pt x 128.02927pt.
+<Images/general.png, id=16, 1927.2pt x 1084.05pt>
+File: Images/general.png Graphic file (type png)
+<use Images/general.png>
+Package pdftex.def Info: Images/general.png  used on input line 69.
+(pdftex.def)             Requested size: 227.62204pt x 128.02927pt.
+<Images/perfil.png, id=17, 1927.2pt x 1084.05pt>
+File: Images/perfil.png Graphic file (type png)
+<use Images/perfil.png>
+Package pdftex.def Info: Images/perfil.png  used on input line 70.
+(pdftex.def)             Requested size: 227.62204pt x 128.02927pt.
+<Images/prototipo1.png, id=18, 1084.05pt x 1883.035pt>
+File: Images/prototipo1.png Graphic file (type png)
+<use Images/prototipo1.png>
+Package pdftex.def Info: Images/prototipo1.png  used on input line 74.
+(pdftex.def)             Requested size: 227.62204pt x 395.36282pt.
+ [3 <./Images/DSIinicio.png> <./Images/general.png> <./Images/perfil.png>]
+<Images/prototipo2.png, id=25, 1084.05pt x 1883.035pt>
+File: Images/prototipo2.png Graphic file (type png)
+<use Images/prototipo2.png>
+Package pdftex.def Info: Images/prototipo2.png  used on input line 75.
+(pdftex.def)             Requested size: 227.62204pt x 395.36282pt.
+ [4 <./Images/prototipo1.png>]
+<Images/ALEJANpage_11.png, id=30, 1927.2pt x 1084.05pt>
+File: Images/ALEJANpage_11.png Graphic file (type png)
+<use Images/ALEJANpage_11.png>
+Package pdftex.def Info: Images/ALEJANpage_11.png  used on input line 79.
+(pdftex.def)             Requested size: 227.62204pt x 128.02927pt.
+<Images/ALEJANpage_2.png, id=31, 1927.2pt x 1084.05pt>
+File: Images/ALEJANpage_2.png Graphic file (type png)
+<use Images/ALEJANpage_2.png>
+Package pdftex.def Info: Images/ALEJANpage_2.png  used on input line 80.
+(pdftex.def)             Requested size: 227.62204pt x 128.02927pt.
+ [5 <./Images/prototipo2.png> <./Images/ALEJANpage_11.png>]
+<Images/home.png, id=37, 5463.612pt x 3072.9204pt>
+File: Images/home.png Graphic file (type png)
+<use Images/home.png>
+Package pdftex.def Info: Images/home.png  used on input line 84.
+(pdftex.def)             Requested size: 227.62204pt x 128.00677pt.
+<Images/search.png, id=38, 5561.8992pt x 3122.064pt>
+File: Images/search.png Graphic file (type png)
+<use Images/search.png>
+Package pdftex.def Info: Images/search.png  used on input line 85.
+(pdftex.def)             Requested size: 227.62204pt x 127.76726pt.
+<Images/profile.png, id=39, 5463.612pt x 3072.9204pt>
+File: Images/profile.png Graphic file (type png)
+<use Images/profile.png>
+Package pdftex.def Info: Images/profile.png  used on input line 86.
+(pdftex.def)             Requested size: 227.62204pt x 128.00677pt.
 
 
 AED: lastpage setting LastPage
-[3] (./practica_2-1.aux
+[6 <./Images/ALEJANpage_2.png> <./Images/home.png> <./Images/search.png> <./Ima
+ges/profile.png>] [7] (./practica_2-1.aux
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
 ) ) 
 Here is how much of TeX's memory you used:
- 3721 strings out of 492609
- 50849 string characters out of 6131462
+ 3771 strings out of 492609
+ 51939 string characters out of 6131462
  137487 words of memory out of 5000000
- 7576 multiletter control sequences out of 15000+600000
+ 7616 multiletter control sequences out of 15000+600000
  31475 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,10n,45p,803b,359s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -394,10 +448,10 @@ Here is how much of TeX's memory you used:
 ve/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/helvetic/uhvro8a.pfb>
-Output written on practica_2-1.pdf (3 pages, 80765 bytes).
+Output written on practica_2-1.pdf (7 pages, 3080452 bytes).
 PDF statistics:
- 30 PDF objects out of 1000 (max. 8388607)
- 19 compressed objects within 1 object stream
+ 64 PDF objects out of 1000 (max. 8388607)
+ 29 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
