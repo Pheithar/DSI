@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.1.20)  11 APR 2020 17:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.1.20)  11 APR 2020 17:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**practica_opt.tex
-(./practica_opt.tex
+**practica_2-2.tex
+(./practica_2-2.tex
 LaTeX2e <2018-12-01>
 (./uc3mpracticas.cls (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
@@ -199,11 +199,11 @@ LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/helvet.sty
 Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
 ))
-(./practica_opt.aux
+(./practica_2-2.aux
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
 )
-\openout1 = `practica_opt.aux'.
+\openout1 = `practica_2-2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
 LaTeX Font Info:    ... okay on input line 38.
@@ -325,11 +325,11 @@ e
 ))
 ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 38.
-<Images/LogoUC3M.png, id=1, 337.26pt x 118.4425pt>
-File: Images/LogoUC3M.png Graphic file (type png)
-<use Images/LogoUC3M.png>
-Package pdftex.def Info: Images/LogoUC3M.png  used on input line 43.
-(pdftex.def)             Requested size: 227.62204pt x 79.9398pt.
+<Images/logo_help.png, id=1, 231.11343pt x 246.1697pt>
+File: Images/logo_help.png Graphic file (type png)
+<use Images/logo_help.png>
+Package pdftex.def Info: Images/logo_help.png  used on input line 43.
+(pdftex.def)             Requested size: 227.62204pt x 242.45415pt.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 16.41594pt on input line 43.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
@@ -364,83 +364,37 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 9.49997pt on input line 51.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Images/LogoUC3M.png>] (.
-/practica_opt.toc
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Images/logo_help.png>] (
+./practica_2-2.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
 \tf@toc=\write3
-\openout3 = `practica_opt.toc'.
+\openout3 = `practica_2-2.toc'.
 
  [2]
-<Images/habitica.png, id=15, 1882.03125pt x 701.62125pt>
-File: Images/habitica.png Graphic file (type png)
-<use Images/habitica.png>
-Package pdftex.def Info: Images/habitica.png  used on input line 68.
-(pdftex.def)             Requested size: 227.62204pt x 84.85468pt.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 76.
-<Images/profile.png, id=16, 452.69125pt x 162.6075pt>
-File: Images/profile.png Graphic file (type png)
-<use Images/profile.png>
-Package pdftex.def Info: Images/profile.png  used on input line 78.
-(pdftex.def)             Requested size: 227.62204pt x 81.76256pt.
-<Images/coin_h.png, id=17, 153.57375pt x 37.13875pt>
-File: Images/coin_h.png Graphic file (type png)
-<use Images/coin_h.png>
-Package pdftex.def Info: Images/coin_h.png  used on input line 92.
-(pdftex.def)             Requested size: 227.62204pt x 55.04948pt.
- [3 <./Images/habitica.png> <./Images/profile.png> <./Images/coin_h.png>]
-<Images/market.png, id=24, 619.31375pt x 205.76875pt>
-File: Images/market.png Graphic file (type png)
-<use Images/market.png>
-Package pdftex.def Info: Images/market.png  used on input line 104.
-(pdftex.def)             Requested size: 227.62204pt x 75.62773pt.
-<Images/logros.png, id=25, 660.4675pt x 398.48875pt>
-File: Images/logros.png Graphic file (type png)
-<use Images/logros.png>
-Package pdftex.def Info: Images/logros.png  used on input line 114.
-(pdftex.def)             Requested size: 227.62204pt x 137.33282pt.
-<Images/community.png, id=26, 1232.605pt x 533.995pt>
-File: Images/community.png Graphic file (type png)
-<use Images/community.png>
-Package pdftex.def Info: Images/community.png  used on input line 128.
-(pdftex.def)             Requested size: 227.62204pt x 98.60826pt.
- [4 <./Images/market.png> <./Images/logros.png>]
-<Images/nivel.png, id=32, 1422.2736pt x 653.3208pt>
-File: Images/nivel.png Graphic file (type png)
-<use Images/nivel.png>
-Package pdftex.def Info: Images/nivel.png  used on input line 147.
-(pdftex.def)             Requested size: 227.62204pt x 104.55339pt.
- [5 <./Images/community.png> <./Images/nivel.png>]
-<Images/coins.png, id=38, 994.4352pt x 711.1368pt>
-File: Images/coins.png Graphic file (type png)
-<use Images/coins.png>
-Package pdftex.def Info: Images/coins.png  used on input line 168.
-(pdftex.def)             Requested size: 227.62204pt x 162.77673pt.
-
 
 AED: lastpage setting LastPage
-[6 <./Images/coins.png>] (./practica_opt.aux
+[3] (./practica_2-2.aux
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
 ) ) 
 Here is how much of TeX's memory you used:
- 3762 strings out of 492609
- 51645 string characters out of 6131462
- 140508 words of memory out of 5000000
- 7609 multiletter control sequences out of 15000+600000
- 31475 words of font info for 34 fonts, out of 8000000 for 9000
+ 3720 strings out of 492609
+ 50836 string characters out of 6131462
+ 137495 words of memory out of 5000000
+ 7575 multiletter control sequences out of 15000+600000
+ 29739 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,45p,884b,359s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,10n,45p,803b,359s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/helvetic/uhvro8a.pfb>
-Output written on practica_opt.pdf (6 pages, 240463 bytes).
+Output written on practica_2-2.pdf (3 pages, 80787 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
- 25 compressed objects within 1 object stream
+ 30 PDF objects out of 1000 (max. 8388607)
+ 19 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

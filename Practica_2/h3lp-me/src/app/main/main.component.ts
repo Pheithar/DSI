@@ -24,7 +24,6 @@ export class MainComponent implements OnInit {
   ngOnInit(){
     this.s_users = this.firestoreService.getUsers().subscribe(data=>{
       this.users = data;
-      console.log(this.users);
     });
   }
 
@@ -33,12 +32,10 @@ export class MainComponent implements OnInit {
   }
 
   public change() {
-    console.log("A");
-
   }
 
   public testNavigate(){
-    console.log(this.users);
+    console.log(this.users[0].level);
 
     this.router.navigate(['/profile', this.users[0].id,     // En URL y participan en el routing.
                         {param_extra1:'XXX',param_extra2:57}],  // Se pasan codificados en la url.

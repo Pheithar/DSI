@@ -1,0 +1,7 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{3}% 
+\contentsline {section}{\numberline {2}Tecnolog\IeC {\'\i }a Empleada}{3}% 
+\contentsline {section}{\numberline {3}Productos Generados}{3}% 
+\contentsline {section}{\numberline {4}Manual de Despliegue}{3}% 
+\contentsline {section}{\numberline {5}Manual de Uso}{3}% 
+\contentsline {section}{\numberline {6}Distribuci\IeC {\'o}n del Trabajo}{3}% 

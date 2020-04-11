@@ -4,6 +4,7 @@
 \contentsline {subsection}{\numberline {1.2}Moneda Virtual y Mercado}{3}% 
 \contentsline {subsection}{\numberline {1.3}Logros}{4}% 
 \contentsline {subsection}{\numberline {1.4}Amigos y Comunidad}{5}% 
-\contentsline {subsection}{\numberline {1.5}Reflesxi\IeC {\'o}n General}{5}% 
+\contentsline {subsection}{\numberline {1.5}Reflexi\IeC {\'o}n General}{5}% 
 \contentsline {section}{\numberline {2}Nuestra aplicaci\IeC {\'o}n: H3lp Me}{5}% 
 \contentsline {subsection}{\numberline {2.1}Perfil: Nivel}{5}% 
+\contentsline {subsection}{\numberline {2.2}Moneda Virtual}{6}% 

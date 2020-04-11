@@ -1,0 +1,88 @@
+\documentclass{uc3mpracticas}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                   Plantilla Prácticas UC3M                               %%%
+%%%                Universidad Carlos III de Madrid                          %%%
+%%%                   Alejandro Valverde Mahou                               %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Permitir cabeceras y pie de páginas personalizados
+\pagestyle{fancy}
+
+%Path por defecto de las imágenes
+\graphicspath{ {./images/} }
+
+%Declarar formato de encabezado y pie de página de las páginas del documento
+\fancypagestyle{doc}{
+  %Cabecera
+  \headerpr[1]{Fase de Diseño}{\textbf{}}{Diseño de Sistemas Interactivos}
+  %Pie de Página
+  \footerpr{\textbf{Universidad Carlos III de Madrid}}{}{{\thepage} de \pageref{LastPage}}
+}
+
+%Declarar formato de encabezado y pie del título e indice
+\fancypagestyle{titu}{%
+  %Cabecera
+  \headerpr{}{}{}
+  %Pie de Página
+  \footerpr{}{}{}
+}
+
+
+\appto\frontmatter{\pagestyle{titu}}
+\appto\mainmatter{\pagestyle{doc}}
+
+
+\begin{document}
+  %Comienzo formato título
+  \frontmatter
+
+
+  \centeredtitle{Images/logo_help.png}{Grado en Ingeniería Informática}{Curso 2020}{Diseño de Sistemas Interactivos}{Fase de Diseño: H3lp Me}
+
+    \vspace{2mm}
+
+    \begin{center}
+      \line(1, 0){450}
+    \end{center}
+
+    \authorsright{Alejandro Parrado Rivas}{100383453}{Adrián Sanz Gómez}{100383473}{Alejandro Valverde Mahou}{100383383}{Andrés Vinagre Blanco}{100383414}
+
+    \newpage
+
+
+    %Índice
+    \tableofcontents
+
+  \newpage
+
+  %Comienzo formato documento general
+  \mainmatter
+
+  \section{Metodología y Documentación del Proceso de Diseño}
+
+  \subsection{Prototipo 1}
+
+  \subsection{Prototipo 2}
+
+  \subsection{Prototipo 3}
+
+  \subsection{Prototipo 4}
+
+
+  \section{Fase Divergente: Conceptos de Diseño y Sketches}
+
+  \section{Fase Convergente: Selección de un Concepto de Diseño}
+
+  \section{Diseño Final: Escenario y Detalles de Diseño}
+
+
+
+
+
+
+
+
+\end{document}
