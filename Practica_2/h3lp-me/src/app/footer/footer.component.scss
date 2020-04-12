@@ -1,0 +1,75 @@
+// Tamaño de los iconos
+$icon-size: 30px;
+$small-icon-size: 10px;
+
+$icon-size: 30px;
+
+// Padding por defecto de los elementos
+$default-padding: 5px;
+
+// Número de autores
+$num-authors: 4;
+
+// Color de la fuente por defecto
+$fount-color: black;
+
+// Clase para todos los iconos del footer
+.icon{
+  width: $icon-size;
+  height: auto;
+  padding: $default-padding;
+}
+
+//Iconos que son mas pequeños de lo normal
+.small-icon{
+  @extend .icon;
+  width: $small-icon-size;
+}
+
+// clase para los textos del footer
+.text{
+  padding: $default-padding;
+  color: $fount-color;
+}
+
+// Clase para todo el footer
+.footer{
+  text-align: center;
+  //Eliminar despues
+  background-color: red;
+}
+
+// clase donde se encuentran los elementos principales del footer
+.bot-footer{
+  display: inline-flex;
+  width: 100%;
+}
+
+// cad uno de los componentes del footer
+.block-footer{
+  display: inline-flex;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+// clase para los autores en el footer
+.authors{
+  width: 100%;
+  height: auto;
+}
+
+// Clase para cada uno de los autores
+.author{
+  @extend .text;
+  text-decoration: none;
+  display: inline-flex;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+// Clase para las referencias a otras páginas y a recursos usados
+.referency{
+  width: 100%;
+  text-align: left;
+  display: inline-flex;
+}

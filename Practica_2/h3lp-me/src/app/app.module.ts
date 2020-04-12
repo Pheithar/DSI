@@ -15,7 +15,9 @@ import { RouterModule, Routes } from '@angular/router';
 // Módulos
 import { MainComponent } from './main/main.component'; // Página principal
 import { ProfileComponent } from './profile/profile.component'; //Página de perfil
-import { NotFoundComponent } from './not-found/not-found.component'; // Página del error 404
+import { NotFoundComponent } from './not-found/not-found.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component'; // Página del error 404
 
 // Definición de las rutas
 const appRoutes: Routes = [
@@ -31,7 +33,9 @@ const appRoutes: Routes = [
     AppComponent,
     MainComponent,
     ProfileComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes, { enableTracing: true }), //Enable tracing es solo para debuggear
