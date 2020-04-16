@@ -10,3 +10,12 @@ $default-padding: 5px;
   height: auto;
   padding: $default-padding;
 }
+
+.example-card {
+  max-width: 15%;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}

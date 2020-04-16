@@ -67,12 +67,7 @@ import { FooterComponent } from './footer/footer.component';
 // Componente de las tarjetas
 import { CardComponent } from './card/card.component';
 
-// Definición de las rutas
-const appRoutes: Routes = [
-  { path: '', component: MainComponent },
-  { path: 'profile/:id', component: ProfileComponent },
-  { path: '**', component: NotFoundComponent }
-];
+
 
 
 
@@ -91,12 +86,11 @@ const appRoutes: Routes = [
     CardComponent
   ],
   imports: [
-    RouterModule.forRoot(appRoutes, { enableTracing: true }), //Enable tracing es solo para debuggear
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     BrowserAnimationsModule,
-    //material
+    //material{ enableTracing: true }
     FormsModule,
     MatAutocompleteModule,
     MatBadgeModule,

@@ -25,17 +25,12 @@ export class HeaderComponent{
   username: string;
   password: string;
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, public router: Router) {}
 
   abrirIniciarSesion(): void {
     const dialogRef = this.dialog.open(popUpIniciar, {
       width: '20%',
       data: {password: this.password, username: this.username}
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-
-      this.username = result;
     });
   }
 
@@ -44,11 +39,15 @@ export class HeaderComponent{
       width: '20%',
       data: {password: this.password, username: this.username}
     });
+  }
 
-    dialogRef.afterClosed().subscribe(result => {
+  getGlobalUser(){
+    return GlobalService.currentUser;
+  }
 
-      this.username = result;
-    });
+  cerrarSesion(){
+    GlobalService.currentUser = undefined;
+    this.router.navigate([""]);
   }
 
 }
@@ -59,12 +58,14 @@ export class HeaderComponent{
 
 @Component({
   selector: 'pop-up-iniciar',
-  templateUrl: 'header.component.pop-up-iniciar.html',
+  templateUrl: './header.component.pop-up-iniciar.html',
 })
 export class popUpIniciar implements OnInit{
 
   public users: User[];
   public s_users: Subscription;
+
+  public wrong_user: boolean;
 
 
 
@@ -92,14 +93,24 @@ export class popUpIniciar implements OnInit{
 
   iniciarSesion(username:string, password:string){
 
+    this.wrong_user = false;
+
     let user = this.comprobarDatosInicioSesion(this.users, username, password);
 
     if(user){
-      console.log("INICIAR SESIÓN");
+      let id = user.id;
+
+      //poner ese usuario como el que ha iniciado sesión
+      GlobalService.currentUser = user;
+
+      //Navegar al perfil
+      this.router.navigate(['/profile', id]);     // En URL y participan en el routing.
+      this.onNoClick();
+
 
     }
     else{
-      console.log("Nombre o contraseña incorrecto");
+        this.wrong_user = true;
 
     }
 
@@ -111,7 +122,7 @@ export class popUpIniciar implements OnInit{
         return users[i]
       }
     }
-    return ""
+    return undefined
   }
 
 
@@ -127,7 +138,7 @@ interface h3lperSelect {
 
 @Component({
   selector: 'pop-up-registro',
-  templateUrl: 'header.component.pop-up-registro.html',
+  templateUrl: './header.component.pop-up-registro.html',
 })
 export class popUpRegistro implements OnInit{
 
@@ -142,6 +153,7 @@ export class popUpRegistro implements OnInit{
     {value: true, viewValue: 'Quiero ser h3lper'},
   ];
 
+  public used_name:boolean;
 
 
   hide = true;
@@ -166,6 +178,8 @@ export class popUpRegistro implements OnInit{
 
   async iniciarRegistro(username:string, password:string){
 
+    this.used_name = false;
+
     let unused_name = this.checkUsername(this.users, username);
 
     if (unused_name) {
@@ -178,14 +192,13 @@ export class popUpRegistro implements OnInit{
 
         //Navegar al perfil
         this.router.navigate(['/profile', id]);     // En URL y participan en el routing.
-
+        this.onNoClick();
       }
       else{
-        console.log("Las contraseñas no coinciden");
       }
     }
     else{
-      console.log("Nombre ya usado");
+      this.used_name = true;
     }
   }
 
