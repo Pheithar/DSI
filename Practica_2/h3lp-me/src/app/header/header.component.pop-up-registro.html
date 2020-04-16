@@ -1,0 +1,49 @@
+<h2>Crear Cuenta</h2>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Nombre de Usuario</mat-label>
+    <input matInput [(ngModel)]="data.username">
+  </mat-form-field>
+
+</div>
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label>Contraseña</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="data.password">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+
+</div>
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label>Repetir Contraseña</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="password_confirm">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+</div>
+
+<div>
+  <mat-form-field>
+    <mat-label>H3lper</mat-label>
+    <mat-select [(ngModel)]="h3lper_selected">
+      <mat-option *ngFor="let value of h3lper" [value]="value.value">
+        {{value.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<!-- Revisar estilo -->
+<button mat-raised-button (click)="iniciarRegistro(data.username, data.password)" [disabled]="data.username && data.password && password_confirm && h3lper_selected != undefined ? 'false' : 'true'">Crear Cuenta</button>
+
+
+
+
+
+
+
+<button mat-raised-button (click)="onNoClick()">Cancelar</button>

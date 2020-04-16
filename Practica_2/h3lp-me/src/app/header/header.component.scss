@@ -1,0 +1,12 @@
+// Tamaño del logo principal
+$main-logo-size: 100px;
+
+// Padding por defecto de los elementos
+$default-padding: 5px;
+
+// Clase para el logo
+.logo{
+  width: $main-logo-size;
+  height: auto;
+  padding: $default-padding;
+}

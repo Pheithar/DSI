@@ -1,5 +1,6 @@
 //Test
 import { Component, OnInit,OnDestroy } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { FirestoreService } from '../services/firestore/firestore.service'
 import { Subscription } from 'rxjs';
 
@@ -11,33 +12,34 @@ import { User } from '../user'
   styleUrls: ['./profile.component.scss']
 })
 
-export class ProfileComponent implements OnInit,OnDestroy {
-  public users: User[];
-  public s_users: Subscription;
+export class ProfileComponent implements OnInit {
 
-  constructor(private firestoreService: FirestoreService){
-    this.users = [];
+  public user: User;
+
+  constructor(private firestoreService: FirestoreService,
+              private router: Router,
+              private route: ActivatedRoute,
+              )
+  {}
+
+
+  ngOnInit() {
+    // // EJEMPLO de recuperación de parametros pasados en {state}:
+    // console.log("NOT IN URL: ", history.state.param_not_in_url);
+
+    this.route.paramMap.subscribe(params=>{
+      // // Aquí se recuperan todos los parametros pasados en la URL:
+      // console.log("IN URL: ", params);
+
+      let id =params['params']['id'];
+      if(id!=undefined)
+        this.firestoreService.getUser(id).then(r=>{
+          this.user=r;
+        });
+      else{
+          console.log("USUARIO DESCONOCIDO");
+      }
+    })
   }
 
-  ngOnInit(){
-    this.s_users = this.firestoreService.getUsers().subscribe(data=>{
-      this.users = data;
-    });
-  }
-
-  ngOnDestroy(){
-    this.s_users.unsubscribe();
-  }
-
-  // TEST PARA CREAR USUARIOS
-  public createUser(){
-    let aux: User = new User('1', 'AAA', 'BBB', 1);
-    this.firestoreService.createUser(aux);
-    console.log(this.users);
-    return 1;
-  }
-
-  public test(){
-    console.log("FUNCIONA");
-  }
 }
