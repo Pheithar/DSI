@@ -1,0 +1,11 @@
+BUSCADOR
+<button mat-raised-button routerLink="services">IR A SERVICIOS</button>
+
+<mat-form-field>
+  <mat-label>Buscador de Servicios</mat-label>
+  <input matInput type="text" [(ngModel)]="value">
+  <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
+<button mat-button>BUSCAR</button>

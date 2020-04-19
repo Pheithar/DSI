@@ -13,12 +13,16 @@ import {HeaderComponent, popUpIniciar, popUpRegistro} from './header/header.comp
 import { FooterComponent } from './footer/footer.component';
 // Componente de las tarjetas
 import { CardComponent } from './card/card.component';
+// Componente donde están todos los servicios
+import { ServiciosComponent } from './servicios/servicios.component';
 
 // Definición de las rutas
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'profile/:id', component: ProfileComponent },
-  { path: '**', component: NotFoundComponent }
+  { path: 'services', component: ServiciosComponent },
+  { path: 'error404', component: NotFoundComponent },
+  { path: '**', redirectTo:'error404' }
 ];
 
 @NgModule({

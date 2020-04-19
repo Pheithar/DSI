@@ -66,6 +66,9 @@ import {HeaderComponent, popUpIniciar, popUpRegistro} from './header/header.comp
 import { FooterComponent } from './footer/footer.component';
 // Componente de las tarjetas
 import { CardComponent } from './card/card.component';
+// Componente donde están todos los servicios
+import { ServiciosComponent } from './servicios/servicios.component';
+import { SearcherComponent } from './searcher/searcher.component';
 
 
 
@@ -83,7 +86,9 @@ import { CardComponent } from './card/card.component';
     HeaderComponent,
     popUpIniciar,
     popUpRegistro,
-    CardComponent
+    CardComponent,
+    ServiciosComponent,
+    SearcherComponent
   ],
   imports: [
     BrowserModule,

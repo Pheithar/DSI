@@ -1,21 +1,70 @@
-// Tamaño del logo principal
-$main-logo-size: 100px;
+// Tamaño de alto del header
+$header-height: 100px;
+
+//Tamaño de la fuente del título
+$title-font-size: 40px;
 
 // Padding por defecto de los elementos
 $default-padding: 5px;
 
+$primary-color: #002d6f;
+$secundary-color: #4f9ae1;
+
+
+.header{
+  background-color: $primary-color;
+  display: inline-flex;
+  width: 100%;
+  position: relative;
+}
+
+// Div que contiene el logo y el título
+.titleBox{
+  width: 30%;
+  position: relative;
+}
+
 // Clase para el logo
 .logo{
-  width: $main-logo-size;
+  width: $header-height;
   height: auto;
   padding: $default-padding;
 }
 
-.example-card {
-  max-width: 15%;
+.title{
+  position: absolute;
+  top: $header-height/2 - $title-font-size/3;
+  font-size: $title-font-size;
+  left: $header-height + $title-font-size;
+}
+
+.rightPos{
+  position: absolute;
+  right: 10px;
+  top: $header-height/4;
+}
+
+.button{
+  background-color: $secundary-color;
+  margin: 15px;
+  border-radius: 20px;
+}
+
+.profile {
+  @extend .rightPos;
+  background-color: $secundary-color;
+  width: 15%;
+  top: 15%;
+  height: 40%;
 }
 
 .example-header-image {
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   background-size: cover;
+}
+
+.hyperlink{
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
 }

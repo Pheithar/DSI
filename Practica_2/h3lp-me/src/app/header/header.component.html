@@ -1,20 +1,28 @@
 <div class="header">
 
-  <img class="logo" src="../assets/logos/h3lp-me-logo.png" alt="Logo de H3lp Me">
-  <div *ngIf="getGlobalUser() == undefined">
-    <button mat-raised-button (click)="abrirIniciarRegistro()">Registrarse</button>
-    <button mat-raised-button (click)="abrirIniciarSesion()">Iniciar Sesión</button>
+  <div class="titleBox">
+    <img routerLink="" class="logo" src="../assets/logos/h3lp-me-logo-circle.png" alt="Logo de H3lp Me">
+
+    <h2 class="title">H3lp Me</h2>
+  </div>
+
+
+  <div class="rightPos" *ngIf="getGlobalUser() == undefined">
+    <button class="button" mat-raised-button (click)="abrirIniciarRegistro()">Registrarse</button>
+    <button class="button" mat-raised-button (click)="abrirIniciarSesion()">Iniciar Sesión</button>
   </div>
 
   <button mat-raised-button (click)="cerrarSesion()">Cerrar Sesión(Temporal)</button>
 
-  <mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Nombre de Usuario</mat-card-title>
-    <mat-card-subtitle>Level 12</mat-card-subtitle>
-  </mat-card-header>
-</mat-card>
+  <mat-card class="profile" *ngIf="getGlobalUser() != undefined">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image" (click)="irPerfil()"></div>
+      <mat-card-title>Nombre de Usuario</mat-card-title>
+      <mat-card-subtitle>Level 12</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
 
+  <br><br>
 
 </div>
+<app-searcher></app-searcher>

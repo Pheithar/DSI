@@ -16,30 +16,43 @@ export class ProfileComponent implements OnInit {
 
   public user: User;
 
+  public users: User[];
+  public s_users: Subscription;
+
+  public loaded:boolean;
+
   constructor(private firestoreService: FirestoreService,
               private router: Router,
-              private route: ActivatedRoute,
-              )
-  {}
+              private route: ActivatedRoute){
+                this.users=[];
+                this.loaded = false;
+              }
 
 
-  ngOnInit() {
-    // // EJEMPLO de recuperación de parametros pasados en {state}:
-    // console.log("NOT IN URL: ", history.state.param_not_in_url);
+  async ngOnInit() {
+    this.s_users = await this.firestoreService.getUsers().subscribe(data=>{
+      this.users = data;
+      console.log(this.users);
+      this.route.paramMap.subscribe(async params=>{
+        let id=params['params']['id'];
+        this.user = this.comprobarUser(this.users, id);
+        if (this.user==undefined) {
+          this.router.navigate(['**']);
+        }
+        else{
+          this.loaded = true;
+        }
+      });
+    });
+  }
 
-    this.route.paramMap.subscribe(params=>{
-      // // Aquí se recuperan todos los parametros pasados en la URL:
-      // console.log("IN URL: ", params);
-
-      let id =params['params']['id'];
-      if(id!=undefined)
-        this.firestoreService.getUser(id).then(r=>{
-          this.user=r;
-        });
-      else{
-          console.log("USUARIO DESCONOCIDO");
+  comprobarUser(users:User[], id:string){
+    for (let i = 0; i < users.length; i++) {
+      if (users[i].id == id) {
+        return users[i]
       }
-    })
+    }
+    return undefined
   }
 
 }

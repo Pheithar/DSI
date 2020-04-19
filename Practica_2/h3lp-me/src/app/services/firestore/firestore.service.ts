@@ -3,6 +3,7 @@ import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/fire
 import { Observable } from 'rxjs';
 
 import { User } from '../../user';
+import { Advertisement } from '../../advertisement';
 
 @Injectable({
   providedIn: 'root'
@@ -11,10 +12,13 @@ import { User } from '../../user';
 export class FirestoreService {
 
   private afs:AngularFirestoreCollection<User>;
+  private afsadds:AngularFirestoreCollection<Advertisement>;
+
 
   constructor(private firestore: AngularFirestore) {
 
     this.afs=this.firestore.collection('users');
+    this.afsadds=this.firestore.collection('services');
   }
 
 
@@ -43,6 +47,35 @@ export class FirestoreService {
   public createUser(data: User):Promise<string>{
     data.id=this.firestore.createId();
     return this.afs.doc(data.id).set({... data}).then(r=>{
+      return data.id;
+    });
+  }
+
+  // Obtener todos los sericios de la base de datos
+  public getServices():Observable<Advertisement[]>{
+    return this.afsadds.valueChanges();
+  }
+
+  // Obtener un servicio por id
+  public getService(id: string):Promise<Advertisement>{
+    return this.afsadds.doc(id).get().toPromise().then(r=>{
+      return r.data() as Advertisement;
+    });
+  }
+
+  // Actualiza un servicio
+  public updateService(data:Advertisement){
+    return this.afsadds.doc(data.id).set(data);
+  }
+
+  // Elimina un servicio, por id
+  public removeService(id: string){
+    return this.afsadds.doc(id).delete();
+  }
+
+  public createServicio(data: Advertisement):Promise<string>{
+    data.id=this.firestore.createId();
+    return this.afsadds.doc(data.id).set({... data}).then(r=>{
       return data.id;
     });
   }

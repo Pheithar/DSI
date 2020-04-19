@@ -25,7 +25,7 @@ export class HeaderComponent{
   username: string;
   password: string;
 
-  constructor(public dialog: MatDialog, public router: Router) {}
+  constructor(public dialog: MatDialog, public router: Router, private global:GlobalService) {}
 
   abrirIniciarSesion(): void {
     const dialogRef = this.dialog.open(popUpIniciar, {
@@ -42,12 +42,19 @@ export class HeaderComponent{
   }
 
   getGlobalUser(){
-    return GlobalService.currentUser;
+    return this.global.getCurrentUser();
   }
 
   cerrarSesion(){
-    GlobalService.currentUser = undefined;
+    this.global.deleteCurrentUser();
     this.router.navigate([""]);
+  }
+
+  irPerfil(){
+    console.log("AA?");
+
+    let id = this.getGlobalUser().id;
+    this.router.navigate(['/profile', id]);
   }
 
 }
@@ -59,6 +66,7 @@ export class HeaderComponent{
 @Component({
   selector: 'pop-up-iniciar',
   templateUrl: './header.component.pop-up-iniciar.html',
+  styleUrls: ['./header.component.scss']
 })
 export class popUpIniciar implements OnInit{
 
@@ -67,11 +75,12 @@ export class popUpIniciar implements OnInit{
 
   public wrong_user: boolean;
 
-
+  username: string;
+  password: string;
 
   hide = true;
 
-  constructor(public dialogRef: MatDialogRef<popUpIniciar>, @Inject(MAT_DIALOG_DATA) public data: IniciarSesionData, public router: Router, public route: ActivatedRoute, private firestoreService: FirestoreService){
+  constructor(public dialog: MatDialog, public dialogRef: MatDialogRef<popUpIniciar>, @Inject(MAT_DIALOG_DATA) public data: IniciarSesionData, public router: Router, public route: ActivatedRoute, private firestoreService: FirestoreService, private global:GlobalService){
       this.users=[];
     }
 
@@ -101,7 +110,7 @@ export class popUpIniciar implements OnInit{
       let id = user.id;
 
       //poner ese usuario como el que ha iniciado sesión
-      GlobalService.currentUser = user;
+      this.global.setCurrentUser(user);
 
       //Navegar al perfil
       this.router.navigate(['/profile', id]);     // En URL y participan en el routing.
@@ -125,6 +134,13 @@ export class popUpIniciar implements OnInit{
     return undefined
   }
 
+  abrirIniciarRegistro(): void {
+    const dialogRef = this.dialog.open(popUpRegistro, {
+      width: '20%',
+      data: {password: this.password, username: this.username}
+    });
+  }
+
 
 }
 
@@ -139,6 +155,7 @@ interface h3lperSelect {
 @Component({
   selector: 'pop-up-registro',
   templateUrl: './header.component.pop-up-registro.html',
+  styleUrls: ['./header.component.scss']
 })
 export class popUpRegistro implements OnInit{
 
@@ -158,7 +175,7 @@ export class popUpRegistro implements OnInit{
 
   hide = true;
 
-  constructor(public dialogRef: MatDialogRef<popUpRegistro>, @Inject(MAT_DIALOG_DATA) public data: IniciarSesionData, public router: Router, public route: ActivatedRoute, private firestoreService: FirestoreService){
+  constructor(public dialogRef: MatDialogRef<popUpRegistro>, @Inject(MAT_DIALOG_DATA) public data: IniciarSesionData, public router: Router, public route: ActivatedRoute, private firestoreService: FirestoreService, private global:GlobalService){
       this.users=[];
     }
 
@@ -188,7 +205,7 @@ export class popUpRegistro implements OnInit{
         let id = await this.firestoreService.createUser(new User(username, password, this.h3lper_selected));
 
         //poner ese usuario como el que ha iniciado sesión
-        GlobalService.currentUser = await this.firestoreService.getUser(id);
+        this.global.setCurrentUser(await this.firestoreService.getUser(id));
 
         //Navegar al perfil
         this.router.navigate(['/profile', id]);     // En URL y participan en el routing.

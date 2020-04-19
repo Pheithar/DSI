@@ -7,7 +7,20 @@ import { User } from '../../user'
 })
 export class GlobalService {
 
-  public static currentUser:User;
+  private currentUser:User;
 
   constructor() { }
+
+  getCurrentUser(){
+    return this.currentUser;
+  }
+
+  setCurrentUser(user:User){
+    this.currentUser = user;
+  }
+
+  deleteCurrentUser(){
+    this.currentUser = undefined;
+  }
+
 }

@@ -23,3 +23,7 @@
 <button mat-raised-button (click)="iniciarSesion(data.username, data.password)" [disabled]="data.username && data.password ? 'false' : 'true'">Iniciar Sesión</button>
 
 <button mat-raised-button (click)="onNoClick()">Cancelar</button>
+
+
+<p>¿No tienes cuenta?</p>
+<p class="hyperlink" (click)="onNoClick(); abrirIniciarRegistro()">Registrate aquí</p>
