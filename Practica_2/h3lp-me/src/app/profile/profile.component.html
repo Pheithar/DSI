@@ -1,20 +1,31 @@
-<div *ngIf="loaded" class="userCard">
-  <img src="./jaja" alt="Prueba">
-  <p>{{user.username}}</p>
-  <p>{{user.coins}}</p>
-  <p>{{user.h3lper}}</p>
-  <p>{{user.level}}/{{user.experience}}</p>
-  <p>{{user.review_h3lper}}/{{user.review_h3lper.length}}</p>
-  <p>{{user.review_normal}}/{{user.review_normal.length}}</p>
-</div>
+<div class="profile">
 
-<div *ngIf="!loaded">
-  <mat-spinner></mat-spinner>
+  <div *ngIf="loaded" class="userCard">
+    <div class="userHeader">
+      <img class="icon" src="../assets/iconos/user.svg" alt="Imagen de usuario">
+      <p class="username">{{user.username}}</p>
 
-</div>
+      <p>{{user.coins}}</p>
+      <p>{{user.h3lper}}</p>
+    </div>
+    <br><br>
+    <div class="userLevel">
+      <p>Nivel {{user.level}}</p>
+      <mat-progress-bar class="progressBar" mode="determinate" value={{user.getProporcionalXP()}} matTooltip="{{user.experience}}/{{user.getXPtoNextLevel()}} puntos de experiencia"></mat-progress-bar>
+    </div>
+    <div class="userReviews">
+      <p>{{user.review_h3lper}}/{{user.review_h3lper.length}}</p>
+      <p>{{user.review_normal}}/{{user.review_normal.length}}</p>
+    </div>
+  </div>
 
-<div>
-  <p>Tus servicios: Solicitados y Ofrecidos</p>
-  <p>Tienda</p>
-  <p>Chat</p>
+  <div *ngIf="!loaded">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <div>
+    <p>Tus servicios: Solicitados y Ofrecidos</p>
+    <p>Tienda</p>
+    <p>Chat</p>
+  </div>
 </div>

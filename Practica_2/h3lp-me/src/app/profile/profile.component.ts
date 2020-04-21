@@ -1,5 +1,5 @@
 //Test
-import { Component, OnInit,OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FirestoreService } from '../services/firestore/firestore.service'
 import { Subscription } from 'rxjs';
@@ -32,15 +32,17 @@ export class ProfileComponent implements OnInit {
   async ngOnInit() {
     this.s_users = await this.firestoreService.getUsers().subscribe(data=>{
       this.users = data;
-      console.log(this.users);
       this.route.paramMap.subscribe(async params=>{
         let id=params['params']['id'];
-        this.user = this.comprobarUser(this.users, id);
-        if (this.user==undefined) {
+        let aux_user
+        aux_user = this.comprobarUser(this.users, id);
+        if (aux_user==undefined) {
           this.router.navigate(['**']);
         }
         else{
           this.loaded = true;
+          this.user = new User(aux_user.username, aux_user.password, aux_user.level, aux_user.h3lper, aux_user.review_normal, aux_user.review_h3lper, aux_user.experience, aux_user.coins);
+
         }
       });
     });
@@ -54,5 +56,6 @@ export class ProfileComponent implements OnInit {
     }
     return undefined
   }
+
 
 }

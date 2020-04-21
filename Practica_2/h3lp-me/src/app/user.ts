@@ -10,15 +10,33 @@ export class User{
   experience:number;
   coins:number;
 
+  XPMultiply:number = 100;
 
-  constructor(username:string, password:string, h3lper:boolean){
+  constructor(username:string, password:string, level:number, h3lper:boolean, review_normal:number[], review_h3lper:number[], experience:number, coins:number){
     this.username = username;
     this.password = password;
-    this.level = 1;
+    this.level = level;
     this.h3lper = h3lper;
-    this.review_normal = [];
-    this.review_h3lper = [];
-    this.experience = 0;
-    this.coins = 0;
+    this.review_normal = review_normal;
+    this.review_h3lper = review_h3lper;
+    this.experience = experience;
+    this.coins = coins;
+  }
+
+  getXPtoNextLevel(){ //Experiencia total para nivel siguiente
+    return this.level * this.level * this.XPMultiply;
+  }
+
+  getProporcionalXP(){ //Porcentaje de
+    return this.experience * 100 / this.getXPtoNextLevel();
+  }
+
+  addXP(experience:number){
+    this.experience += experience;
+
+    while (this.experience >= this.getXPtoNextLevel()) {
+      this.experience = this.experience - this.getXPtoNextLevel();
+      this.level += 1;
+    }
   }
 }

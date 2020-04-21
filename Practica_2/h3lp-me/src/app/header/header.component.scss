@@ -1,6 +1,12 @@
 // Tamaño de alto del header
 $header-height: 100px;
 
+//Tamaño de los iconos
+$icon-size: 30px;
+
+// Padding por defecto de los elementos
+$default-padding: 5px;
+
 //Tamaño de la fuente del título
 $title-font-size: 40px;
 
@@ -9,6 +15,19 @@ $default-padding: 5px;
 
 $primary-color: #002d6f;
 $secundary-color: #4f9ae1;
+
+$text-color: white;
+
+.icon{
+  width: $icon-size;
+  height: auto;
+  padding: $default-padding;
+}
+
+#settings{
+  position: absolute;
+  right: 7.5px;
+}
 
 
 .header{
@@ -36,6 +55,7 @@ $secundary-color: #4f9ae1;
   top: $header-height/2 - $title-font-size/3;
   font-size: $title-font-size;
   left: $header-height + $title-font-size;
+  color: $text-color;
 }
 
 .rightPos{

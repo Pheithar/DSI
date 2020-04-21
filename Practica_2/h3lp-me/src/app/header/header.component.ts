@@ -51,8 +51,6 @@ export class HeaderComponent{
   }
 
   irPerfil(){
-    console.log("AA?");
-
     let id = this.getGlobalUser().id;
     this.router.navigate(['/profile', id]);
   }
@@ -90,7 +88,7 @@ export class popUpIniciar implements OnInit{
       });
     }
 
-    ngOnDestroy(){popUpIniciar
+    ngOnDestroy(){
       this.s_users.unsubscribe();
     }
 
@@ -202,7 +200,7 @@ export class popUpRegistro implements OnInit{
     if (unused_name) {
       if (this.password_confirm == password) {
         //Crear el usuario
-        let id = await this.firestoreService.createUser(new User(username, password, this.h3lper_selected));
+        let id = await this.firestoreService.createUser(new User(username, password, 1, this.h3lper_selected, [], [], 0, 0));
 
         //poner ese usuario como el que ha iniciado sesión
         this.global.setCurrentUser(await this.firestoreService.getUser(id));
