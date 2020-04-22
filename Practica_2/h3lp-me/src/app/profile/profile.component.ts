@@ -4,6 +4,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FirestoreService } from '../services/firestore/firestore.service'
 import { Subscription } from 'rxjs';
 
+import { StarRatingComponent } from 'ng-starrating';
+
 import { User } from '../user'
 
 @Component({
@@ -55,6 +57,13 @@ export class ProfileComponent implements OnInit {
       }
     }
     return undefined
+  }
+
+  onRate($event:{oldValue:number, newValue:number, starRating:StarRatingComponent}) {
+    alert(`Old Value:${$event.oldValue},
+      New Value: ${$event.newValue},
+      Checked Color: ${$event.starRating.checkedcolor},
+      Unchecked Color: ${$event.starRating.uncheckedcolor}`);
   }
 
 
