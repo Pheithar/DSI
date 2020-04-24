@@ -8,3 +8,4 @@
 \contentsline {section}{\numberline {2}Nuestra aplicaci\IeC {\'o}n: H3lp Me}{5}% 
 \contentsline {subsection}{\numberline {2.1}Perfil: Nivel}{5}% 
 \contentsline {subsection}{\numberline {2.2}Moneda Virtual}{6}% 
+\contentsline {section}{\numberline {3}Conclusi\IeC {\'o}n}{6}% 

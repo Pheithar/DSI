@@ -27,9 +27,10 @@ export class ServiciosComponent implements OnInit {
 
   ngOnInit(): void {
     this.s_adds = this.firestoreService.getServices().subscribe(data=>{
-      this.adds = data;
-      console.log(this.adds);
+      for (let i = 0; i < data.length; i++) {
+        this.adds.push(new Advertisement(data[i].name, data[i].category, data[i].description, data[i].picture, data[i].owner_name, data[i].location, data[i].creation_date))
 
+      }
     });
   }
 
@@ -37,9 +38,6 @@ export class ServiciosComponent implements OnInit {
     this.s_adds.unsubscribe();
   }
 
-  test(){
-    this.firestoreService.createServicio(new Advertisement("Anuncio 1", "Limpieza", "Hola a todos y todas", "picture", "iuqy", "Madrid", "2/2"));
 
-  }
 
 }

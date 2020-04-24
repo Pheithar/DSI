@@ -51,6 +51,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 
+import { NgChatModule } from 'ng-chat';
+
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 // Módulos
@@ -69,6 +71,7 @@ import { CardComponent } from './card/card.component';
 // Componente donde están todos los servicios
 import { ServiciosComponent } from './servicios/servicios.component';
 import { SearcherComponent } from './searcher/searcher.component';
+import { ChatComponent } from './chat/chat.component';
 
 
 
@@ -88,7 +91,8 @@ import { SearcherComponent } from './searcher/searcher.component';
     popUpRegistro,
     CardComponent,
     ServiciosComponent,
-    SearcherComponent
+    SearcherComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
@@ -131,7 +135,8 @@ import { SearcherComponent } from './searcher/searcher.component';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatTreeModule
+    MatTreeModule,
+    NgChatModule
   ],
   entryComponents: [HeaderComponent, popUpIniciar, popUpRegistro],
   providers: [GlobalService],

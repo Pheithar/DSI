@@ -4,11 +4,14 @@ Estos son los servicios disponbles
 HOLAA
 <br><br><br><br>
 
-<app-card></app-card>
-<app-card></app-card>
-<app-card></app-card>
-<app-card></app-card>
 
-{{adds[0]}}
+<div *ngFor="let service of adds">
+  <app-card  [add]="service"></app-card>
+  <p>{{service.name}}</p>
+</div>
 
-<button type="button" name="button" (click)="test()">PAPAPA</button>
+<!-- <div *ngIf="adds.length == 0"> -->
+  <div>
+
+  <mat-spinner></mat-spinner>
+</div>
