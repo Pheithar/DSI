@@ -54,4 +54,10 @@
     <p>Chat</p>
   </div>
 
+  <div *ngIf="loaded && globalUser != undefined">
+    <button *ngIf="user.username == globalUser.username" mat-button (click)="newService()">Crear Nuevo Servicio</button>
+  </div>
+  <button mat-raised-button (click)="newService()">Crear Nuevo Servicio</button>
+
+
 </div>

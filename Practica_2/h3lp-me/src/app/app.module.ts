@@ -59,7 +59,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 // Página principal
 import { MainComponent } from './main/main.component';
 //Página de perfil
-import { ProfileComponent } from './profile/profile.component';
+import { ProfileComponent, nuevoServicio } from './profile/profile.component';
 // Página del error 404
 import { NotFoundComponent } from './not-found/not-found.component';
 // Componente del header
@@ -83,6 +83,7 @@ import { ChatComponent } from './chat/chat.component';
     AppComponent,
     MainComponent,
     ProfileComponent,
+    nuevoServicio,
     NotFoundComponent,
     HeaderComponent,
     FooterComponent,

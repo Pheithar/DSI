@@ -1,0 +1,43 @@
+<h1>Crear un nuevo Servicio</h1>
+
+<form>
+  <mat-form-field>
+    <mat-label>Usuario creador</mat-label>
+    <input matInput disabled value={{username}}>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-label>Nombre del Servicio</mat-label>
+    <input matInput [(ngModel)]="serviceName" name="nombre">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+  <mat-label>Categoría del servicio</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let category of categorys" [value]="category.viewValue">
+      {{category.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<br>
+<mat-form-field>
+  <mat-label>Descripción del Servicio</mat-label>
+  <textarea matInput></textarea>
+</mat-form-field>
+<br>
+<mat-form-field>
+<mat-label>Provincia</mat-label>
+<mat-select>
+  <mat-option *ngFor="let province of provinces" [value]="province.viewValue">
+    {{province.viewValue}}
+  </mat-option>
+</mat-select>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Ciudad</mat-label>
+  <input matInput>
+</mat-form-field>
+
+<<p></p>
+
+</form>
