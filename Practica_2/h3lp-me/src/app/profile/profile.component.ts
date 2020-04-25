@@ -124,6 +124,9 @@ export class nuevoServicio implements OnInit{
 
   serviceName:string;
 
+  serviceDescription:string;
+
+  selectedCategory:string;
   categorys: Category[] = [
     {value: 0, viewValue: 'Cuidado del hogar'},
     {value: 1, viewValue: 'Profesor'},

@@ -13,7 +13,7 @@
   <br>
   <mat-form-field>
   <mat-label>Categoría del servicio</mat-label>
-  <mat-select>
+  <mat-select [(ngModel)]="selectedCategory" name="category">
     <mat-option *ngFor="let category of categorys" [value]="category.viewValue">
       {{category.viewValue}}
     </mat-option>
@@ -22,7 +22,7 @@
 <br>
 <mat-form-field>
   <mat-label>Descripción del Servicio</mat-label>
-  <textarea matInput></textarea>
+  <textarea matInput [(ngModel)]="serviceDescription" name="descripcion"></textarea>
 </mat-form-field>
 <br>
 <mat-form-field>
@@ -37,7 +37,11 @@
   <mat-label>Ciudad</mat-label>
   <input matInput>
 </mat-form-field>
+<br>
 
-<<p></p>
+<p>{{username}} {{serviceName}} {{selectedCategory}}{{serviceDescription}}</p>
+<button mat-raised-button>Crear Servicio</button>
+<button mat-raised-button (click)=onNoClick()>Cancelar</button>
+
 
 </form>

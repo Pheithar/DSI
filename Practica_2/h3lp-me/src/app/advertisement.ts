@@ -19,4 +19,8 @@ export class Advertisement{
     this.location = location;
     this.creation_date = creation_date;
   }
+
+  setId(id:string){
+    this.id = id;
+  }
 }

@@ -16,12 +16,15 @@ import { CardComponent } from './card/card.component';
 // Componente donde están todos los servicios
 import { ServiciosComponent } from './servicios/servicios.component';
 
+import { AddComponent } from './add/add.component';
+
 // Definición de las rutas
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'profile/:id', component: ProfileComponent },
   { path: 'services', component: ServiciosComponent },
   { path: 'error404', component: NotFoundComponent },
+  { path: 'add/:id', component: AddComponent },
   { path: '**', redirectTo:'error404' }
 ];
 

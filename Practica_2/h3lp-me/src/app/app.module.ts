@@ -72,6 +72,7 @@ import { CardComponent } from './card/card.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { SearcherComponent } from './searcher/searcher.component';
 import { ChatComponent } from './chat/chat.component';
+import { AddComponent } from './add/add.component';
 
 
 
@@ -93,7 +94,8 @@ import { ChatComponent } from './chat/chat.component';
     CardComponent,
     ServiciosComponent,
     SearcherComponent,
-    ChatComponent
+    ChatComponent,
+    AddComponent
   ],
   imports: [
     BrowserModule,
