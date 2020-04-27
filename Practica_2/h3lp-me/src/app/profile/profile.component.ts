@@ -13,8 +13,14 @@ import { GlobalService } from '../services/globals/global.service';
 
 import { User } from '../user'
 
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+
 export interface nuevoServicioData {
   username: string;
+}
+
+export interface passUser {
+  user: User;
 }
 
 
@@ -26,6 +32,8 @@ export interface nuevoServicioData {
 
 export class ProfileComponent implements OnInit {
 
+  public t:File;
+
   public user: User;
 
   public globalUser: User;
@@ -36,6 +44,8 @@ export class ProfileComponent implements OnInit {
   public loaded:boolean;
 
   public test_image_url:string;
+
+  public user_picture:string;
 
   constructor(public dialog: MatDialog,
               private firestoreService: FirestoreService,
@@ -55,31 +65,26 @@ export class ProfileComponent implements OnInit {
 
   async ngOnInit() {
 
-    this.s_users = await this.firestoreService.getUsers().subscribe(data=>{
-      this.users = data;
-      this.route.paramMap.subscribe(async params=>{
-        let id=params['params']['id'];
-        let aux_user
-        aux_user = this.comprobarUser(this.users, id);
-        if (aux_user==undefined) {
-          this.router.navigate(['**']);
-        }
-        else{
-          this.loaded = true;
-          this.user = new User(aux_user.username, aux_user.password, aux_user.level, aux_user.h3lper, aux_user.review_normal, aux_user.review_h3lper, aux_user.experience, aux_user.coins);
+    this.route.paramMap.subscribe(async params=>{
+      let id = params['params']['id'];
 
-        }
-      });
-    });
-  }
+      let aux_user = await this.firestoreService.getUser(id);
 
-  comprobarUser(users:User[], id:string){
-    for (let i = 0; i < users.length; i++) {
-      if (users[i].id == id) {
-        return users[i]
+      if (aux_user == undefined) {
+        this.router.navigate(['**']);
       }
-    }
-    return undefined
+      else{
+        this.loaded = true;
+        this.user = new User(aux_user.username, aux_user.password, aux_user.level, aux_user.h3lper, aux_user.review_normal, aux_user.review_h3lper, aux_user.experience, aux_user.coins, aux_user.picture);
+        this.user.id = aux_user.id
+        console.log(aux_user.picture);
+
+
+        this.firestoreService.getImg(this.user.picture).subscribe(url=>{
+          this.user_picture = url;
+        })
+      }
+    });
   }
 
   onRate($event:{oldValue:number, newValue:number, starRating:StarRatingComponent}) {
@@ -93,16 +98,24 @@ export class ProfileComponent implements OnInit {
   newService(){
     const dialogRef = this.dialog.open(nuevoServicio, {
       width: '50%',
-      data: {username: "Pheithar"}
+      data: {username: this.user.username}
+    });
+  }
+
+  updateImage(){
+    const dialogRef = this.dialog.open(nuevaImagen, {
+      width: '30%',
+      data: {user: this.user}
     });
   }
 
   test(){
-    this.firestoreService.getImg("BlueLogo.jpg").subscribe(url=>{
-      this.test_image_url = url;
-    })
-  }
+    // this.firestoreService.getImg("BlueLogo.jpg").subscribe(url=>{
+    //   this.test_image_url = url;
+    // })
+    console.log(this.t);
 
+  }
 }
 
 
@@ -218,4 +231,60 @@ export class nuevoServicio implements OnInit{
   onNoClick(): void {
     this.dialogRef.close();
   }
+}
+
+@Component({
+  selector: 'pop-up-nueva-imagen',
+  templateUrl: './profile.component.new-image.html',
+  styleUrls: ['./profile.component.scss']
+})
+export class nuevaImagen implements OnInit{
+
+  selectedFile = null;
+  user = null;
+
+  constructor(private firestoreService: FirestoreService, public dialog: MatDialog, public dialogRef: MatDialogRef<nuevaImagen>, @Inject(MAT_DIALOG_DATA) public data: passUser){
+    this.user = this.data.user;
+  }
+
+  ngOnInit(){}
+
+  onFileSelected(event){
+    console.log(event);
+    this.selectedFile = event.target.files[0];
+  }
+
+  async uploadFile(){
+    if (this.selectedFile != null) {
+      console.log(this.selectedFile);
+      let storageRef = this.firestoreService.getStorage().ref(this.data.user.username);
+
+      await storageRef.put(this.selectedFile).then(function(snapshot) {
+        console.log('Uploaded file!');
+
+
+      });
+
+      this.user.picture = this.data.user.username;
+
+      let aux_user = new User(this.user.username, this.user.password, this.user.level, this.user.h3lper, this.user.review_normal, this.user.review_h3lper, this.user.experience, this.user.coins, this.user.picture)
+
+      aux_user.id = this.user.id
+
+      console.log(this.user.id);
+
+      console.log(aux_user);
+
+
+      this.firestoreService.updateUser(aux_user);
+
+      this.onNoClick();
+    }
+
+  }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
 }

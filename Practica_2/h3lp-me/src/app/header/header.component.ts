@@ -9,6 +9,8 @@ import { GlobalService } from '../services/globals/global.service';
 
 import { User } from '../user'
 
+import { CookieService } from 'ngx-cookie-service';
+
 export interface IniciarSesionData {
   username: string;
   password: string;
@@ -25,7 +27,7 @@ export class HeaderComponent{
   username: string;
   password: string;
 
-  constructor(public dialog: MatDialog, public router: Router, private global:GlobalService) {}
+  constructor(public dialog: MatDialog, public router: Router, private global:GlobalService, private cookieService: CookieService) {}
 
   abrirIniciarSesion(): void {
     const dialogRef = this.dialog.open(popUpIniciar, {
@@ -48,6 +50,10 @@ export class HeaderComponent{
   cerrarSesion(){
     this.global.deleteCurrentUser();
     this.router.navigate([""]);
+
+    if (this.cookieService.check('currentUser')) {
+      this.cookieService.delete('currentUser');
+    }
   }
 
   irPerfil(){
@@ -78,7 +84,7 @@ export class popUpIniciar implements OnInit{
 
   hide = true;
 
-  constructor(public dialog: MatDialog, public dialogRef: MatDialogRef<popUpIniciar>, @Inject(MAT_DIALOG_DATA) public data: IniciarSesionData, public router: Router, public route: ActivatedRoute, private firestoreService: FirestoreService, private global:GlobalService){
+  constructor(public dialog: MatDialog, public dialogRef: MatDialogRef<popUpIniciar>, @Inject(MAT_DIALOG_DATA) public data: IniciarSesionData, public router: Router, public route: ActivatedRoute, private firestoreService: FirestoreService, private global:GlobalService, private cookieService: CookieService){
       this.users=[];
     }
 
@@ -112,6 +118,9 @@ export class popUpIniciar implements OnInit{
 
       //Navegar al perfil
       this.router.navigate(['/profile', id]);     // En URL y participan en el routing.
+
+      this.cookieService.set("currentUser", id);
+
       this.onNoClick();
 
 
@@ -200,7 +209,7 @@ export class popUpRegistro implements OnInit{
     if (unused_name) {
       if (this.password_confirm == password) {
         //Crear el usuario
-        let id = await this.firestoreService.createUser(new User(username, password, 1, this.h3lper_selected, [], [], 0, 0));
+        let id = await this.firestoreService.createUser(new User(username, password, 1, this.h3lper_selected, [], [], 0, 0, "user.svg"));
 
         //poner ese usuario como el que ha iniciado sesión
         this.global.setCurrentUser(await this.firestoreService.getUser(id));

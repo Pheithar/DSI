@@ -37,7 +37,7 @@ export class FirestoreService {
 
   // ACtualiza un contacto
   public updateUser(data:User){
-    return this.afs.doc(data.id).set(data);
+    return this.afs.doc(data.id).set(Object.assign({}, data));
   }
 
   // Elimina un contacto, por id
@@ -93,6 +93,18 @@ export class FirestoreService {
 
     return ref.getDownloadURL();
 
+  }
+
+  public uploadImg(img:string):Observable<string>{
+    let ref = this.storage.ref(img);
+    console.log(img);
+
+    return ref.getDownloadURL();
+
+  }
+
+  getStorage(){
+    return this.storage;
   }
 
 }

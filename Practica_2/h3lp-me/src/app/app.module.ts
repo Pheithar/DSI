@@ -55,11 +55,13 @@ import { NgChatModule } from 'ng-chat';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
+import { CookieService } from 'ngx-cookie-service';
+
 // Módulos
 // Página principal
 import { MainComponent } from './main/main.component';
 //Página de perfil
-import { ProfileComponent, nuevoServicio } from './profile/profile.component';
+import { ProfileComponent, nuevoServicio, nuevaImagen } from './profile/profile.component';
 // Página del error 404
 import { NotFoundComponent } from './not-found/not-found.component';
 // Componente del header
@@ -73,6 +75,7 @@ import { ServiciosComponent } from './servicios/servicios.component';
 import { SearcherComponent } from './searcher/searcher.component';
 import { ChatComponent } from './chat/chat.component';
 import { AddComponent } from './add/add.component';
+import { UploadFileComponent } from './upload-file/upload-file.component';
 
 
 
@@ -85,6 +88,7 @@ import { AddComponent } from './add/add.component';
     MainComponent,
     ProfileComponent,
     nuevoServicio,
+    nuevaImagen,
     NotFoundComponent,
     HeaderComponent,
     FooterComponent,
@@ -95,7 +99,8 @@ import { AddComponent } from './add/add.component';
     ServiciosComponent,
     SearcherComponent,
     ChatComponent,
-    AddComponent
+    AddComponent,
+    UploadFileComponent
   ],
   imports: [
     BrowserModule,
@@ -142,7 +147,10 @@ import { AddComponent } from './add/add.component';
     NgChatModule
   ],
   entryComponents: [HeaderComponent, popUpIniciar, popUpRegistro],
-  providers: [GlobalService],
+  providers: [
+    GlobalService,
+    CookieService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

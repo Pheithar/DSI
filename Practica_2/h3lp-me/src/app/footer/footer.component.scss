@@ -1,3 +1,8 @@
+//Color oscuro
+$dark-blue: #002d6f;
+//Color de resalte.
+$light-blue: #4f9ae1;
+
 // Tamaño de los iconos
 $icon-size: 30px;
 $small-icon-size: 10px;
@@ -9,7 +14,7 @@ $default-padding: 5px;
 $num-authors: 4;
 
 // Color de la fuente por defecto
-$fount-color: black;
+$fount-color: white;
 
 // Clase para todos los iconos del footer
 .icon{
@@ -34,35 +39,65 @@ $fount-color: black;
 .footer{
   text-align: center;
   //Eliminar despues
-  background-color: red;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 110px;
+  background-color: $dark-blue;
 }
 
 // clase donde se encuentran los elementos principales del footer
 .bot-footer{
-  display: inline-flex;
-  width: 100%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+
+#bot-left{
+left: 0;
+margin-left: 1%;
+}
+
+#bot-right{
+right: 0;
+margin-right: 1%;
 }
 
 // cad uno de los componentes del footer
 .block-footer{
-  display: inline-flex;
-  padding-left: 20%;
-  padding-right: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: auto;
+  // padding-left: 20%;
+  // padding-right: 20%;
 }
 
 // clase para los autores en el footer
-.authors{
-  width: 100%;
+#authors{
+  // width: 100%;
   height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 // Clase para cada uno de los autores
 .author{
   @extend .text;
   text-decoration: none;
-  display: inline-flex;
-  padding-left: 5%;
-  padding-right: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // padding-left: 1%;
+  // padding-right: 1%;
 }
 
 // Clase para las referencias a otras páginas y a recursos usados
