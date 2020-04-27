@@ -35,6 +35,8 @@ export class ProfileComponent implements OnInit {
 
   public loaded:boolean;
 
+  public test_image_url:string;
+
   constructor(public dialog: MatDialog,
               private firestoreService: FirestoreService,
               private router: Router,
@@ -95,7 +97,18 @@ export class ProfileComponent implements OnInit {
     });
   }
 
+  test(){
+    this.firestoreService.getImg("BlueLogo.jpg").subscribe(url=>{
+      this.test_image_url = url;
+    })
+  }
+
 }
+
+
+
+
+
 
 interface Category {
   value: number;

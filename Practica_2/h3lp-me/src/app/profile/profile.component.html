@@ -59,5 +59,35 @@
   </div>
   <button mat-raised-button (click)="newService()">Crear Nuevo Servicio</button>
 
+  <img src="{{test_image_url}}" alt="Prueba">
+  <button type="button" name="button" (click)="test()">AAA</button>
+
+
+<!-- ####################################################################### -->
+
+  <div class="contenedor">
+  <div class="contenedor_formulario">
+    <h1 class="is-size-1">Subir archivos a Cloud Storage</h1>
+    <p class="download">URL de descarga: <a href="#" target="_blank">Descargar</a></p>
+    <form>
+      <div class="file has-name is-boxed">
+        <label class="file-label">
+          <input class="file-input" type="file" name="resume">
+          <span class="file-cta">
+            <span class="file-label">
+              Elegir un archivo…
+            </span>
+          </span>
+          <span class="file-name">
+            No hay un archivo seleccionado
+          </span>
+        </label>
+      </div>
+      <hr>
+      <progress class="progress is-large is-success" value="0" max="100">0%</progress>
+      <button class="button is-success is-large">Subir archivo</button>
+    </form>
+  </div>
+</div>
 
 </div>

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { AngularFireStorage } from '@angular/fire/storage';
 import { Observable } from 'rxjs';
 
 import { User } from '../../user';
@@ -15,7 +16,7 @@ export class FirestoreService {
   private afsadds:AngularFirestoreCollection<Advertisement>;
 
 
-  constructor(private firestore: AngularFirestore) {
+  constructor(private firestore: AngularFirestore, private storage: AngularFireStorage) {
 
     this.afs=this.firestore.collection('users');
     this.afsadds=this.firestore.collection('services');
@@ -79,4 +80,19 @@ export class FirestoreService {
       return data.id;
     });
   }
+
+  // public getSets():Observable<Set[]>
+  // {
+  //   return this.firestore.collection<Set>('sets',ref=>ref.orderBy('id')).valueChanges();
+  //
+  // }
+
+  public getImg(img:string):Observable<string>{
+    let ref = this.storage.ref(img);
+    console.log(img);
+
+    return ref.getDownloadURL();
+
+  }
+
 }
