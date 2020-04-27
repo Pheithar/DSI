@@ -18,6 +18,8 @@ $secundary-color: #4f9ae1;
 
 $text-color: white;
 
+$contrast-color: white;
+
 .icon{
   width: $icon-size;
   height: auto;
@@ -65,14 +67,31 @@ $text-color: white;
 }
 
 .button{
-  background-color: $secundary-color;
+  background-color: $contrast-color;
   margin: 15px;
   border-radius: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
+
+//Texto de  los botones
+
+.log_text{
+  margin-top: 5%;
+  text-align: center;
+  font-weight: bold;
+  background: -webkit-linear-gradient(to right, $primary-color, $secundary-color);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right,$primary-color, $secundary-color); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
 
 .profile {
   @extend .rightPos;
-  background-color: $secundary-color;
+  background-color: $contrast-color;
   width: 15%;
   top: 15%;
   height: 40%;

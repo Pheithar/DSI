@@ -10,6 +10,11 @@ $num-authors: 4;
 
 // Color de la fuente por defecto
 $fount-color: black;
+//Color oscuro
+$dark-blue: #002d6f;
+//Color de resalte.
+$light-blue: #4f9ae1;
+
 
 // Clase para todos los iconos del footer
 .icon{
@@ -34,7 +39,7 @@ $fount-color: black;
 .footer{
   text-align: center;
   //Eliminar despues
-  background-color: red;
+  background-color: $dark-blue;
 }
 
 // clase donde se encuentran los elementos principales del footer
