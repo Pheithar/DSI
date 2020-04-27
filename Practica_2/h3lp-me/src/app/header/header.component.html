@@ -8,8 +8,8 @@
 
 
   <div class="rightPos" *ngIf="getGlobalUser() == undefined">
-    <button class="button" mat-raised-button (click)="abrirIniciarRegistro()">Registrarse</button>
-    <button class="button" mat-raised-button (click)="abrirIniciarSesion()">Iniciar Sesión</button>
+    <button class="button" mat-raised-button (click)="abrirIniciarRegistro()"><p class="log_text"> Registrarse</p></button>
+    <button class="button" mat-raised-button (click)="abrirIniciarSesion()"> <p class = "log_text"> Iniciar Sesión</p></button>
   </div>
 
   <mat-card class="profile" *ngIf="getGlobalUser() != undefined">
