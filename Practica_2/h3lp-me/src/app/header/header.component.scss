@@ -70,15 +70,17 @@ $contrast-color: white;
   background-color: $contrast-color;
   margin: 15px;
   border-radius: 20px;
+  height: 35px;
   text-align: center;
   justify-content: center;
   align-items: center;
+
 }
 
 //Texto de  los botones
 
 .log_text{
-  margin-top: 5%;
+  margin-top: 0%;
   text-align: center;
   font-weight: bold;
   background: -webkit-linear-gradient(to right, $primary-color, $secundary-color);  /* Chrome 10-25, Safari 5.1-6 */
