@@ -4,6 +4,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FirestoreService } from '../services/firestore/firestore.service'
 import { Subscription } from 'rxjs';
 
+import { DatePipe } from '@angular/common';
+
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 
@@ -13,10 +15,13 @@ import { GlobalService } from '../services/globals/global.service';
 
 import { User } from '../user'
 
+import { Advertisement } from '../advertisement'
+
+
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 export interface nuevoServicioData {
-  username: string;
+  user: User;
 }
 
 export interface passUser {
@@ -98,7 +103,7 @@ export class ProfileComponent implements OnInit {
   newService(){
     const dialogRef = this.dialog.open(nuevoServicio, {
       width: '50%',
-      data: {username: this.user.username}
+      data: {user: this.user}
     });
   }
 
@@ -140,7 +145,8 @@ interface Province {
 @Component({
   selector: 'pop-up-nuevo-servicio',
   templateUrl: './profile.component.pop-up-nuevo-servicio.html',
-  styleUrls: ['./profile.component.scss']
+  styleUrls: ['./profile.component.scss'],
+  providers: [DatePipe]
 })
 export class nuevoServicio implements OnInit{
 
@@ -161,6 +167,8 @@ export class nuevoServicio implements OnInit{
     {value: 4, viewValue: 'Instalaciones eléctricas'},
     {value: 5, viewValue: 'Otros'}
   ];
+
+  selectedProvince:string;
 
   provinces: Province[] = [
     {value: 0, viewValue: 'Álava'},
@@ -217,8 +225,12 @@ export class nuevoServicio implements OnInit{
     {value: 51, viewValue: 'Melilla'}
   ];
 
-  constructor(public dialog: MatDialog, public dialogRef: MatDialogRef<nuevoServicio>, @Inject(MAT_DIALOG_DATA) public data: nuevoServicioData, public router: Router, public route: ActivatedRoute, private firestoreService: FirestoreService, private global:GlobalService){
-    this.username = this.data.username;
+  city:string;
+
+  selectedFile = null;
+
+  constructor(public dialog: MatDialog, public dialogRef: MatDialogRef<nuevoServicio>, @Inject(MAT_DIALOG_DATA) public data: nuevoServicioData, public router: Router, public route: ActivatedRoute, private firestoreService: FirestoreService, private global:GlobalService, private datePipe: DatePipe){
+    this.username = this.data.user.username;
     }
 
     ngOnInit(){
@@ -230,6 +242,33 @@ export class nuevoServicio implements OnInit{
 
   onNoClick(): void {
     this.dialogRef.close();
+  }
+
+  async createService(){
+    let myDate = new Date();
+    let today = this.datePipe.transform(myDate, 'yyyy-MM-dd');
+
+    let newService = new Advertisement(this.serviceName, this.selectedCategory, this.serviceDescription, "test", this.username, this.city + ", " + this.selectedProvince, today);
+    let id = await this.firestoreService.createService(newService);
+    console.log(newService);
+
+
+    if (this.selectedFile == null) {
+      newService.picture = "default.svg";
+    }
+    else{
+      let storageRef = this.firestoreService.getStorage().ref(id);
+      await storageRef.put(this.selectedFile).then(function(snapshot) {
+        console.log('Uploaded file!');
+      });
+    }
+
+
+    await this.firestoreService.updateService(newService);
+  }
+
+  onFileSelected(event){
+    this.selectedFile = event.target.files[0];
   }
 }
 

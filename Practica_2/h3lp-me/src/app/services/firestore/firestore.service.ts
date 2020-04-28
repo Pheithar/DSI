@@ -74,7 +74,7 @@ export class FirestoreService {
     return this.afsadds.doc(id).delete();
   }
 
-  public createServicio(data: Advertisement):Promise<string>{
+  public createService(data: Advertisement):Promise<string>{
     data.id=this.firestore.createId();
     return this.afsadds.doc(data.id).set({... data}).then(r=>{
       return data.id;
