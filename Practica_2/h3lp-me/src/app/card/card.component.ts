@@ -4,6 +4,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 import { Advertisement } from "../advertisement";
 
+import { FirestoreService } from '../services/firestore/firestore.service'
+
+
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -11,11 +14,16 @@ import { Advertisement } from "../advertisement";
 })
 export class CardComponent implements OnInit {
 
+  public add_picture:string;
+
   @Input() add:Advertisement;
 
-  constructor(public router: Router, public route: ActivatedRoute) { }
+  constructor(private firestoreService: FirestoreService, public router: Router, public route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.firestoreService.getImg(this.add.picture).subscribe(url=>{
+      this.add_picture = url;
+    })
   }
 
   goToService(){

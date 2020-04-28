@@ -27,7 +27,7 @@
 <br>
 <mat-form-field>
 <mat-label>Provincia</mat-label>
-<mat-select>
+<mat-select [(ngModel)]="selectedProvince" name="provincia">
   <mat-option *ngFor="let province of provinces" [value]="province.viewValue">
     {{province.viewValue}}
   </mat-option>
@@ -35,12 +35,15 @@
 </mat-form-field>
 <mat-form-field>
   <mat-label>Ciudad</mat-label>
-  <input matInput>
+  <input matInput [(ngModel)]="city" name="ciudad">
 </mat-form-field>
 <br>
+<h1>Imágen del Servicio</h1>
+<input type="file" accept="image/*" (change)="onFileSelected($event)">
+<br>
+<!-- <p>{{username}} {{serviceName}} {{selectedCategory}} {{serviceDescription}} {{selectedProvince}} {{city}}</p> -->
+<button mat-raised-button (click)="createService()" [disabled]="username && serviceName && selectedCategory && serviceDescription && selectedProvince && city? 'false': 'true'">Crear Servicio</button>
 
-<p>{{username}} {{serviceName}} {{selectedCategory}}{{serviceDescription}}</p>
-<button mat-raised-button>Crear Servicio</button>
 <button mat-raised-button (click)=onNoClick()>Cancelar</button>
 
 

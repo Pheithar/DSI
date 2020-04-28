@@ -66,7 +66,7 @@ export class FirestoreService {
 
   // Actualiza un servicio
   public updateService(data:Advertisement){
-    return this.afsadds.doc(data.id).set(data);
+    return this.afsadds.doc(data.id).set(Object.assign({}, data));
   }
 
   // Elimina un servicio, por id
@@ -74,7 +74,7 @@ export class FirestoreService {
     return this.afsadds.doc(id).delete();
   }
 
-  public createServicio(data: Advertisement):Promise<string>{
+  public createService(data: Advertisement):Promise<string>{
     data.id=this.firestore.createId();
     return this.afsadds.doc(data.id).set({... data}).then(r=>{
       return data.id;
