@@ -40,8 +40,8 @@
 <br>
 <h1>Imágen del Servicio</h1>
 <input type="file" accept="image/*" (change)="onFileSelected($event)">
-
-<p>{{username}} {{serviceName}} {{selectedCategory}} {{serviceDescription}} {{selectedProvince}} {{city}}</p>
+<br>
+<!-- <p>{{username}} {{serviceName}} {{selectedCategory}} {{serviceDescription}} {{selectedProvince}} {{city}}</p> -->
 <button mat-raised-button (click)="createService()" [disabled]="username && serviceName && selectedCategory && serviceDescription && selectedProvince && city? 'false': 'true'">Crear Servicio</button>
 
 <button mat-raised-button (click)=onNoClick()>Cancelar</button>

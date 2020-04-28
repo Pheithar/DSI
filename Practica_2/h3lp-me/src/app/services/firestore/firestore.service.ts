@@ -66,7 +66,7 @@ export class FirestoreService {
 
   // Actualiza un servicio
   public updateService(data:Advertisement){
-    return this.afsadds.doc(data.id).set(data);
+    return this.afsadds.doc(data.id).set(Object.assign({}, data));
   }
 
   // Elimina un servicio, por id

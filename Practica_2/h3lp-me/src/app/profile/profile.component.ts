@@ -260,11 +260,14 @@ export class nuevoServicio implements OnInit{
       let storageRef = this.firestoreService.getStorage().ref(id);
       await storageRef.put(this.selectedFile).then(function(snapshot) {
         console.log('Uploaded file!');
+        newService.picture = id
       });
     }
 
 
     await this.firestoreService.updateService(newService);
+
+    this.onNoClick();
   }
 
   onFileSelected(event){
