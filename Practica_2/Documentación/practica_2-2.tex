@@ -48,7 +48,7 @@
       \line(1, 0){450}
     \end{center}
 
-    \authorsright{Alejandro Parrado Rivas}{100383453}{Adrián Sanz Gómez}{100383473}{Alejandro Valverde Mahou}{100383383}{Andrés Vinagre Blanco}{100383414}
+    \authorsright{Alejandro Parrado Arribas}{100383453}{Adrián Sanz Gómez}{100383473}{Alejandro Valverde Mahou}{100383383}{Andrés Vinagre Blanco}{100383414}
 
     \newpage
 
@@ -64,7 +64,87 @@
 
   \section{Introducción}
 
+  Este documento sirve como ayuda complementaria para la entrega del código de la página de \textit{h3lp me}. Este documento se divide en varios apartados:
+  \begin{itemize}
+    \item \textbf{Tecnología Empleada}: Este apartado aportará una explicación del diseño y la forma que ha sido implementado.
+    \item \textbf{Productos Generados}: Este apartado aportará una breve descripción del producto que se ha creado al finalizar esta práctica.
+    \item \textbf{Manual de Despliegue}: Este apartado informará de la locaclización de la página web y los recursos que usa, como puede ser información de la base de datos o el servidor.
+    \item \textbf{Manual de Uso}: Este apartado explicará el funcionamiento de la página desde el punto de vista del usuario.
+    \item \textbf{Distribución de Trabajo}: En este apartado se indiacrá el número de horas y la carga de trabajo realizada por cada uno de los miembros del equipo.
+  \end{itemize}
+
   \section{Tecnología Empleada}
+
+  La tecnología en la que se ha desarrollado la Práctica es \textbf{Angular 9}. Se ha optado por utilizar una programación basada en componentes donde cada componente cumple una función específica. Los componentes usados son:
+
+  \begin{itemize}
+    \item \textbf{add}
+
+      Este componente es el encargado de mostrar cada uno de los anuncios publicados en la página. Para acceder a cada uno de ellos, se tiene que acceder desde la ventana de \textit{servicios}, y pulsar en el botón de ver más de cada anuncio.
+
+    \item \textbf{card}
+
+      Este componente es cada uno de los anuncios que se muestran en la ventana de \textit{servicios}. Es una versión reducida de la ventana de \textit{add}.
+
+    \item \textbf{footer}
+
+      Es el pie de página de la aplicación. Es visible desde todas las ventanas y tiene un caracter principalmente informativo. En él están indicados las referencias de las imágenes de la página y enlace a los creadores.
+
+    \item \textbf{header}
+
+      Es la cabecera de la página, y es visible desde cualquier ventana de ella. En ella está el componente \textit{searcher}, donde realzian las búsquedas de servicios.
+
+      \vspace{2mm}
+
+      Además en ella están los botones de registro e inicio de sesión, con su pop-up correspondiente. Si el usuario ya ha iniciado sesión, esos botones se sustituyen por el símbolo de su perfil.
+
+    \item \textbf{main}
+
+      Es el componente que se encuentra ne la página principal, y posee sobre todo elementos visuales.
+
+    \item \textbf{not-found}
+
+      Es un componente auxiliar que se muestra si el usuario intenta escribir a mano la url y se equivoca. Permite redirigirse a la página principal.
+
+    \item \textbf{profile}
+
+      Es la ventan del perfil de cada usuario. Si esa ventana corresponde con la del usuario registrado, permite hacer acciones adicionales, cmo crear un servicio nuevo si el usuario es \textit{h3lper}.
+
+    \item \textbf{searcher}
+
+      Este componente permite realizar las búsquedas por nombre o por categoría (dentro de las categorias predeterminadas).
+
+    \item \textbf{servicios}
+
+      Es la ventana mostrada al realizar una búsqueda, y muestra todos los servicios que coinciden con esa búsqueda.
+
+  \end{itemize}
+
+  Además de los componentes, se usan dos servicios para controlar y manjear la aplicación:
+
+  \begin{itemize}
+    \item \textbf{FireStore}
+
+      Este servicio se encarga de alojar las funciones necesarias para establecer y realizar la comunicación con la base de datos de \textit{FireBase}.
+
+    \item  \textbf{Global}
+
+      Es un servicio que contiene el usuario que ha iniciado sesión actualmente. Esto sirve para que la sesión no expire cuando el usuario navega entre las diferentes ventanas de la aplicación.
+
+  \end{itemize}
+
+  Por último, se han creado dos objetos auxiliares para el tratamiento de datos:
+
+  \begin{itemize}
+    \item \textbf{User}
+
+        Tiene los campos de los usuarios.
+
+    \item \textbf{Advertisement}
+
+      Tiene los campos de los anuncios.
+
+  \end{itemize}
 
   \section{Productos Generados}
 
