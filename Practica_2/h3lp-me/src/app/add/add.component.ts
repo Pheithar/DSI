@@ -21,6 +21,9 @@ export class AddComponent implements OnInit {
 
   public loaded:boolean;
 
+  public add_picture:string;
+
+
   constructor(private firestoreService: FirestoreService, private router: Router, private route: ActivatedRoute,) {
     this.loaded = false;
   }
@@ -36,9 +39,12 @@ export class AddComponent implements OnInit {
         this.router.navigate(['**']);
       }
       else{
-        this.loaded = true;
-      }
+        this.firestoreService.getImg(this.add.picture).subscribe(url=>{
+          this.add_picture = url;
+          this.loaded = true;
 
+        });
+      }
     });
 
 
