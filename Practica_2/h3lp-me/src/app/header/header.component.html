@@ -14,8 +14,9 @@
 
   <mat-card class="profile" *ngIf="getGlobalUser() != undefined">
     <mat-card-header>
-      <div mat-card-avatar class="example-header-image" (click)="irPerfil()"></div>
-      <mat-card-title>{{getGlobalUser().username}}</mat-card-title>
+      <!-- Lo de style dentro de div esta bastante feo, pero si no no se como meterle una variable del ts -->
+      <img mat-card-avatar class="example-header-image" src="{{global.getCurrentUserPicture()}}" (click)="irPerfil()">
+      <mat-card-title (click)="irPerfil()" >{{getGlobalUser().username}}</mat-card-title>
       <mat-card-subtitle>Nivel {{getGlobalUser().level}}</mat-card-subtitle>
       <img class="icon" id="settings" src="./assets/iconos/settings.svg" alt="Icono de ajustes" [matMenuTriggerFor]="menu">
       <mat-menu #menu="matMenu">

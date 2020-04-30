@@ -52,6 +52,9 @@ export class ProfileComponent implements OnInit {
 
   public user_picture:string;
 
+  public services_ofrecidos:Advertisement[];
+  public services_solicitados:Advertisement[];
+
   constructor(public dialog: MatDialog,
               private firestoreService: FirestoreService,
               private router: Router,
@@ -59,16 +62,25 @@ export class ProfileComponent implements OnInit {
               private global:GlobalService){
                 this.users=[];
                 this.loaded = false;
-                if (this.global.getCurrentUser() != undefined) {
-                  this.globalUser = this.global.getCurrentUser();
-                }
-                else{
-                  this.globalUser = undefined;
-                }
+                this.services_ofrecidos = [];
+                this.services_solicitados = [];
+
+
+
               }
 
 
   async ngOnInit() {
+
+    await this.global.forceLoad();
+
+
+    if (this.global.getCurrentUser() != undefined) {
+      this.globalUser = this.global.getCurrentUser();
+    }
+    else{
+      this.globalUser = undefined;
+    }
 
     this.route.paramMap.subscribe(async params=>{
       let id = params['params']['id'];
@@ -79,15 +91,23 @@ export class ProfileComponent implements OnInit {
         this.router.navigate(['**']);
       }
       else{
-        this.loaded = true;
-        this.user = new User(aux_user.username, aux_user.password, aux_user.level, aux_user.h3lper, aux_user.review_normal, aux_user.review_h3lper, aux_user.experience, aux_user.coins, aux_user.picture);
+        this.user = new User(aux_user.username, aux_user.password, aux_user.level, aux_user.h3lper, aux_user.review_normal, aux_user.review_h3lper, aux_user.experience, aux_user.coins, aux_user.picture, aux_user.ofrecidos, aux_user.solicitados);
         this.user.id = aux_user.id
-        console.log(aux_user.picture);
-
 
         this.firestoreService.getImg(this.user.picture).subscribe(url=>{
           this.user_picture = url;
-        })
+        });
+        for (let i = 0; i < this.user.ofrecidos.length; i++) {
+          let ofre = await this.firestoreService.getService(this.user.ofrecidos[i]);
+          this.services_ofrecidos.push(ofre);
+        }
+        for (let i = 0; i < this.user.solicitados.length; i++) {
+          let soli = await this.firestoreService.getService(this.user.solicitados[i]);
+          this.services_solicitados.push(soli);
+        }
+
+        this.loaded = true;
+
       }
     });
   }
@@ -264,6 +284,9 @@ export class nuevoServicio implements OnInit{
       });
     }
 
+    this.data.user.ofrecidos.push(id);
+
+    await this.firestoreService.updateUser(this.data.user);
 
     await this.firestoreService.updateService(newService);
 
@@ -309,7 +332,7 @@ export class nuevaImagen implements OnInit{
 
       this.user.picture = this.data.user.username;
 
-      let aux_user = new User(this.user.username, this.user.password, this.user.level, this.user.h3lper, this.user.review_normal, this.user.review_h3lper, this.user.experience, this.user.coins, this.user.picture)
+      let aux_user = new User(this.user.username, this.user.password, this.user.level, this.user.h3lper, this.user.review_normal, this.user.review_h3lper, this.user.experience, this.user.coins, this.user.picture, this.user.solicitados, this.user.ofrecidos)
 
       aux_user.id = this.user.id
 

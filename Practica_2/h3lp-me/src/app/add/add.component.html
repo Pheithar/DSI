@@ -9,8 +9,12 @@
   <p>{{add.creation_date}}</p>
   <img class="icon" src="{{add_picture}}" alt="Imagen {{add.name}}">
 
-
-  <button mat-button>Solicitar Servicio</button>
+  <p *ngIf="correct">Se ha solicitado el servicio correctamente</p>
+  <p *ngIf="repeat">El servicio ya estaba solicitado</p>
+  <button mat-raised-button (click)="solicitar()" [disabled]="global.getCurrentUser()  ? 'false' : 'true'" *ngIf="global.getCurrentUser().username != add.owner_name">Solicitar Servicio</button>
+  <p *ngIf="global.getCurrentUser() == undefined">
+    Registrate o inicia sesión para poder solicitar servicios
+  </p>
 
 </div>
 

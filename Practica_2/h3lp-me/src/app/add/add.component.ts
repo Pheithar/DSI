@@ -23,9 +23,14 @@ export class AddComponent implements OnInit {
 
   public add_picture:string;
 
+  public correct:boolean;
+  public repeat:boolean;
 
-  constructor(private firestoreService: FirestoreService, private router: Router, private route: ActivatedRoute,) {
+
+  constructor(private firestoreService: FirestoreService, private router: Router, private route: ActivatedRoute, public global:GlobalService) {
     this.loaded = false;
+    this.correct = false;
+    this.repeat = false;
   }
 
   async ngOnInit(){
@@ -46,6 +51,22 @@ export class AddComponent implements OnInit {
         });
       }
     });
+
+
+  }
+
+  async solicitar(){
+    let user = await this.firestoreService.getUser(this.global.getCurrentUser().id);
+    if(!user.solicitados.includes(this.add.id)){
+      user.solicitados.push(this.add.id);
+      this.firestoreService.updateUser(user);
+      this.correct = true;
+    }
+    else{
+      this.correct = false;
+      this.repeat = true;
+    }
+
 
 
   }

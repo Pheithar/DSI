@@ -89,7 +89,6 @@ export class FirestoreService {
 
   public getImg(img:string):Observable<string>{
     let ref = this.storage.ref(img);
-    console.log(img);
 
     return ref.getDownloadURL();
 
@@ -97,7 +96,6 @@ export class FirestoreService {
 
   public uploadImg(img:string):Observable<string>{
     let ref = this.storage.ref(img);
-    console.log(img);
 
     return ref.getDownloadURL();
 

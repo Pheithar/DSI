@@ -15,21 +15,35 @@ export class GlobalService {
 
   private currentUser:User;
 
+  private user_picture;
+
   constructor(private cookieService: CookieService, private firestoreService: FirestoreService) {
 
     this.userFromCookie();
   }
 
+  async forceLoad(){
+    await this.userFromCookie();
+  }
+
   async userFromCookie(){
+
     if (this.cookieService.check('currentUser')) {
+
       let id = this.cookieService.get("currentUser");
 
       let aux_user = await this.firestoreService.getUser(id);
 
       if (aux_user != undefined) {
-        this.currentUser = aux_user;
+        this.setCurrentUser(aux_user);
       }
     }
+  }
+
+  setCurrentUserPicture(){
+    this.firestoreService.getImg(this.currentUser.picture).subscribe(url=>{
+      this.user_picture = url;
+    });
   }
 
   getCurrentUser(){
@@ -38,10 +52,15 @@ export class GlobalService {
 
   setCurrentUser(user:User){
     this.currentUser = user;
+    this.setCurrentUserPicture();
   }
 
   deleteCurrentUser(){
     this.currentUser = undefined;
+  }
+
+  getCurrentUserPicture(){
+    return this.user_picture;
   }
 
 }

@@ -27,7 +27,8 @@ export class HeaderComponent{
   username: string;
   password: string;
 
-  constructor(public dialog: MatDialog, public router: Router, private global:GlobalService, private cookieService: CookieService) {}
+
+  constructor(private firestoreService: FirestoreService, public dialog: MatDialog, public router: Router, public global:GlobalService, private cookieService: CookieService) {}
 
   abrirIniciarSesion(): void {
     const dialogRef = this.dialog.open(popUpIniciar, {
@@ -44,6 +45,7 @@ export class HeaderComponent{
   }
 
   getGlobalUser(){
+
     return this.global.getCurrentUser();
   }
 
@@ -60,6 +62,8 @@ export class HeaderComponent{
     let id = this.getGlobalUser().id;
     this.router.navigate(['/profile', id]);
   }
+
+
 
 }
 
@@ -209,7 +213,7 @@ export class popUpRegistro implements OnInit{
     if (unused_name) {
       if (this.password_confirm == password) {
         //Crear el usuario
-        let id = await this.firestoreService.createUser(new User(username, password, 1, this.h3lper_selected, [], [], 0, 0, "user.svg"));
+        let id = await this.firestoreService.createUser(new User(username, password, 1, this.h3lper_selected, [], [], 0, 0, "user.svg", [], []));
 
         //poner ese usuario como el que ha iniciado sesión
         this.global.setCurrentUser(await this.firestoreService.getUser(id));

@@ -11,10 +11,13 @@ export class User{
   coins:number;
   picture:string;
 
+  solicitados:string[];
+  ofrecidos:string[];
+
 
   XPMultiply:number = 100;
 
-  constructor(username:string, password:string, level:number, h3lper:boolean, review_normal:number[], review_h3lper:number[], experience:number, coins:number, picture:string){
+  constructor(username:string, password:string, level:number, h3lper:boolean, review_normal:number[], review_h3lper:number[], experience:number, coins:number, picture:string, ofrecidos:string[], solicitados:string[]){
     this.username = username;
     this.password = password;
     this.level = level;
@@ -24,6 +27,9 @@ export class User{
     this.experience = experience;
     this.coins = coins;
     this.picture = picture;
+
+    this.ofrecidos = ofrecidos;
+    this.solicitados = solicitados;
   }
 
   getXPtoNextLevel(){ //Experiencia total para nivel siguiente
