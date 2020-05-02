@@ -48,13 +48,17 @@
 
   <div>
     <h1>Tus servicios: Solicitados</h1>
-    <div *ngFor="let service of services_solicitados">
-      <app-card [add]="service"></app-card>
+    <div class="solicitados">
+      <div class="service" *ngFor="let service of services_solicitados">
+        <app-card [add]="service"></app-card>
+      </div>
     </div>
 
     <h1 *ngIf="user.h3lper">Tus servicios: Ofrecidos</h1>
-    <div *ngFor="let service of services_ofrecidos">
-      <app-card [add]="service"></app-card>
+    <div class="ofrecidos">
+      <div class="service" *ngFor="let service of services_ofrecidos" matBadge="{{service.requests.length}}">
+        <app-card [add]="service"></app-card>
+      </div>
     </div>
     <p>Tienda</p>
     <p>Chat</p>

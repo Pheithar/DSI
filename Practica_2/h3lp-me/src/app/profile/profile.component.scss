@@ -99,6 +99,48 @@ $default-padding: 10px;
   border-radius: 13px;
 }
 
+// Clase para los servicios de los anuncios
+.service{
+  width: 45%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+
+.ofrecidos{
+  display: flex;
+  flex-wrap: wrap;
+  width: 55%;
+}
+
+.solicitados{
+  @extend .ofrecidos;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // https://fireship.io/lessons/star-ratings-system-with-firestore/
 
 

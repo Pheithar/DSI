@@ -289,7 +289,7 @@ export class nuevoServicio implements OnInit{
     this.data.user.addXP(30);
 
     this.bar.open("Obtenidos puntos de experiencia", "30XP", {
-      duration: 2000,
+      duration: 5000,
     });
 
     this.data.user.ofrecidos.push(id);

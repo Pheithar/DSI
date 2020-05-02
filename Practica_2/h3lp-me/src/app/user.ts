@@ -46,6 +46,7 @@ export class User{
     while (this.experience >= this.getXPtoNextLevel()) {
       this.experience = this.experience - this.getXPtoNextLevel();
       this.level += 1;
+      this.coins += 10;
     }
   }
 }
