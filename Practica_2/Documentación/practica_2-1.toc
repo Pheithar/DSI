@@ -4,6 +4,19 @@
 \contentsline {subsection}{\numberline {2.1}Prototipo 1}{4}%
 \contentsline {subsection}{\numberline {2.2}Prototipo 2}{6}%
 \contentsline {subsection}{\numberline {2.3}Prototipo 3}{7}%
-\contentsline {subsection}{\numberline {2.4}Prototipo 4}{8}%
-\contentsline {section}{\numberline {3}Fase Convergente: Selección de un Concepto de Diseño}{10}%
-\contentsline {section}{\numberline {4}Diseño Final: Escenario y Detalles de Diseño}{10}%
+\contentsline {subsection}{\numberline {2.4}Prototipo 4}{9}%
+\contentsline {section}{\numberline {3}Fase Convergente: Selección de un Concepto de Diseño}{11}%
+\contentsline {subsection}{\numberline {3.1}Prototipo 1}{11}%
+\contentsline {subsubsection}{\numberline {3.1.1}Pros}{11}%
+\contentsline {subsubsection}{\numberline {3.1.2}Contras}{11}%
+\contentsline {subsection}{\numberline {3.2}Prototipo 2}{11}%
+\contentsline {subsubsection}{\numberline {3.2.1}Pros}{11}%
+\contentsline {subsubsection}{\numberline {3.2.2}Contras}{11}%
+\contentsline {subsection}{\numberline {3.3}Prototipo 3}{11}%
+\contentsline {subsubsection}{\numberline {3.3.1}Pros}{11}%
+\contentsline {subsubsection}{\numberline {3.3.2}Contras}{12}%
+\contentsline {subsection}{\numberline {3.4}Prototipo 4}{12}%
+\contentsline {subsubsection}{\numberline {3.4.1}Pros}{12}%
+\contentsline {subsubsection}{\numberline {3.4.2}Contras}{12}%
+\contentsline {subsection}{\numberline {3.5}Prototipo final}{12}%
+\contentsline {section}{\numberline {4}Diseño Final: Escenario y Detalles de Diseño}{13}%
