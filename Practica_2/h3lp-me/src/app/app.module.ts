@@ -65,7 +65,7 @@ import { ProfileComponent, nuevoServicio, nuevaImagen } from './profile/profile.
 // Página del error 404
 import { NotFoundComponent } from './not-found/not-found.component';
 // Componente del header
-import {HeaderComponent, popUpIniciar, popUpRegistro} from './header/header.component';
+import {HeaderComponent, popUpIniciar, popUpRegistro, popUpPassword, popUpUsername} from './header/header.component';
 // Componente del footer
 import { FooterComponent } from './footer/footer.component';
 // Componente de las tarjetas
@@ -95,6 +95,8 @@ import { UploadFileComponent } from './upload-file/upload-file.component';
     HeaderComponent,
     popUpIniciar,
     popUpRegistro,
+    popUpPassword,
+    popUpUsername,
     CardComponent,
     ServiciosComponent,
     SearcherComponent,

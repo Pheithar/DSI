@@ -15,13 +15,14 @@
   <mat-card class="profile" *ngIf="getGlobalUser() != undefined">
     <mat-card-header>
       <!-- Lo de style dentro de div esta bastante feo, pero si no no se como meterle una variable del ts -->
-      <img mat-card-avatar class="example-header-image" src="{{global.getCurrentUserPicture()}}" (click)="irPerfil()">
-      <mat-card-title (click)="irPerfil()" >{{getGlobalUser().username}}</mat-card-title>
+      <img *ngIf="getGlobalUser() != undefined" mat-card-avatar class="example-header-image" src="{{global.getCurrentUserPicture()}}" (click)="irPerfil()">
+      <mat-card-title *ngIf="getGlobalUser() != undefined" (click)="irPerfil()" >{{getGlobalUser().username}}</mat-card-title>
       <mat-card-subtitle>Nivel {{getGlobalUser().level}}</mat-card-subtitle>
       <img class="icon" id="settings" src="./assets/iconos/settings.svg" alt="Icono de ajustes" [matMenuTriggerFor]="menu">
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>Cambiar Nombre de Usuario</button>
-        <button mat-menu-item>Cambiar Contraseña</button>
+        <button *ngIf="getGlobalUser() != undefined && global.getCurrentUser().h3lper == false" mat-menu-item (click)="beH3lper()">Convertirse en h3lper</button>
+        <button mat-menu-item (click)="changeUser()">Cambiar Nombre de Usuario</button>
+        <button mat-menu-item (click)="changePassword()">Cambiar Contraseña</button>
         <button mat-menu-item (click)="cerrarSesion()">Cerrar Sesión</button>
       </mat-menu>
     </mat-card-header>

@@ -1,0 +1,15 @@
+<h1>Cambiar contraseña</h1>
+<p>Contraseña actual: {{username}}</p>
+
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Nombre de Usuario</mat-label>
+    <input matInput [(ngModel)]="new_username" required>
+  </mat-form-field>
+  <mat-error *ngIf="new_username != undefined && new_username.length < 3">Los nombres de usuario deben tener al menos 3 caracteres</mat-error>
+  <mat-error *ngIf="used_name">Nombre de usuario no disponible</mat-error>
+
+</div>
+
+
+<button mat-raised-button (click)="confirm(new_username)" [disabled]="new_username ? 'false' : 'true'">Cambiar Nombre de Usuario</button>

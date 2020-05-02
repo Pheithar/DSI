@@ -16,6 +16,10 @@ export interface IniciarSesionData {
   password: string;
 }
 
+export interface Cambio {
+  user: User;
+}
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -61,6 +65,25 @@ export class HeaderComponent{
   irPerfil(){
     let id = this.getGlobalUser().id;
     this.router.navigate(['/profile', id]);
+  }
+
+  beH3lper(){
+    this.global.getCurrentUser().h3lper = true;
+    this.firestoreService.updateUser(this.global.getCurrentUser());
+  }
+
+  changePassword(){
+    const dialogRef = this.dialog.open(popUpPassword, {
+      width: '20%',
+      data: {user: this.global.getCurrentUser()}
+    });
+  }
+
+  changeUser(){
+    const dialogRef = this.dialog.open(popUpUsername, {
+      width: '20%',
+      data: {user: this.global.getCurrentUser()}
+    });
   }
 
 
@@ -211,7 +234,7 @@ export class popUpRegistro implements OnInit{
     let unused_name = this.checkUsername(this.users, username);
 
     if (unused_name) {
-      if (this.password_confirm == password) {
+      if (this.password_confirm == password && password.length >= 6) {
         //Crear el usuario
         let id = await this.firestoreService.createUser(new User(username, password, 1, this.h3lper_selected, [], [], 0, 0, "user.svg", [], []));
 
@@ -237,5 +260,84 @@ export class popUpRegistro implements OnInit{
         }
       }
       return true;
+  }
+}
+
+@Component({
+  selector: 'pop-up-password',
+  templateUrl: './header.component.pop-up-password.html',
+  styleUrls: ['./header.component.scss']
+})
+export class popUpPassword implements OnInit{
+
+  password:string;
+  new_password:string;
+  repeat_new_password:string;
+  hide:boolean = true;
+
+
+  constructor(public dialogRef: MatDialogRef<popUpPassword>, @Inject(MAT_DIALOG_DATA) public data: Cambio, private firestoreService: FirestoreService, private global:GlobalService){
+  }
+
+  ngOnInit(){
+    this.password = this.data.user.password;
+  }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+  confirm(password:string){
+    this.data.user.password = password;
+    this.firestoreService.updateUser(this.data.user);
+    this.onNoClick();
+  }
+}
+
+@Component({
+  selector: 'pop-up-username',
+  templateUrl: './header.component.pop-up-username.html',
+  styleUrls: ['./header.component.scss']
+})
+export class popUpUsername implements OnInit{
+
+  public users: User[];
+  public s_users: Subscription;
+
+  public used_name: boolean;
+
+  username:string;
+  new_username:string;
+
+  constructor(public dialogRef: MatDialogRef<popUpUsername>, @Inject(MAT_DIALOG_DATA) public data: Cambio, private firestoreService: FirestoreService, private global:GlobalService){
+    this.users=[];
+    this.used_name = false;
+  }
+
+  ngOnInit(){
+    this.username = this.data.user.username;
+    this.s_users = this.firestoreService.getUsers().subscribe(data=>{
+      this.users = data;
+    });
+  }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+  confirm(username:string){
+    this.used_name = false;
+    for (let i = 0; i < this.users.length; i++) {
+        if (this.users[i].username == username) {
+          this.used_name = true;
+        }
+      }
+
+    if (!this.used_name) {
+      this.data.user.username = username;
+      this.firestoreService.updateUser(this.data.user);
+      this.onNoClick();
+    }
+
   }
 }

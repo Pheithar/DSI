@@ -20,6 +20,9 @@ import { Advertisement } from '../advertisement'
 
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
+import {MatSnackBar} from '@angular/material/snack-bar';
+
+
 export interface nuevoServicioData {
   user: User;
 }
@@ -249,7 +252,7 @@ export class nuevoServicio implements OnInit{
 
   selectedFile = null;
 
-  constructor(public dialog: MatDialog, public dialogRef: MatDialogRef<nuevoServicio>, @Inject(MAT_DIALOG_DATA) public data: nuevoServicioData, public router: Router, public route: ActivatedRoute, private firestoreService: FirestoreService, private global:GlobalService, private datePipe: DatePipe){
+  constructor(public dialog: MatDialog, public dialogRef: MatDialogRef<nuevoServicio>, @Inject(MAT_DIALOG_DATA) public data: nuevoServicioData, public router: Router, public route: ActivatedRoute, private firestoreService: FirestoreService, private global:GlobalService, private datePipe: DatePipe, private bar: MatSnackBar){
     this.username = this.data.user.username;
     }
 
@@ -268,9 +271,8 @@ export class nuevoServicio implements OnInit{
     let myDate = new Date();
     let today = this.datePipe.transform(myDate, 'yyyy-MM-dd');
 
-    let newService = new Advertisement(this.serviceName, this.selectedCategory, this.serviceDescription, "test", this.username, this.city + ", " + this.selectedProvince, today);
+    let newService = new Advertisement(this.serviceName, this.selectedCategory, this.serviceDescription, "test", this.username, this.city + ", " + this.selectedProvince, today, []);
     let id = await this.firestoreService.createService(newService);
-    console.log(newService);
 
 
     if (this.selectedFile == null) {
@@ -284,13 +286,19 @@ export class nuevoServicio implements OnInit{
       });
     }
 
+    this.data.user.addXP(30);
+
+    this.bar.open("Obtenidos puntos de experiencia", "30XP", {
+      duration: 2000,
+    });
+
     this.data.user.ofrecidos.push(id);
 
     await this.firestoreService.updateUser(this.data.user);
 
     await this.firestoreService.updateService(newService);
-
     this.onNoClick();
+
   }
 
   onFileSelected(event){
