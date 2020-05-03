@@ -23,6 +23,7 @@ const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'profile/:id', component: ProfileComponent },
   { path: 'services', component: ServiciosComponent },
+  { path: 'services/:filter', component: ServiciosComponent },
   { path: 'error404', component: NotFoundComponent },
   { path: 'add/:id', component: AddComponent },
   { path: '**', redirectTo:'error404' }

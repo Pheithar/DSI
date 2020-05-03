@@ -183,12 +183,11 @@ export class nuevoServicio implements OnInit{
 
   selectedCategory:string;
   categorys: Category[] = [
-    {value: 0, viewValue: 'Cuidado del hogar'},
-    {value: 1, viewValue: 'Profesor'},
-    {value: 2, viewValue: 'Fontanería'},
-    {value: 3, viewValue: 'Jardinería'},
-    {value: 4, viewValue: 'Instalaciones eléctricas'},
-    {value: 5, viewValue: 'Otros'}
+    {value: 0, viewValue: 'Fotografía'},
+    {value: 1, viewValue: 'Infomática'},
+    {value: 2, viewValue: 'Cocina'},
+    {value: 3, viewValue: 'Hogar'},
+    {value: 4, viewValue: 'Otros'},
   ];
 
   selectedProvince:string;

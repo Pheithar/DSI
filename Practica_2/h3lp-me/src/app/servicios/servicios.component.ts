@@ -20,17 +20,47 @@ export class ServiciosComponent implements OnInit {
   public adds: Advertisement[]; //Array que almacena todos lo anuncios
   public s_adds: Subscription; //Establecer conexion con la BBDD y registrar cambios
 
+  public filter:string;
+
   constructor(public router: Router, public route: ActivatedRoute, private firestoreService: FirestoreService, private global:GlobalService) {
     this.adds = [];
 
   }
 
   ngOnInit(): void {
-    this.s_adds = this.firestoreService.getServices().subscribe(data=>{
-      for (let i = 0; i < data.length; i++) {
-        this.adds.push(new Advertisement(data[i].name, data[i].category, data[i].description, data[i].picture, data[i].owner_name, data[i].location, data[i].creation_date, data[i].requests))
-        this.adds[i].setId(data[i].id);
+    this.route.paramMap.subscribe(async params=>{
+      this.filter = params['params']['filter'];
+      let category;
+      if (this.filter = "fotografia") {
+        category = "Fotografía"
       }
+      if (this.filter = "informatica") {
+        category = "Informática"
+      }
+      if (this.filter = "cocina") {
+        category = "Cocina"
+      }
+      if (this.filter = "hogar") {
+        category = "Hogar"
+      }
+      if (this.filter = "otros") {
+        category = "Otros"
+      }
+
+      this.s_adds = this.firestoreService.getServices().subscribe(data=>{
+        for (let i = 0; i < data.length; i++) {
+          if (this.filter == undefined) {
+            this.adds.push(new Advertisement(data[i].name, data[i].category, data[i].description, data[i].picture, data[i].owner_name, data[i].location, data[i].creation_date, data[i].requests));
+            this.adds[i].setId(data[i].id);
+          }
+          else{
+            if (data[i].category == category) {
+              this.adds.push(new Advertisement(data[i].name, data[i].category, data[i].description, data[i].picture, data[i].owner_name, data[i].location, data[i].creation_date, data[i].requests));
+              this.adds[i].setId(data[i].id);
+            }
+          }
+        }
+      });
     });
   }
 
