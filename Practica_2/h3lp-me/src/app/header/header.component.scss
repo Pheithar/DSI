@@ -8,7 +8,7 @@ $icon-size: 30px;
 $default-padding: 5px;
 
 //Tamaño de la fuente del título
-$title-font-size: 40px;
+$title-font-size: 45px;
 
 // Padding por defecto de los elementos
 $default-padding: 5px;
@@ -29,6 +29,8 @@ $contrast-color: white;
 #settings{
   position: absolute;
   right: 7.5px;
+  color: white;
+  cursor: pointer;
 }
 
 
@@ -58,6 +60,7 @@ $contrast-color: white;
   font-size: $title-font-size;
   left: $header-height + $title-font-size;
   color: $text-color;
+  margin-top: 2%;
 }
 
 .rightPos{
@@ -93,18 +96,32 @@ $contrast-color: white;
 
 .profile {
   @extend .rightPos;
-  background-color: $contrast-color;
+  background-color: $primary-color;
   width: 15%;
   top: 15%;
   height: 40%;
+
 }
 
 .example-header-image {
   background-size: cover;
 }
 
+.example-header-image:hover{
+  cursor: pointer;
+  
+}
+
 .hyperlink{
   color: blue;
   text-decoration: underline;
+  cursor: pointer;
+}
+
+
+.userText{
+  color: $text-color;
+}
+.userText:hover{
   cursor: pointer;
 }

@@ -28,7 +28,10 @@ $fount-color: white;
   @extend .icon;
   width: $small-icon-size;
 }
-
+#logofooter{
+  width: 60px;
+  height: 60px;
+}
 // clase para los textos del footer
 .text{
   padding: $default-padding;

@@ -2,6 +2,28 @@
 $primary-color: #002d6f;
 
 .categories{
-    margin-left: 8%;
+    margin-left: 6%;
     color: $primary-color;
+    font-size: 14pt;
+    margin-top: 1%;;
 }
+
+.searcher{
+    color: $primary-color;
+    font-size: 14pt;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: $primary-color!important;
+   }
+  
+   ::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: $primary-color!important;
+  } 
+  
+  ::ng-deep.mat-form-field-ripple {
+   /*change color of underline when focused*/
+   background-color:$primary-color!important;;
+  }
