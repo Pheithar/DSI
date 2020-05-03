@@ -19,7 +19,7 @@ export class SearcherComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  goTo(destine:string, search:boolean){
+  goTo(destine:string){
     if (destine == "") {
       this.router.navigate(['/services']);
     }

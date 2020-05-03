@@ -1,6 +1,6 @@
 <base href="/">
 
-<p>main works!</p>
+<!-- <p>main works!</p>
 
 <button (click)="change()" type="button" name="button">Press Me</button>
 
@@ -9,6 +9,52 @@
   <a (click) = "testNavigate()" routerLinkActive="active">Crisis Center</a>
 </nav>
 
-<button type="button" name="button" (click) = "testNavigate()">HOLA</button>
+<button type="button" name="button" (click) = "testNavigate()">HOLA</button> -->
 
-HOLA?
+
+<div class="main">
+  <div class="bloque_main">
+    <div class="bloque_izqdo">
+      <h1 class="title">
+        ¿USUARIO NUEVO?
+      </h1>
+      <div class="boton">
+        <p class="text" id="text_white" (click)="registro()">
+          ¡REGÍSTRATE!
+        </p>
+      </div>
+    </div>
+    <div class="bloque_dcho">
+      <img class="icon_big" src="../assets/images/logo_main.png" alt="logo">
+      <p class="text">
+      La plataforma donde dar y <br>
+          recibir todo aquello <br>
+            que necesitas.
+      </p>
+    </div>
+  </div>
+
+  <div class="bloque_main">
+    <div class="bloque_izqdo">
+      <img class="big_img" src="../assets/images/video_main" alt="video">
+    </div>
+    <div class="bloque_dcho">
+      <h1 class="title">
+        ¡CONÓCENOS!
+        </h1>
+      <p class="text">
+      En este video encontrarás<br>
+            toda la información<br>
+              sobre como usar<br>
+               H3lp Me.
+      </p>
+    </div>
+  </div>
+  <div class="bloque_main" id="ultimo_bloque">
+    <p class="text">
+    ¡Tu aventura ayudando<br>
+          y recibiendo ayuda<br>
+            empieza aquí!
+    </p>
+  </div>
+</div>

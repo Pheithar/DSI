@@ -59,7 +59,7 @@ import { CookieService } from 'ngx-cookie-service';
 
 // Módulos
 // Página principal
-import { MainComponent } from './main/main.component';
+import { MainComponent, popUpMainRegistro } from './main/main.component';
 //Página de perfil
 import { ProfileComponent, nuevoServicio, nuevaImagen } from './profile/profile.component';
 // Página del error 404
@@ -86,6 +86,7 @@ import { UploadFileComponent } from './upload-file/upload-file.component';
     //Componentes
     AppComponent,
     MainComponent,
+    popUpMainRegistro,
     ProfileComponent,
     nuevoServicio,
     nuevaImagen,
