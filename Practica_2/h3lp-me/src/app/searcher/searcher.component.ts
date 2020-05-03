@@ -10,15 +10,27 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class SearcherComponent implements OnInit {
 
-  value = '';
+  public value:string;
 
-  constructor(public router: Router) { }
+  constructor(public route: ActivatedRoute, public router: Router) {
+    this.value = ""
+  }
 
   ngOnInit(): void {
   }
 
-  goTo(destine:string){
-    this.router.navigate(['/services', destine]);
+  goTo(destine:string, search:boolean){
+    if (destine == "") {
+      this.router.navigate(['/services']);
+    }
+    else{
+      this.router.navigate(['/services', destine]);
+    }
+  }
+
+  search(){
+    this.router.navigate(['/services', {search:this.value}]);
+    this.value = "";
   }
 
 }

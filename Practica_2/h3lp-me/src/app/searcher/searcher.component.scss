@@ -17,13 +17,18 @@ $primary-color: #002d6f;
     /*change color of label*/
     color: $primary-color!important;
    }
-  
+
    ::ng-deep.mat-form-field-underline {
     /*change color of underline*/
     background-color: $primary-color!important;
-  } 
-  
+  }
+
   ::ng-deep.mat-form-field-ripple {
    /*change color of underline when focused*/
    background-color:$primary-color!important;;
   }
+
+.todos{
+  @extend .searcher;
+  margin-right: 1%;
+}
