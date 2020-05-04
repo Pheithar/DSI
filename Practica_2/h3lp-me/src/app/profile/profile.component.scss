@@ -103,7 +103,18 @@ $default-padding: 10px;
   border-radius: 13px;
   left: 135px;
   position: absolute;
+  //color: #002d6f;
 }
+::ng-deep .mat-progress-bar-fill::after {
+  background-color: $primary-color;
+}
+
+
+::ng-deep .mat-progress-bar-buffer {
+  background: aliceblue;
+}
+
+
 
 // Clase para los servicios de los anuncios
 .service{
@@ -122,6 +133,24 @@ $default-padding: 10px;
   @extend .ofrecidos;
 }
 
+.serviceMenu{
+  font-size: 45px;
+  font-family: "Helvetica Neue";
+  margin-top: 10%;
+  font-weight: bold;
+}
+
+
+.servicebutton{
+  background-color: $primary-color;
+  border-radius: 30px;
+}
+#buttonText{
+  color: #FFFFFF;
+  border-radius: 35px;
+
+
+}
 
 
 
