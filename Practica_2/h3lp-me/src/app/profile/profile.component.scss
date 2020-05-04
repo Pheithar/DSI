@@ -4,7 +4,7 @@ $secundary-color: #4f9ae1;
 $title-fontsize: 50px;
 
 //Tamaño de los iconos
-$icon-size: 20%;
+$icon-size: 25%;
 
 // Padding por defecto de los elementos
 $default-padding: 10px;
@@ -48,7 +48,7 @@ $default-padding: 10px;
 // Clases para las distintas imágenes delñ perfil
 .icon{
   width: $icon-size;
-  height: $icon-size;
+  height: auto;
   padding: $default-padding;
 }
 
@@ -86,7 +86,8 @@ $default-padding: 10px;
   display: inline-flex;
   width: 85%;
   padding-left: 15%;
-  position: relative;
+  position: absolute;
+  top: 200px;
 }
 
 .userLevel p{
