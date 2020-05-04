@@ -22,24 +22,24 @@
   </div>
 
   <div *ngIf="loaded && globalUser != undefined && user.h3lper">
-    <button *ngIf="user.username == globalUser.username" mat-raised-button (click)="newService()">Crear Nuevo Servicio</button>
+    <button *ngIf="user.username == globalUser.username" mat-raised-button (click)="newService()" class="servicebutton"> <h1 id="buttonText">+ Nuevo servicio</h1></button>
   </div>
 
   <div>
-    <h1>Tus servicios: Solicitados</h1>
+    <h1 class= "serviceMenu">Tus servicios: Solicitados</h1>
     <div class="solicitados">
       <div class="service" *ngFor="let service of services_solicitados">
         <app-card [add]="service"></app-card>
       </div>
     </div>
 
-    <h1 *ngIf="user.h3lper">Tus servicios: Ofrecidos</h1>
+    <h1 *ngIf="user.h3lper" class="serviceMenu">Tus servicios: Ofrecidos</h1>
     <div class="ofrecidos">
       <div class="service" *ngFor="let service of services_ofrecidos" matBadge="{{service.requests.length}}">
         <app-card [add]="service"></app-card>
       </div>
     </div>
-    <h1>Tienda</h1>
+    <h1 class="serviceMenu">Tienda</h1>
   </div>
 
 
