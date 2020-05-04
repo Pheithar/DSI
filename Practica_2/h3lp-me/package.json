@@ -1,13 +1,16 @@
 {
   "name": "h3lp-me",
   "version": "0.0.0",
+  "main": "main.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "electron": "electron .",
+    "electron-build": "ng build --prod && electron ."
   },
   "private": true,
   "dependencies": {
@@ -28,6 +31,7 @@
     "cors": "^2.8.5",
     "css-star-rating": "^1.2.4",
     "dotenv": "^8.2.0",
+    "electron-prebuilt": "^1.4.13",
     "express": "^4.17.1",
     "firebase": "^7.14.1",
     "font-awesome": "^4.7.0",
@@ -47,10 +51,13 @@
     "@angular/cli": "~10.0.0-next.2",
     "@angular/compiler-cli": "~10.0.0-next.3",
     "@angular/language-service": "~10.0.0-next.3",
+    "@types/electron": "^1.6.10",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.12.37",
     "codelyzer": "^5.1.2",
+    "electron": "^8.2.5",
+    "electron-nightly": "^10.0.0-nightly.20200501",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "^5.0.2",
