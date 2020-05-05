@@ -1,10 +1,17 @@
 <div class="card">
-  <h1>{{add.name}}</h1>
-  <h3>{{add.category}}</h3>
-  <p>{{add.picture}}</p>
-  <h5>{{add.owner_name}}</h5>
-  <p>{{add.location}}</p>
-  <p>{{add.creation_date}}</p>
-  <img class="icon" src="{{add_picture}}" alt="Imagen {{add.name}}">
-  <button mat-raised-button (click)="goToService()">Ver Más</button>
+  <div class="top_card">
+    <p class="title">{{add.name}}</p>
+    <p class="subtitle">{{add.category}}</p>
+  </div>
+  <div class="mid_part">
+    <!-- <p>{{add.picture}}</p> -->
+    <img class="icon" src="{{add_picture}}" alt="Imagen {{add.name}}">
+    <p>{{add.owner_name}}</p>
+  </div>
+  <div class="botton_part">
+    <p class="location">{{add.location}}</p>
+    <p class="date">{{add.creation_date}}</p>
+    <button class="button" mat-raised-button (click)="goToService()">+ INFO</button>
+  </div>
+
 </div>
