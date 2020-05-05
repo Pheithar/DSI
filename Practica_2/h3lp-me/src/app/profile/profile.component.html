@@ -27,6 +27,7 @@
 
   <div>
     <h1 class= "serviceMenu">Tus servicios: Solicitados</h1>
+    <p class="no_services" *ngIf="services_solicitados.length == 0">Parece que no tienes ningún servicio solicitado ahora mismo</p>
     <div class="solicitados">
       <div class="service" *ngFor="let service of services_solicitados">
         <app-card [add]="service"></app-card>
@@ -34,6 +35,7 @@
     </div>
 
     <h1 *ngIf="user.h3lper" class="serviceMenu">Tus servicios: Ofrecidos</h1>
+    <p class="no_services" *ngIf="user.h3lper && services_ofrecidos.length == 0">Parece que no estas ofreceindo ningún servicio ahora mismo</p>
     <div class="ofrecidos">
       <div class="service" *ngFor="let service of services_ofrecidos" matBadge="{{service.requests.length}}">
         <app-card [add]="service"></app-card>

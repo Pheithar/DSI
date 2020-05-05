@@ -70,6 +70,7 @@ export class HeaderComponent{
   beH3lper(){
     this.global.getCurrentUser().h3lper = true;
     this.firestoreService.updateUser(this.global.getCurrentUser());
+    this.router.navigate(['/']);
   }
 
   changePassword(){

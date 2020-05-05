@@ -137,7 +137,7 @@ $default-padding: 10px;
 .serviceMenu{
   font-size: 45px;
   font-family: "Helvetica Neue";
-  margin-top: 10%;
+  margin-top: 3%;
   font-weight: bold;
 }
 
@@ -153,7 +153,11 @@ $default-padding: 10px;
 
 }
 
-
+.no_services{
+  color: grey;
+  font-size: 12px;
+  margin:2%;
+}
 
 
 
