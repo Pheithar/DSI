@@ -1,5 +1,5 @@
 // Tamaño de alto del header
-$header-height: 100px;
+$header-height: 150px;
 
 //Tamaño de los iconos
 $icon-size: 30px;
@@ -39,7 +39,7 @@ $contrast-color: white;
   display: inline-flex;
   width: 100%;
   position: relative;
-  height: 14%;
+  height: 20%;
 }
 
 // Div que contiene el logo y el título
@@ -69,7 +69,7 @@ $contrast-color: white;
 .rightPos{
   position: absolute;
   right: 1%;
-  top: 27%;
+  top: 23%;
 }
 
 .button{
@@ -112,7 +112,7 @@ $contrast-color: white;
 
 .example-header-image:hover{
   cursor: pointer;
-  
+
 }
 
 .hyperlink{
