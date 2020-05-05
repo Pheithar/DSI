@@ -36,6 +36,7 @@ export class ServiciosComponent implements OnInit {
 
       this.s_adds = this.firestoreService.getServices().subscribe(data=>{
         for (let i = 0; i < data.length; i++) {
+
           if (this.filter == undefined) {
             this.search = params['params']['search'];
             if (this.search != undefined && this.search != "") {
@@ -54,7 +55,7 @@ export class ServiciosComponent implements OnInit {
           else{
             if (data[i].category == this.filter) {
               this.adds.push(new Advertisement(data[i].name, data[i].category, data[i].description, data[i].picture, data[i].owner_name, data[i].location, data[i].creation_date, data[i].requests));
-              this.adds[i].setId(data[i].id);
+              this.adds[this.adds.length - 1].setId(data[i].id);
             }
           }
         }

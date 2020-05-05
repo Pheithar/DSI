@@ -44,15 +44,16 @@ $contrast-color: white;
 
 // Div que contiene el logo y el título
 .titleBox{
-  width: 30%;
+  width: 25%;
   position: relative;
 }
 
 // Clase para el logo
 .logo{
-  width: 25%;
-  height: auto;
-  padding: $default-padding;
+  height: 80%;
+  width: auto;
+  padding: 2.5%;
+  position: relative;
 }
 
 .title{
@@ -69,7 +70,7 @@ $contrast-color: white;
 .rightPos{
   position: absolute;
   right: 1%;
-  top: 23%;
+  top: 20%;
 }
 
 .button{

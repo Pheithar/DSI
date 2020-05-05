@@ -58,9 +58,6 @@ export class AddComponent implements OnInit {
         this.firestoreService.getImg(this.add.picture).subscribe(url=>{
           this.add_picture = url;
           this.loaded = true;
-          console.log(this.add.requests);
-
-
         });
       }
     });

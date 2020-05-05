@@ -1,15 +1,17 @@
-<div *ngIf="loaded" class="servicios">
-  <h3 *ngIf="filter != undefined">Buscando por categoría: <strong>{{filter}}</strong></h3>
-  <h3 *ngIf="search != undefined && search != ''">Buscando por: <strong>{{search}}</strong></h3>
+<div class="all">
+  <div *ngIf="loaded" class="servicios">
+    <h3 *ngIf="filter != undefined">Buscando por categoría: <strong>{{filter}}</strong></h3>
+    <h3 *ngIf="search != undefined && search != ''">Buscando por: <strong>{{search}}</strong></h3>
 
-  <div *ngFor="let service of adds">
-    <app-card  [add]="service"></app-card>
+    <div *ngFor="let service of adds">
+      <app-card  [add]="service"></app-card>
+    </div>
+
+    <h1 *ngIf="adds.length == 0">Parece que no hay ningún servicio que cumpla con los criterios de búsqueda</h1>
   </div>
 
-  <h1 *ngIf="adds.length == 0">Parece que no hay ningún servicio que cumpla con los criterios de búsqueda</h1>
-</div>
 
-
-<div *ngIf="!loaded">
-  <mat-spinner></mat-spinner>
+  <div *ngIf="!loaded">
+    <mat-spinner></mat-spinner>
+  </div>
 </div>
