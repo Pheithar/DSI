@@ -39,6 +39,7 @@ $contrast-color: white;
   display: inline-flex;
   width: 100%;
   position: relative;
+  height: 14%;
 }
 
 // Div que contiene el logo y el título
@@ -49,24 +50,26 @@ $contrast-color: white;
 
 // Clase para el logo
 .logo{
-  width: $header-height;
+  width: 25%;
   height: auto;
   padding: $default-padding;
 }
 
 .title{
   position: absolute;
-  top: $header-height/2 - $title-font-size/3;
-  font-size: $title-font-size;
-  left: $header-height + $title-font-size;
+  top: 27%;
+  //top: $header-height/2 - $title-font-size/3;
+  font-size: 400%;
+  //left: $header-height + $title-font-size;
+  left: 30%;
   color: $text-color;
   margin-top: 2%;
 }
 
 .rightPos{
   position: absolute;
-  right: 10px;
-  top: $header-height/4;
+  right: 1%;
+  top: 27%;
 }
 
 .button{
