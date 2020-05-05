@@ -97,9 +97,9 @@ export class ProfileComponent implements OnInit {
         this.user = new User(aux_user.username, aux_user.password, aux_user.level, aux_user.h3lper, aux_user.review_normal, aux_user.review_h3lper, aux_user.experience, aux_user.coins, aux_user.picture, aux_user.ofrecidos, aux_user.solicitados);
         this.user.id = aux_user.id
 
-        this.firestoreService.getImg(this.user.picture).subscribe(url=>{
-          this.user_picture = url;
-        });
+        this.setPicture(this.user.picture);
+
+
         for (let i = 0; i < this.user.ofrecidos.length; i++) {
           let ofre = await this.firestoreService.getService(this.user.ofrecidos[i]);
           this.services_ofrecidos.push(ofre);
@@ -128,6 +128,15 @@ export class ProfileComponent implements OnInit {
       width: '50%',
       data: {user: this.user}
     });
+    dialogRef.afterClosed().subscribe(async result => {
+      if (result) {
+        this.services_ofrecidos = [];
+        for (let i = 0; i < this.user.ofrecidos.length; i++) {
+          let ofre = await this.firestoreService.getService(this.user.ofrecidos[i]);
+          this.services_ofrecidos.push(ofre);
+        }
+      }
+    });
   }
 
   updateImage(){
@@ -135,14 +144,22 @@ export class ProfileComponent implements OnInit {
       width: '30%',
       data: {user: this.user}
     });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result);
+
+      if (result) {
+        this.user.picture = result;
+        this.global.setCurrentUserPicture(result);
+        this.setPicture(result);
+
+      }
+    });
   }
 
-  test(){
-    // this.firestoreService.getImg("BlueLogo.jpg").subscribe(url=>{
-    //   this.test_image_url = url;
-    // })
-    console.log(this.t);
-
+  setPicture(picture){
+    this.firestoreService.getImg(picture).subscribe(url=>{
+      this.user_picture = url;
+    });
   }
 }
 
@@ -280,7 +297,6 @@ export class nuevoServicio implements OnInit{
     else{
       let storageRef = this.firestoreService.getStorage().ref(id);
       await storageRef.put(this.selectedFile).then(function(snapshot) {
-        console.log('Uploaded file!');
         newService.picture = id
       });
     }
@@ -296,7 +312,7 @@ export class nuevoServicio implements OnInit{
     await this.firestoreService.updateUser(this.data.user);
 
     await this.firestoreService.updateService(newService);
-    this.onNoClick();
+    this.dialogRef.close(true);
 
   }
 
@@ -328,14 +344,8 @@ export class nuevaImagen implements OnInit{
 
   async uploadFile(){
     if (this.selectedFile != null) {
-      console.log(this.selectedFile);
       let storageRef = this.firestoreService.getStorage().ref(this.data.user.username);
-
-      await storageRef.put(this.selectedFile).then(function(snapshot) {
-        console.log('Uploaded file!');
-
-
-      });
+      await storageRef.put(this.selectedFile);
 
       this.user.picture = this.data.user.username;
 
@@ -343,14 +353,9 @@ export class nuevaImagen implements OnInit{
 
       aux_user.id = this.user.id
 
-      console.log(this.user.id);
-
-      console.log(aux_user);
-
-
       this.firestoreService.updateUser(aux_user);
 
-      this.onNoClick();
+      this.dialogRef.close(this.user.picture);
     }
 
   }

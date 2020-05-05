@@ -40,8 +40,8 @@ export class GlobalService {
     }
   }
 
-  setCurrentUserPicture(){
-    this.firestoreService.getImg(this.currentUser.picture).subscribe(url=>{
+  setCurrentUserPicture(picture){
+    this.firestoreService.getImg(picture).subscribe(url=>{
       this.user_picture = url;
     });
   }
@@ -52,7 +52,7 @@ export class GlobalService {
 
   setCurrentUser(user:User){
     this.currentUser = user;
-    this.setCurrentUserPicture();
+    this.setCurrentUserPicture(this.currentUser.picture);
   }
 
   deleteCurrentUser(){

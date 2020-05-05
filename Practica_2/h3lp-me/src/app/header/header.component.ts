@@ -309,7 +309,7 @@ export class popUpUsername implements OnInit{
   username:string;
   new_username:string;
 
-  constructor(public dialogRef: MatDialogRef<popUpUsername>, @Inject(MAT_DIALOG_DATA) public data: Cambio, private firestoreService: FirestoreService, private global:GlobalService){
+  constructor(public dialogRef: MatDialogRef<popUpUsername>, @Inject(MAT_DIALOG_DATA) public data: Cambio, private firestoreService: FirestoreService, private global:GlobalService, public router: Router, public route: ActivatedRoute){
     this.users=[];
     this.used_name = false;
   }
@@ -333,10 +333,12 @@ export class popUpUsername implements OnInit{
         }
       }
 
-    if (!this.used_name) {
+    if (!this.used_name && username.length >= 3) {
       this.data.user.username = username;
       this.firestoreService.updateUser(this.data.user);
       this.onNoClick();
+
+      this.router.navigate(['/']);
     }
 
   }

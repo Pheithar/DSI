@@ -1,13 +1,18 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, getCurrentWindow, globalShortcut, screen } = require('electron')
+
 
 let win;
 
 function createWindow () {
+
+  const electronScreen = screen;
+  const size = electronScreen.getPrimaryDisplay().workAreaSize;
   // Create the browser window.
   win = new BrowserWindow({
-    width: 1920,
-    height: 1080,
-    backgroundColor: '#ffffff',
+    x: 0,
+    y: 0,
+    width: size.width,
+    height: size.height,
     icon: `file://${__dirname}/dist/assets/logo2.png`
   })
 
@@ -41,3 +46,15 @@ app.on('activate', function () {
     createWindow()
   }
 })
+
+// var reload = ()=>{
+//   getCurrentWindow().reload()
+// }
+// //
+// globalShortcut.register('F5', reload);
+// globalShortcut.register('CommandOrControl+R', reload);
+// // here is the fix bug #3778, if you know alternative ways, please write them
+// window.addEventListener('beforeunload', ()=>{
+//   globalShortcut.unregister('F5', reload);
+//   globalShortcut.unregister('CommandOrControl+R', reload);
+// })
