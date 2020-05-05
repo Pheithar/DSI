@@ -42,6 +42,9 @@ $fount-color: $dark-blue;
   height: 55%;
   width: 100%;
   position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .botton_part{
@@ -86,7 +89,7 @@ $fount-color: $dark-blue;
 
 .icon{
   width: 150px;
-  height: 150px;
+  max-height: 150px;
   border: solid 3px;
   border-color: $dark-blue;
   border-radius: 10px;

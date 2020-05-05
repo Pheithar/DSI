@@ -145,7 +145,6 @@ export class ProfileComponent implements OnInit {
       data: {user: this.user}
     });
     dialogRef.afterClosed().subscribe(result => {
-      console.log(result);
 
       if (result) {
         this.user.picture = result;
@@ -268,6 +267,9 @@ export class nuevoServicio implements OnInit{
 
   selectedFile = null;
 
+  price:string;
+  pay:string;
+
   constructor(public dialog: MatDialog, public dialogRef: MatDialogRef<nuevoServicio>, @Inject(MAT_DIALOG_DATA) public data: nuevoServicioData, public router: Router, public route: ActivatedRoute, private firestoreService: FirestoreService, private global:GlobalService, private datePipe: DatePipe, private bar: MatSnackBar){
     this.username = this.data.user.username;
     }
@@ -287,7 +289,7 @@ export class nuevoServicio implements OnInit{
     let myDate = new Date();
     let today = this.datePipe.transform(myDate, 'yyyy-MM-dd');
 
-    let newService = new Advertisement(this.serviceName, this.selectedCategory, this.serviceDescription, "test", this.username, this.city + ", " + this.selectedProvince, today, []);
+    let newService = new Advertisement(this.serviceName, this.selectedCategory, this.serviceDescription, "test", this.username, this.city + ", " + this.selectedProvince, today, [], this.price + " " + this.pay);
     let id = await this.firestoreService.createService(newService);
 
 

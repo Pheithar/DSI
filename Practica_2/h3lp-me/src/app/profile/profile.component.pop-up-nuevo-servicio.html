@@ -41,8 +41,19 @@
 <h1>Imágen del Servicio</h1>
 <input type="file" accept="image/*" (change)="onFileSelected($event)">
 <br>
-<!-- <p>{{username}} {{serviceName}} {{selectedCategory}} {{serviceDescription}} {{selectedProvince}} {{city}}</p> -->
-<button mat-raised-button (click)="createService()" [disabled]="username && serviceName && selectedCategory && serviceDescription && selectedProvince && city? 'false': 'true'">Crear Servicio</button>
+<mat-form-field>
+  <mat-label>Precio</mat-label>
+  <input matInput [(ngModel)]="price" name="precio">
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Tipo de pago</mat-label>
+  <mat-select [(value)]="pay" name="tipo de pago">
+    <mat-option value="€">€</mat-option>
+    <mat-option value="€/hora">€/hora</mat-option>
+  </mat-select>
+</mat-form-field>
+<br>
+<button mat-raised-button (click)="createService()" [disabled]="username && serviceName && selectedCategory && serviceDescription && selectedProvince && city && price && pay ? 'false': 'true'">Crear Servicio</button>
 
 <button mat-raised-button (click)=onNoClick()>Cancelar</button>
 
