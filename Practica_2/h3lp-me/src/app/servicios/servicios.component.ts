@@ -43,9 +43,9 @@ export class ServiciosComponent implements OnInit {
           let promotionDay = new Date(data[i].promotion);
 
 
-          console.log(today <= promotionDay);
-          console.log(today.toDateString());
-          console.log(promotionDay.toDateString());
+          // console.log(today <= promotionDay);
+          // console.log(today.toDateString());
+          // console.log(promotionDay.toDateString());
 
 
           if (this.filter == undefined) {
