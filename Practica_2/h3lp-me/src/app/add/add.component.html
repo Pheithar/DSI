@@ -30,7 +30,7 @@
   <div *ngIf="loaded">
     <p *ngIf="correct">Se ha solicitado el servicio correctamente</p>
     <p *ngIf="repeat">El servicio ya estaba solicitado</p>
-    <button *ngIf="global.getCurrentUser() == undefined || global.getCurrentUser().username != add.owner_name" mat-raised-button (click)="solicitar()" [disabled]="global.getCurrentUser()  ? 'false' : 'true'" >Solicitar Servicio</button>
+    <button class="button" *ngIf="global.getCurrentUser() == undefined || global.getCurrentUser().username != add.owner_name" mat-raised-button (click)="solicitar()" [disabled]="global.getCurrentUser()  ? 'false' : 'true'" >Solicitar Servicio</button>
 
     <p *ngIf="global.getCurrentUser() == undefined">
       Registrate o inicia sesión para poder solicitar servicios.

@@ -17,6 +17,11 @@ $fount-color: $dark-blue;
   left: 17%;
 }
 
+.button{
+  color: white;
+  background-color: $dark-blue
+}
+
 .global{
   display: flex;
   flex-direction: column;
