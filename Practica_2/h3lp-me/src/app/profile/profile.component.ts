@@ -451,7 +451,7 @@ export class Promocion implements OnInit{
       this.onNoClick();
 
     }
-    if (this.user.coins < this.totalCost) {
+    else if (this.user.coins < this.totalCost) {
       this.noMoney = true;
     }
 
