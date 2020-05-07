@@ -1,105 +1,544 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.20)  6 MAY 2020 23:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.4.28)  7 MAY 2020 14:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**practica_2-1.pdf
-(./practica_2-1.pdf
-LaTeX2e <2019-10-01>
+**practica_2-1.tex
+(./practica_2-1.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14> (./uc3mpracticas.cls
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+Document Class: uc3mpracticas 2020/03/05 Clase personalizada de Alejandro Valve
+rde para prÃ¡cticas de la UC3M
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip49
+\f@nch@O@elh=\skip50
+\f@nch@O@erh=\skip51
+\f@nch@O@olh=\skip52
+\f@nch@O@orh=\skip53
+\f@nch@O@elf=\skip54
+\f@nch@O@erf=\skip55
+\f@nch@O@olf=\skip56
+\f@nch@O@orf=\skip57
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/02/14 3.40 The Babel package
 
-! LaTeX Error: Missing \begin{document}.
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2020/02/14 3.40 Babel switching mechanism
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.3 5
-      0 obj
-? 
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no j in font nullfont!
-Missing character: There is no < in font nullfont!
-Missing character: There is no < in font nullfont!
-Missing character: There is no / in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no / in font nullfont!
-Missing character: There is no F in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no / in font nullfont!
-Missing character: There is no F in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no D in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no > in font nullfont!
-Missing character: There is no > in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no x in font nullfont!
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/02/14 3.40 Babel common definitions
+\babel@savecnt=\count175
+\U@D=\dimen135
 
-! Package inputenc Error: Unicode character Ú• (U+0695)
-(inputenc)                not set up for use with LaTeX.
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count176
+)
+\es@quottoks=\toks14
+\es@quotdepth=\count177
+))
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
 
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9 xÚ•
-       SËnÛ0^^P¼û+x”^^NÚpùfny4i^^B^^Dha#—8^^GÆbR^^U–ÔJv
-? 
-Missing character: There is no S in font nullfont!
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
-! Package inputenc Error: Invalid UTF-8 byte sequence.
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+))
+\Gm@cnth=\count178
+\Gm@cntv=\count179
+\c@Gm@tempcnt=\count180
+\Gm@bindingoffset=\dimen136
+\Gm@wd@mp=\dimen137
+\Gm@odd@mp=\dimen138
+\Gm@even@mp=\dimen139
+\Gm@layoutwidth=\dimen140
+\Gm@layoutheight=\dimen141
+\Gm@layouthoffset=\dimen142
+\Gm@layoutvoffset=\dimen143
+\Gm@dimlist=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+)
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count181
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9 xÚ•SËn
-          Û0^^P¼û+x”^^NÚpùfny4i^^B^^Dha#—8^^GÆbR^^U–ÔJv
-? 
-! Emergency stop.
- ...                                              
-                                                  
-l.9 xÚ•SËn
-          Û0^^P¼û+x”^^NÚpùfny4i^^B^^Dha#—8^^GÆbR^^U–ÔJv
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
 
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen144
+\Gin@req@width=\dimen145
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count182
+\mult@box=\box45
+\multicol@leftmargin=\dimen146
+\c@unbalance=\count183
+\c@collectmore=\count184
+\doublecol@number=\count185
+\multicoltolerance=\count186
+\multicolpretolerance=\count187
+\full@width=\dimen147
+\page@free=\dimen148
+\premulticols=\dimen149
+\postmulticols=\dimen150
+\multicolsep=\skip58
+\multicolbaselineskip=\skip59
+\partial@page=\box46
+\last@line=\box47
+\maxbalancingoverflow=\dimen151
+\mult@rightbox=\box48
+\mult@grightbox=\box49
+\mult@gfirstbox=\box50
+\mult@firstbox=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\c@minrows=\count188
+\c@columnbadness=\count189
+\c@finalcolumnbadness=\count190
+\last@try=\dimen152
+\multicolovershoot=\dimen153
+\multicolundershoot=\dimen154
+\mult@nat@firstbox=\box89
+\colbreak@box=\box90
+\mc@col@check@num=\count191
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2019/07/28 v2.2 ragged2e Package (MS)
+
+(/usr/share/texlive/texmf-dist/tex/latex/ms/everysel.sty
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+)
+\CenteringLeftskip=\skip60
+\RaggedLeftLeftskip=\skip61
+\RaggedRightLeftskip=\skip62
+\CenteringRightskip=\skip63
+\RaggedLeftRightskip=\skip64
+\RaggedRightRightskip=\skip65
+\CenteringParfillskip=\skip66
+\RaggedLeftParfillskip=\skip67
+\RaggedRightParfillskip=\skip68
+\JustifyingParfillskip=\skip69
+\CenteringParindent=\skip70
+\RaggedLeftParindent=\skip71
+\RaggedRightParindent=\skip72
+\JustifyingParindent=\skip73
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/helvet.sty
+Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
+))
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count192
+\l__pdf_internal_box=\box91
+)
+(./practica_2-1.aux
+LaTeX Info: Redefining \. on input line 3.
+LaTeX Info: Redefining \% on input line 3.
+)
+\openout1 = `practica_2-1.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 38
+.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 9.49997pt on input line 38.
+LaTeX Info: Redefining \. on input line 38.
+LaTeX Info: Redefining \% on input line 38.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 472.03123pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 652.70622pt, 71.13188pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=472.03123pt
+* \textheight=652.70622pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             ! on input line 38.
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count193
+\scratchdimen=\dimen155
+\scratchbox=\box92
+\nofMPsegments=\count194
+\nofMParguments=\count195
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count196
+\MPscratchDim=\dimen156
+\MPnumerator=\count197
+\makeMPintoPDFobject=\count198
+\everyMPtoPDFconversion=\toks20
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 38.
+<Images/logo_help.png, id=1, 231.11343pt x 246.1697pt>
+File: Images/logo_help.png Graphic file (type png)
+<use Images/logo_help.png>
+Package pdftex.def Info: Images/logo_help.png  used on input line 43.
+(pdftex.def)             Requested size: 227.62204pt x 242.45415pt.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 16.41594pt on input line 43.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 13.67995pt on input line 43.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 13.67995pt on input line 43.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 16.41594pt on input line 43.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 23.63593pt on input line 43.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 51.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 51.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 9.49997pt on input line 51.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 11.39996pt on input line 51.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 51.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 9.49997pt on input line 51.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Images/logo_help.png>] (
+./practica_2-1.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
+\tf@toc=\write3
+\openout3 = `practica_2-1.toc'.
+
+ [2]
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 11.39996pt on input line 96.
+<Images/DSIinicio.png, id=15, 1927.2pt x 1084.05pt>
+File: Images/DSIinicio.png Graphic file (type png)
+<use Images/DSIinicio.png>
+Package pdftex.def Info: Images/DSIinicio.png  used on input line 99.
+(pdftex.def)             Requested size: 369.88582pt x 208.05583pt.
+ [3]
+<Images/general.png, id=19, 1927.2pt x 1084.05pt>
+File: Images/general.png Graphic file (type png)
+<use Images/general.png>
+Package pdftex.def Info: Images/general.png  used on input line 105.
+(pdftex.def)             Requested size: 369.88582pt x 208.05583pt.
+ [4 <./Images/DSIinicio.png> <./Images/general.png>]
+<Images/perfil.png, id=25, 1927.2pt x 1084.05pt>
+File: Images/perfil.png Graphic file (type png)
+<use Images/perfil.png>
+Package pdftex.def Info: Images/perfil.png  used on input line 115.
+(pdftex.def)             Requested size: 369.88582pt x 208.05583pt.
+<Images/prototipo1.png, id=26, 1084.05pt x 1883.035pt>
+File: Images/prototipo1.png Graphic file (type png)
+<use Images/prototipo1.png>
+Package pdftex.def Info: Images/prototipo1.png  used on input line 127.
+(pdftex.def)             Requested size: 227.62204pt x 395.36282pt.
+ [5 <./Images/perfil.png>]
+<Images/prototipo2.png, id=31, 1084.05pt x 1883.035pt>
+File: Images/prototipo2.png Graphic file (type png)
+<use Images/prototipo2.png>
+Package pdftex.def Info: Images/prototipo2.png  used on input line 135.
+(pdftex.def)             Requested size: 227.62204pt x 395.36282pt.
+ [6 <./Images/prototipo1.png>]
+<Images/ALEJANpage_11.png, id=36, 1927.2pt x 1084.05pt>
+File: Images/ALEJANpage_11.png Graphic file (type png)
+<use Images/ALEJANpage_11.png>
+Package pdftex.def Info: Images/ALEJANpage_11.png  used on input line 155.
+(pdftex.def)             Requested size: 369.88582pt x 208.05583pt.
+ [7 <./Images/prototipo2.png>]
+<Images/ALEJANpage_2.png, id=42, 1927.2pt x 1084.05pt>
+File: Images/ALEJANpage_2.png Graphic file (type png)
+<use Images/ALEJANpage_2.png>
+Package pdftex.def Info: Images/ALEJANpage_2.png  used on input line 167.
+(pdftex.def)             Requested size: 369.88582pt x 208.05583pt.
+ [8 <./Images/ALEJANpage_11.png> <./Images/ALEJANpage_2.png>]
+<Images/home.png, id=48, 5463.612pt x 3072.9204pt>
+File: Images/home.png Graphic file (type png)
+<use Images/home.png>
+Package pdftex.def Info: Images/home.png  used on input line 177.
+(pdftex.def)             Requested size: 369.88582pt x 207.99928pt.
+<Images/search.png, id=49, 5561.8992pt x 3122.064pt>
+File: Images/search.png Graphic file (type png)
+<use Images/search.png>
+Package pdftex.def Info: Images/search.png  used on input line 183.
+(pdftex.def)             Requested size: 369.88582pt x 207.60988pt.
+ [9 <./Images/home.png>]
+<Images/profile.png, id=54, 5463.612pt x 3072.9204pt>
+File: Images/profile.png Graphic file (type png)
+<use Images/profile.png>
+Package pdftex.def Info: Images/profile.png  used on input line 197.
+(pdftex.def)             Requested size: 369.88582pt x 207.99928pt.
+ [10 <./Images/search.png> <./Images/profile.png>] [11] [12]
+<Images/storyboard1.png, id=66, 585.68813pt x 822.07124pt>
+File: Images/storyboard1.png Graphic file (type png)
+<use Images/storyboard1.png>
+Package pdftex.def Info: Images/storyboard1.png  used on input line 328.
+(pdftex.def)             Requested size: 312.9803pt x 439.32083pt.
+<Images/storyboard2.png, id=67, 573.64313pt x 828.09375pt>
+File: Images/storyboard2.png Graphic file (type png)
+<use Images/storyboard2.png>
+Package pdftex.def Info: Images/storyboard2.png  used on input line 336.
+(pdftex.def)             Requested size: 312.9803pt x 451.8139pt.
+ [13 <./Images/storyboard1.png>]
+<Images/storyboard3.png, id=73, 883.3pt x 508.90125pt>
+File: Images/storyboard3.png Graphic file (type png)
+<use Images/storyboard3.png>
+Package pdftex.def Info: Images/storyboard3.png  used on input line 340.
+(pdftex.def)             Requested size: 312.9803pt x 180.31566pt.
+ [14 <./Images/storyboard2.png>]
+<Images/inicio1.png, id=78, 1927.2pt x 3252.15pt>
+File: Images/inicio1.png Graphic file (type png)
+<use Images/inicio1.png>
+Package pdftex.def Info: Images/inicio1.png  used on input line 364.
+(pdftex.def)             Requested size: 312.9803pt x 528.14557pt.
+ [15 <./Images/storyboard3.png>]
+<Images/iniciosesionhelpme.png, id=82, 1927.2pt x 1585.925pt>
+File: Images/iniciosesionhelpme.png Graphic file (type png)
+<use Images/iniciosesionhelpme.png>
+Package pdftex.def Info: Images/iniciosesionhelpme.png  used on input line 366.
+
+(pdftex.def)             Requested size: 312.9803pt x 257.55246pt.
+ [16 <./Images/inicio1.png>]
+<Images/cuid.png, id=87, 2106.87125pt x 1185.42876pt>
+File: Images/cuid.png Graphic file (type png)
+<use Images/cuid.png>
+Package pdftex.def Info: Images/cuid.png  used on input line 368.
+(pdftex.def)             Requested size: 312.9803pt x 176.08826pt.
+<Images/serviciosinmenu.png, id=88, 2084.78876pt x 1172.38pt>
+File: Images/serviciosinmenu.png Graphic file (type png)
+<use Images/serviciosinmenu.png>
+Package pdftex.def Info: Images/serviciosinmenu.png  used on input line 370.
+(pdftex.def)             Requested size: 312.9803pt x 175.99252pt.
+<Images/contratopop.png, id=89, 1826.825pt x 1029.8475pt>
+File: Images/contratopop.png Graphic file (type png)
+<use Images/contratopop.png>
+Package pdftex.def Info: Images/contratopop.png  used on input line 372.
+(pdftex.def)             Requested size: 312.9803pt x 176.43889pt.
+ [17 <./Images/iniciosesionhelpme.png> <./Images/cuid.png> <./Images/serviciosi
+nmenu.png>]
+<Images/contratado.png, id=96, 3497.065pt x 1968.35374pt>
+File: Images/contratado.png Graphic file (type png)
+<use Images/contratado.png>
+Package pdftex.def Info: Images/contratado.png  used on input line 374.
+(pdftex.def)             Requested size: 312.9803pt x 176.15305pt.
+<Images/ajustes.png, id=97, 1927.2pt x 1084.05pt>
+File: Images/ajustes.png Graphic file (type png)
+<use Images/ajustes.png>
+Package pdftex.def Info: Images/ajustes.png  used on input line 376.
+(pdftex.def)             Requested size: 312.9803pt x 176.04852pt.
+<Images/tienda.png, id=98, 1927.2pt x 1084.05pt>
+File: Images/tienda.png Graphic file (type png)
+<use Images/tienda.png>
+Package pdftex.def Info: Images/tienda.png  used on input line 378.
+(pdftex.def)             Requested size: 312.9803pt x 176.04852pt.
+ [18 <./Images/contratopop.png> <./Images/contratado.png> <./Images/ajustes.png
+>]
+<Images/perfildsi.png, id=105, 1927.2pt x 1084.05pt>
+File: Images/perfildsi.png Graphic file (type png)
+<use Images/perfildsi.png>
+Package pdftex.def Info: Images/perfildsi.png  used on input line 380.
+(pdftex.def)             Requested size: 312.9803pt x 176.04852pt.
+<Images/chats.png, id=106, 1927.2pt x 1084.05pt>
+File: Images/chats.png Graphic file (type png)
+<use Images/chats.png>
+Package pdftex.def Info: Images/chats.png  used on input line 382.
+(pdftex.def)             Requested size: 312.9803pt x 176.04852pt.
  
+AED: lastpage setting LastPage
+[19 <./Images/tienda.png> <./Images/perfildsi.png> <./Images/chats.png>]
+(./practica_2-1.aux
+LaTeX Info: Redefining \. on input line 3.
+LaTeX Info: Redefining \% on input line 3.
+)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 8 strings out of 493610
- 303 string characters out of 6159293
- 55845 words of memory out of 5000000
- 4262 multiletter control sequences out of 15000+600000
- 3640 words of font info for 14 fonts, out of 8000000 for 9000
- 319 hyphenation exceptions out of 8191
- 10i,0n,10p,64b,14s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 4102 strings out of 481239
+ 59253 string characters out of 5920377
+ 318839 words of memory out of 5000000
+ 19281 multiletter control sequences out of 15000+600000
+ 560173 words of font info for 44 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 38i,10n,49p,1105b,361s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/urw/helvetic/uhvro8a.pfb>
+Output written on practica_2-1.pdf (19 pages, 7135639 bytes).
+PDF statistics:
+ 127 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+
