@@ -1,4 +1,144 @@
+//Color oscuro
+$dark-blue: #002d6f;
+//Color de resalte.
+$light-blue: #4f9ae1;
+
+// Padding por defecto de los elementos
+$default-padding: 5px;
+
+// Color de la fuente por defecto
+$fount-color: $dark-blue;
+
 .icon{
   width: 200px;
   height: 200px;
+  position: absolute;
+  top: 10%;
+  left: 17%;
+}
+
+.global{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3%;
+  // background-color: purple;
+}
+
+.text{
+  font-size: 20px;
+  color: black;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  line-height: 15px;
+}
+
+.text_alt{
+  font-size: 20px;
+  color: black;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 15px;
+}
+
+#precio{
+  position: absolute;
+  bottom: 25%;
+  left: 5%;
+}
+
+#localizacion{
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+}
+
+#title{
+  position: absolute;
+  top: 5%;
+}
+
+#category{
+  position: absolute;
+  top: 15%;
+}
+
+#owner{
+  position: absolute;
+  bottom: 1%;
+  right: 3%;
+}
+
+#description{
+  position: absolute;
+  left: 5%;
+  top: 25%;
+  margin-right: 2%;
+  line-height: 25px;
+  text-align: justify;
+}
+
+#fecha{
+  position: absolute;
+  bottom: 3%;
+}
+
+.title{
+  font-size: 45px;
+  color: $fount-color;
+  font-weight: 600;
+}
+
+.subtitle{
+  color: $fount-color;
+  font-size: 30px;
+  font-weight: 450;
+}
+
+.service{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 600px;
+  width: 90%;
+  // margin-left: 2%;
+  margin-top: 2%;
+
+  // background-color: red;
+}
+
+.right{
+  display: flex;
+  flex-direction: column;
+  // background-color: yellow;
+  width: 10%;
+  height: 100%;
+  position: relative;
+}
+
+.left{
+  display: flex;
+  flex-direction: column;
+  // background-color: green;
+  width: 30%;
+  height: 100%;
+  position: relative;
+}
+
+.mid{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  // background-color: blue;
+  width: 60%;
+  height: 100%;
 }

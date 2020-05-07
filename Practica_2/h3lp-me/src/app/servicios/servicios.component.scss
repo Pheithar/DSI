@@ -1,3 +1,26 @@
 .all{
   min-height: 80%;
 }
+
+.lista{
+  margin-left: 6%;
+  display: block;
+  position: relative;
+/* flex-direction: row; */
+  overflow: auto;
+
+  max-width: 100%;
+  max-height: 100%;
+
+  justify-content: center;
+  align-items: center;
+  // background-color: red;
+
+}
+
+.card{
+  margin: 1%;
+  float: left;
+  position: relative;
+
+}

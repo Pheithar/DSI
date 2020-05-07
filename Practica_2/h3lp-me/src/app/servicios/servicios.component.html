@@ -3,8 +3,13 @@
     <h3 *ngIf="filter != undefined">Buscando por categoría: <strong>{{filter}}</strong></h3>
     <h3 *ngIf="search != undefined && search != ''">Buscando por: <strong>{{search}}</strong></h3>
 
-    <div *ngFor="let service of adds">
-      <app-card  [add]="service"></app-card>
+    <div class="lista" *ngFor="let service of adds">
+      <app-card class="card" [add]="service"></app-card>
+      <!-- <app-card class="card" [add]="service"></app-card>
+      <app-card class="card" [add]="service"></app-card>
+      <app-card class="card" [add]="service"></app-card>
+      <app-card class="card" [add]="service"></app-card>
+      <app-card class="card" [add]="service"></app-card> -->
     </div>
 
     <h1 *ngIf="adds.length == 0">Parece que no hay ningún servicio que cumpla con los criterios de búsqueda</h1>
