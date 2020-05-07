@@ -419,8 +419,8 @@ export class Promocion implements OnInit{
       let today = new Date();
       let promotionDay = new Date(ofre.promotion);
 
-      console.log(today >= promotionDay);
-      console.log(promotionDay.toDateString());
+      // console.log(today >= promotionDay);
+      // console.log(promotionDay.toDateString());
 
       if (today >= promotionDay) {
         this.services_ofrecidos.push(ofre);
