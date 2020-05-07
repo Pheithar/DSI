@@ -10,9 +10,10 @@ export class Advertisement{
   creation_date:string;
   requests:string[];
   price:string;
+  promotion:string;
 
 
-  constructor(name:string, category:string, description:string, picture:string, owner_name:string, location:string, creation_date:string, requests:string[], price:string){
+  constructor(name:string, category:string, description:string, picture:string, owner_name:string, location:string, creation_date:string, requests:string[], price:string, promotion:string){
     this.name = name;
     this.category = category;
     this.description = description;
@@ -22,6 +23,7 @@ export class Advertisement{
     this.creation_date = creation_date;
     this.requests = requests;
     this.price = price;
+    this.promotion = promotion;
   }
 
   setId(id:string){

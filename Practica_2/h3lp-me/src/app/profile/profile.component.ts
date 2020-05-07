@@ -31,11 +31,17 @@ export interface passUser {
   user: User;
 }
 
+export interface promotionData{
+  user: User;
+  cost: number;
+  time: number;
+}
+
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.scss']
+  styleUrls: ['./profile.component.scss'],
 })
 
 export class ProfileComponent implements OnInit {
@@ -160,6 +166,14 @@ export class ProfileComponent implements OnInit {
       this.user_picture = url;
     });
   }
+
+  makePromotion(cost:number, time:number){
+    const dialogRef = this.dialog.open(Promocion, {
+      width: '50%',
+      data: {user: this.user, cost: cost, time:time}
+    });
+  }
+
 }
 
 
@@ -289,7 +303,7 @@ export class nuevoServicio implements OnInit{
     let myDate = new Date();
     let today = this.datePipe.transform(myDate, 'yyyy-MM-dd');
 
-    let newService = new Advertisement(this.serviceName, this.selectedCategory, this.serviceDescription, "test", this.username, this.city + ", " + this.selectedProvince, today, [], this.price + " " + this.pay);
+    let newService = new Advertisement(this.serviceName, this.selectedCategory, this.serviceDescription, "test", this.username, this.city + ", " + this.selectedProvince, today, [], this.price + " " + this.pay, today);
     let id = await this.firestoreService.createService(newService);
 
 
@@ -366,4 +380,96 @@ export class nuevaImagen implements OnInit{
     this.dialogRef.close();
   }
 
+}
+
+
+@Component({
+  selector: 'pop-up-promocion',
+  templateUrl: './profile.component.promocion.html',
+  styleUrls: ['./profile.component.scss'],
+  providers: [DatePipe]
+})
+export class Promocion implements OnInit{
+
+  user:User;
+  cost:number;
+  time:number;
+  services_ofrecidos:Advertisement[]
+  selected_services:boolean[];
+  totalCost:number;
+
+  noMoney:boolean;
+  noSelected:boolean;
+
+  constructor(private firestoreService: FirestoreService, public dialog: MatDialog, public dialogRef: MatDialogRef<Promocion>, @Inject(MAT_DIALOG_DATA) public data: promotionData, private datePipe: DatePipe){
+    this.user = this.data.user;
+    this.cost = this.data.cost;
+    this.time = this.data.time;
+    this.services_ofrecidos = [];
+    this.selected_services = [];
+    this.totalCost = 0;
+    this.noMoney = false;
+    this.noSelected = false;
+  }
+
+  async ngOnInit(){
+    for (let i = 0; i < this.user.ofrecidos.length; i++) {
+      let ofre = await this.firestoreService.getService(this.user.ofrecidos[i]);
+
+      let today = new Date();
+      let promotionDay = new Date(ofre.promotion);
+
+      console.log(today >= promotionDay);
+      console.log(promotionDay.toDateString());
+
+      if (today >= promotionDay) {
+        this.services_ofrecidos.push(ofre);
+        this.selected_services.push(false);
+      }
+    }
+  }
+
+  makePromotion(){
+    this.setTotalCost();
+
+    this.noMoney = false;
+
+    if (this.user.coins >= this.totalCost && !this.noSelected) {
+      this.user.coins -= this.totalCost;
+      this.firestoreService.updateUser(this.user);
+      let myDate = new Date();
+      myDate.setDate(myDate.getDate()+this.time);
+      let date = this.datePipe.transform(myDate, 'yyyy-MM-dd');
+
+      for (let i = 0; i < this.selected_services.length; i++) {
+        if (this.selected_services[i]) {
+
+          this.services_ofrecidos[i].promotion = date;
+          this.firestoreService.updateService(this.services_ofrecidos[i]);
+        }
+      }
+      this.onNoClick();
+
+    }
+    if (this.user.coins < this.totalCost) {
+      this.noMoney = true;
+    }
+
+  }
+
+  setTotalCost(){
+    this.totalCost= 0;
+    this.noSelected = true;
+    for (let i = 0; i < this.selected_services.length; i++) {
+      if (this.selected_services[i]) {
+
+        this.totalCost += this.cost
+        this.noSelected = false;
+      }
+    }
+  }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
 }

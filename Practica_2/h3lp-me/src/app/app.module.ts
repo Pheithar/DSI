@@ -61,7 +61,7 @@ import { CookieService } from 'ngx-cookie-service';
 // Página principal
 import { MainComponent, popUpMainRegistro } from './main/main.component';
 //Página de perfil
-import { ProfileComponent, nuevoServicio, nuevaImagen } from './profile/profile.component';
+import { ProfileComponent, nuevoServicio, nuevaImagen, Promocion } from './profile/profile.component';
 // Página del error 404
 import { NotFoundComponent } from './not-found/not-found.component';
 // Componente del header
@@ -90,6 +90,7 @@ import { UploadFileComponent } from './upload-file/upload-file.component';
     ProfileComponent,
     nuevoServicio,
     nuevaImagen,
+    Promocion,
     NotFoundComponent,
     HeaderComponent,
     FooterComponent,

@@ -10,8 +10,8 @@ $default-padding: 5px;
 $fount-color: $dark-blue;
 
 .icon{
-  width: 200px;
-  height: 200px;
+  width: 80%;
+  max-height: 45%;
   position: absolute;
   top: 10%;
   left: 17%;
@@ -61,6 +61,8 @@ $fount-color: $dark-blue;
 #title{
   position: absolute;
   top: 5%;
+  width: 100%;
+  text-align: center;
 }
 
 #category{

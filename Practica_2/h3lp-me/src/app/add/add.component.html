@@ -25,22 +25,23 @@
       <p class="text" id="fecha">{{add.creation_date}}</p>
     </div>
 
+
   </div>
+  <div *ngIf="loaded">
+    <p *ngIf="correct">Se ha solicitado el servicio correctamente</p>
+    <p *ngIf="repeat">El servicio ya estaba solicitado</p>
+    <button *ngIf="global.getCurrentUser() == undefined || global.getCurrentUser().username != add.owner_name" mat-raised-button (click)="solicitar()" [disabled]="global.getCurrentUser()  ? 'false' : 'true'" >Solicitar Servicio</button>
 
-  <p *ngIf="correct">Se ha solicitado el servicio correctamente</p>
-  <p *ngIf="repeat">El servicio ya estaba solicitado</p>
-  <button *ngIf="global.getCurrentUser() == undefined || global.getCurrentUser().username != add.owner_name" mat-raised-button (click)="solicitar()" [disabled]="global.getCurrentUser()  ? 'false' : 'true'" >Solicitar Servicio</button>
-
-  <p *ngIf="global.getCurrentUser() == undefined">
-    Registrate o inicia sesión para poder solicitar servicios.
-  </p>
-  <div *ngIf="global.getCurrentUser() != undefined && global.getCurrentUser().username == add.owner_name">
-    <h2>Usuarios que han solicitado el servicio</h2>
-    <div *ngFor="let name of add.requests">
-      <p>{{name}}</p>
+    <p *ngIf="global.getCurrentUser() == undefined">
+      Registrate o inicia sesión para poder solicitar servicios.
+    </p>
+    <div *ngIf="global.getCurrentUser() != undefined && global.getCurrentUser().username == add.owner_name">
+      <h2>Usuarios que han solicitado el servicio</h2>
+      <div *ngFor="let name of add.requests">
+        <p>{{name}}</p>
+      </div>
     </div>
   </div>
-
 </div>
 <!-- <div *ngIf="!loaded"> -->
   <div>

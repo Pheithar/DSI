@@ -1,52 +1,78 @@
-<div *ngIf="loaded" class="profile">
+<div class="all">
 
-  <div class="userCard">
-    <div class="userHeader">
-      <img class="icon" src="{{user_picture}}" alt="Imagen de usuario" (click)="updateImage()" matTooltip="Haz click en la imagen para cambiarla">
+  <div *ngIf="loaded" class="profile">
 
-      <p class="username">{{user.username}}</p>
+    <div class="userCard">
+      <div class="userHeader">
+        <img class="icon" src="{{user_picture}}" alt="Imagen de usuario" (click)="updateImage()" matTooltip="Haz click en la imagen para cambiarla">
 
-      <div class="coins">
-        <img class="coin-img" src="./assets/iconos/coin.svg" alt="Icono de de h3lpcoins">
-        <p>{{user.coins}}</p>
+        <p class="username">{{user.username}}</p>
+
+        <div class="coins">
+          <img class="coin-img" src="./assets/iconos/coin.svg" alt="Icono de de h3lpcoins">
+          <p>{{user.coins}}</p>
+        </div>
+        <img class="h3lper-img" *ngIf="user.h3lper" src="./assets/iconos/premium.svg" alt="Icono de Premium" matTooltip="Este usuario es un h3lper">
       </div>
-      <img class="h3lper-img" *ngIf="user.h3lper" src="./assets/iconos/premium.svg" alt="Icono de Premium" matTooltip="Este usuario es un h3lper">
+      <br><br>
+      <div class="userLevel">
+        <p>Nivel {{user.level}}</p>
+        <mat-progress-bar class="progressBar" mode="determinate" value={{user.getProporcionalXP()}} matTooltip="{{user.experience}}/{{user.getXPtoNextLevel()}} puntos de experiencia"></mat-progress-bar>
+      </div>
+      <!-- <p>{{user.review_h3lper}}/{{user.review_h3lper.length}}</p>
+      <p>{{user.review_normal}}/{{user.review_normal.length}}</p> -->
     </div>
-    <br><br>
-    <div class="userLevel">
-      <p>Nivel {{user.level}}</p>
-      <mat-progress-bar class="progressBar" mode="determinate" value={{user.getProporcionalXP()}} matTooltip="{{user.experience}}/{{user.getXPtoNextLevel()}} puntos de experiencia"></mat-progress-bar>
+
+    <div *ngIf="loaded && globalUser != undefined && user.h3lper">
+      <button *ngIf="user.username == globalUser.username" mat-raised-button (click)="newService()" class="servicebutton"> <h1 id="buttonText">+ Nuevo servicio</h1></button>
     </div>
-    <!-- <p>{{user.review_h3lper}}/{{user.review_h3lper.length}}</p>
-    <p>{{user.review_normal}}/{{user.review_normal.length}}</p> -->
+
+    <div>
+      <h1 class= "serviceMenu">Tus servicios: Solicitados</h1>
+      <p class="no_services" *ngIf="services_solicitados.length == 0">Parece que no tienes ningún servicio solicitado ahora mismo</p>
+      <div class="solicitados">
+        <div class="service" *ngFor="let service of services_solicitados">
+          <app-card [add]="service"></app-card>
+        </div>
+      </div>
+
+      <h1 *ngIf="user.h3lper" class="serviceMenu">Tus servicios: Ofrecidos</h1>
+      <p class="no_services" *ngIf="user.h3lper && services_ofrecidos.length == 0">Parece que no estas ofreceindo ningún servicio ahora mismo</p>
+      <div class="ofrecidos">
+        <div class="service" *ngFor="let service of services_ofrecidos" matBadge="{{service.requests.length}}">
+          <app-card [add]="service"></app-card>
+        </div>
+      </div>
+      <h1 class="serviceMenu">Tienda</h1>
+      <div class="anuncio">
+        <h2>Promoción de 1 día</h2>
+        <h4>Precio: 10 <img class="coin-img" src="./assets/iconos/coin.svg" alt="Icono de de h3lpcoins"></h4>
+        <button mat-raised-button (click)="makePromotion(10, 1)">Solicitar</button>
+      </div>
+
+      <div class="anuncio">
+        <h2>Promoción de 3 días</h2>
+        <h4>Precio: 25 <img class="coin-img" src="./assets/iconos/coin.svg" alt="Icono de de h3lpcoins"></h4>
+        <button mat-raised-button (click)="makePromotion(25, 3)">Solicitar</button>
+      </div>
+
+      <div class="anuncio">
+        <h2>Promoción de 7 días</h2>
+        <h4>Precio: 50 <img class="coin-img" src="./assets/iconos/coin.svg" alt="Icono de de h3lpcoins"></h4>
+        <button mat-raised-button (click)="makePromotion(50, 7)">Solicitar</button>
+      </div>
+
+      <div class="anuncio">
+        <h2>Promoción de 1 mes (30 días)</h2>
+        <h4>Precio: 190 <img class="coin-img" src="./assets/iconos/coin.svg" alt="Icono de de h3lpcoins"></h4>
+        <button mat-raised-button (click)="makePromotion(190, 30)">Solicitar</button>
+      </div>
+    </div>
+
+
   </div>
 
-  <div *ngIf="loaded && globalUser != undefined && user.h3lper">
-    <button *ngIf="user.username == globalUser.username" mat-raised-button (click)="newService()" class="servicebutton"> <h1 id="buttonText">+ Nuevo servicio</h1></button>
+  <div *ngIf="!loaded">
+    <mat-spinner></mat-spinner>
   </div>
-
-  <div>
-    <h1 class= "serviceMenu">Tus servicios: Solicitados</h1>
-    <p class="no_services" *ngIf="services_solicitados.length == 0">Parece que no tienes ningún servicio solicitado ahora mismo</p>
-    <div class="solicitados">
-      <div class="service" *ngFor="let service of services_solicitados">
-        <app-card [add]="service"></app-card>
-      </div>
-    </div>
-
-    <h1 *ngIf="user.h3lper" class="serviceMenu">Tus servicios: Ofrecidos</h1>
-    <p class="no_services" *ngIf="user.h3lper && services_ofrecidos.length == 0">Parece que no estas ofreceindo ningún servicio ahora mismo</p>
-    <div class="ofrecidos">
-      <div class="service" *ngFor="let service of services_ofrecidos" matBadge="{{service.requests.length}}">
-        <app-card [add]="service"></app-card>
-      </div>
-    </div>
-    <h1 class="serviceMenu">Tienda</h1>
-  </div>
-
-
-</div>
-
-<div *ngIf="!loaded">
-  <mat-spinner></mat-spinner>
 </div>

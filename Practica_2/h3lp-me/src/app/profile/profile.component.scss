@@ -9,9 +9,12 @@ $icon-size: 25%;
 // Padding por defecto de los elementos
 $default-padding: 10px;
 
+.all{
+  min-height: 80%;
+}
+
 // Clase para todo el componenete
 .profile{
-  min-height: 80%;
   height: auto;
 }
 
@@ -154,8 +157,6 @@ $default-padding: 10px;
 #buttonText{
   color: #FFFFFF;
   border-radius: 35px;
-
-
 }
 
 .no_services{

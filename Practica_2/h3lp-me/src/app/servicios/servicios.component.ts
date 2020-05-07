@@ -41,20 +41,20 @@ export class ServiciosComponent implements OnInit {
             this.search = params['params']['search'];
             if (this.search != undefined && this.search != "") {
               if (data[i].name.toLowerCase().startsWith(this.search.toLowerCase())) {
-                this.adds.push(new Advertisement(data[i].name, data[i].category, data[i].description, data[i].picture, data[i].owner_name, data[i].location, data[i].creation_date, data[i].requests, data[i].price));
-                this.adds[i].setId(data[i].id);
+                this.adds.push(new Advertisement(data[i].name, data[i].category, data[i].description, data[i].picture, data[i].owner_name, data[i].location, data[i].creation_date, data[i].requests, data[i].price, data[i].promotion));
+                this.adds[this.adds.length - 1].setId(data[i].id);
               }
             }
             else{
-              this.adds.push(new Advertisement(data[i].name, data[i].category, data[i].description, data[i].picture, data[i].owner_name, data[i].location, data[i].creation_date, data[i].requests, data[i].price));
-              this.adds[i].setId(data[i].id);
+              this.adds.push(new Advertisement(data[i].name, data[i].category, data[i].description, data[i].picture, data[i].owner_name, data[i].location, data[i].creation_date, data[i].requests, data[i].price, data[i].promotion));
+              this.adds[this.adds.length - 1].setId(data[i].id);
             }
 
 
           }
           else{
             if (data[i].category == this.filter) {
-              this.adds.push(new Advertisement(data[i].name, data[i].category, data[i].description, data[i].picture, data[i].owner_name, data[i].location, data[i].creation_date, data[i].requests, data[i].price));
+              this.adds.push(new Advertisement(data[i].name, data[i].category, data[i].description, data[i].picture, data[i].owner_name, data[i].location, data[i].creation_date, data[i].requests, data[i].price, data[i].promotion));
               this.adds[this.adds.length - 1].setId(data[i].id);
             }
           }
