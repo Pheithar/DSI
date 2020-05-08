@@ -9,6 +9,33 @@ $default-padding: 5px;
 // Color de la fuente por defecto
 $fount-color: $dark-blue;
 
+.form{
+  display: flex;
+  flex-direction: column;
+  // padding: 2%;
+  justify-content: center;
+  align-items: center;
+  // width: 40%;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  // margin-top: 2%;
+}
+
+mat-form-field{
+    margin: 2%;
+}
+
+button{
+  background-color: $dark-blue;
+  color: white;
+}
+
+
 // clase para los textos del MAIN
 .text{
   padding: $default-padding;
