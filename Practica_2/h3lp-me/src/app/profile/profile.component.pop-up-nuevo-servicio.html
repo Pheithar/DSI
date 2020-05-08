@@ -1,61 +1,69 @@
-<h1>Crear un nuevo Servicio</h1>
 
-<form>
+
+<form class="form">
+  <h1 class="text">Crear un nuevo Servicio</h1>
   <mat-form-field>
     <mat-label>Usuario creador</mat-label>
     <input matInput disabled value={{username}}>
   </mat-form-field>
   <br>
-  <mat-form-field>
-    <mat-label>Nombre del Servicio</mat-label>
-    <input matInput [(ngModel)]="serviceName" name="nombre">
-  </mat-form-field>
+  <div class="row">
+    <mat-form-field>
+      <mat-label>Nombre del Servicio</mat-label>
+      <input matInput [(ngModel)]="serviceName" name="nombre">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+    <mat-label>Categoría del servicio</mat-label>
+    <mat-select [(ngModel)]="selectedCategory" name="category">
+      <mat-option *ngFor="let category of categorys" [value]="category.viewValue">
+        {{category.viewValue}}
+      </mat-option>
+    </mat-select>
+    </mat-form-field>
+  </div>
   <br>
   <mat-form-field>
-  <mat-label>Categoría del servicio</mat-label>
-  <mat-select [(ngModel)]="selectedCategory" name="category">
-    <mat-option *ngFor="let category of categorys" [value]="category.viewValue">
-      {{category.viewValue}}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
-<br>
-<mat-form-field>
-  <mat-label>Descripción del Servicio</mat-label>
-  <textarea matInput [(ngModel)]="serviceDescription" name="descripcion"></textarea>
-</mat-form-field>
-<br>
-<mat-form-field>
-<mat-label>Provincia</mat-label>
-<mat-select [(ngModel)]="selectedProvince" name="provincia">
-  <mat-option *ngFor="let province of provinces" [value]="province.viewValue">
-    {{province.viewValue}}
-  </mat-option>
-</mat-select>
-</mat-form-field>
-<mat-form-field>
-  <mat-label>Ciudad</mat-label>
-  <input matInput [(ngModel)]="city" name="ciudad">
-</mat-form-field>
-<br>
-<h1>Imágen del Servicio</h1>
-<input type="file" accept="image/*" (change)="onFileSelected($event)">
-<br>
-<mat-form-field>
-  <mat-label>Precio</mat-label>
-  <input matInput [(ngModel)]="price" name="precio">
-</mat-form-field>
-<mat-form-field>
-  <mat-label>Tipo de pago</mat-label>
-  <mat-select [(value)]="pay" name="tipo de pago">
-    <mat-option value="€">€</mat-option>
-    <mat-option value="€/hora">€/hora</mat-option>
-  </mat-select>
-</mat-form-field>
-<br>
-<button mat-raised-button (click)="createService()" [disabled]="username && serviceName && selectedCategory && serviceDescription && selectedProvince && city && price && pay ? 'false': 'true'">Crear Servicio</button>
+    <mat-label>Descripción del Servicio</mat-label>
+    <textarea matInput [(ngModel)]="serviceDescription" name="descripcion"></textarea>
+  </mat-form-field>
+  <br>
+  <div class="row">
+    <mat-form-field>
+    <mat-label>Provincia</mat-label>
+    <mat-select [(ngModel)]="selectedProvince" name="provincia">
+      <mat-option *ngFor="let province of provinces" [value]="province.viewValue">
+        {{province.viewValue}}
+      </mat-option>
+    </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Ciudad</mat-label>
+      <input matInput [(ngModel)]="city" name="ciudad">
+    </mat-form-field>
+  </div>
+  <br>
+  <h1>Imágen del Servicio</h1>
+  <input type="file" accept="image/*" (change)="onFileSelected($event)">
+  <br>
+  <div class="row">
+    <mat-form-field>
+      <mat-label>Precio</mat-label>
+      <input matInput [(ngModel)]="price" name="precio">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Tipo de pago</mat-label>
+      <mat-select [(value)]="pay" name="tipo de pago">
+        <mat-option value="€">€</mat-option>
+        <mat-option value="€/hora">€/hora</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <br>
+  <div class="row">
+    <button mat-raised-button (click)="createService()" [disabled]="username && serviceName && selectedCategory && serviceDescription && selectedProvince && city && price && pay ? 'false': 'true'">Crear Servicio</button>
 
-<button mat-raised-button (click)=onNoClick()>Cancelar</button>
-
+    <button mat-raised-button (click)=onNoClick()>Cancelar</button>
+  </div>
 
 </form>
