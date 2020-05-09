@@ -2,6 +2,7 @@
 
 <form class="form">
   <h1 class="text">Crear un nuevo Servicio</h1>
+  <div class="content">
   <mat-form-field>
     <mat-label>Usuario creador</mat-label>
     <input matInput disabled value={{username}}>
@@ -23,7 +24,7 @@
     </mat-form-field>
   </div>
   <br>
-  <mat-form-field>
+  <mat-form-field class="serviceDesc">
     <mat-label>Descripción del Servicio</mat-label>
     <textarea matInput [(ngModel)]="serviceDescription" name="descripcion"></textarea>
   </mat-form-field>
@@ -42,10 +43,6 @@
       <input matInput [(ngModel)]="city" name="ciudad">
     </mat-form-field>
   </div>
-  <br>
-  <h1>Imágen del Servicio</h1>
-  <input type="file" accept="image/*" (change)="onFileSelected($event)">
-  <br>
   <div class="row">
     <mat-form-field>
       <mat-label>Precio</mat-label>
@@ -59,7 +56,10 @@
       </mat-select>
     </mat-form-field>
   </div>
+  <h1>Imágen del Servicio</h1>
+  <input type="file" accept="image/*" (change)="onFileSelected($event)">
   <br>
+  </div>
   <div class="row">
     <button mat-raised-button (click)="createService()" [disabled]="username && serviceName && selectedCategory && serviceDescription && selectedProvince && city && price && pay ? 'false': 'true'">Crear Servicio</button>
     &nbsp; &nbsp; &nbsp;

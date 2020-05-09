@@ -61,9 +61,7 @@ $default-padding: 10px;
 .row{
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  // margin-top: 2%;
+  margin-top: 2%;
 }
 
 .row_text{
@@ -74,11 +72,11 @@ $default-padding: 10px;
   margin-left: 1%;
 }
 
-mat-form-field{
+.mat-form-field{
     margin: 2%;
 }
 
-button{
+.button{
   background-color: $primary-color;
   color: white;
 }
@@ -306,9 +304,15 @@ button{
 }
 
 
+.content{
+  text-align: left;
+  width: 50%;
+}
 
 
-
+.serviceDesc{
+  width: 100%;
+}
 
 
 
