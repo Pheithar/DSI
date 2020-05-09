@@ -20,7 +20,6 @@
       <mat-card-subtitle class= "userText">Nivel {{getGlobalUser().level}}</mat-card-subtitle>
       <img class="icon" id="settings" src="./assets/iconos/settings.png" alt="Icono de ajustes" [matMenuTriggerFor]="menu">
       <mat-menu #menu="matMenu">
-        <button *ngIf="getGlobalUser() != undefined && global.getCurrentUser().h3lper == false" mat-menu-item (click)="beH3lper()">Convertirse en h3lper</button>
         <button mat-menu-item (click)="changeUser()">Cambiar Nombre de Usuario</button>
         <button mat-menu-item (click)="changePassword()">Cambiar Contraseña</button>
         <button mat-menu-item (click)="cerrarSesion()">Cerrar Sesión</button>
