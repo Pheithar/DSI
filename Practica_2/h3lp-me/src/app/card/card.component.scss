@@ -62,6 +62,10 @@ $fount-color: $dark-blue;
   background-color: $dark-blue;
 }
 
+.button:hover{
+  background-color: $light-blue;
+}
+
 .date{
   position: absolute;
   left: 4%;

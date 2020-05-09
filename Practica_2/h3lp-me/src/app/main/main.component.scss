@@ -9,6 +9,11 @@ $default-padding: 5px;
 // Color de la fuente por defecto
 $fount-color: $dark-blue;
 
+.load{
+  margin:15%;
+  margin-left: 45%;
+}
+
 .form{
   display: flex;
   flex-direction: column;

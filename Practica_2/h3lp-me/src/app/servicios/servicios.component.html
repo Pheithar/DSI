@@ -3,7 +3,7 @@
     <h3 *ngIf="filter != undefined">Buscando por categoría: <strong>{{filter}}</strong></h3>
     <h3 *ngIf="search != undefined && search != ''">Buscando por: <strong>{{search}}</strong></h3>
 
-    <h2 *ngIf="promo.length != 0">Servicios Promocionados</h2>
+    <h2 class="title" *ngIf="promo.length != 0">Servicios Promocionados</h2>
 
     <div class="lista">
       <div class="card" *ngFor="let service of promo">
@@ -11,7 +11,7 @@
       </div>
     </div>
 
-    <h2 *ngIf="adds.length != 0" >Servicios</h2>
+    <h2  class="title" *ngIf="adds.length != 0" >Servicios</h2>
 
     <div class="lista">
       <div class="card" *ngFor="let service of adds">
@@ -24,6 +24,6 @@
 
 
   <div *ngIf="!loaded">
-    <mat-spinner></mat-spinner>
+    <mat-spinner class="load"></mat-spinner>
   </div>
 </div>

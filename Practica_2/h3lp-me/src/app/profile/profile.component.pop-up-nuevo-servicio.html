@@ -61,9 +61,9 @@
   <br>
   </div>
   <div class="row">
-    <button mat-raised-button (click)="createService()" [disabled]="username && serviceName && selectedCategory && serviceDescription && selectedProvince && city && price && pay ? 'false': 'true'">Crear Servicio</button>
+    <button class="boton_form" mat-raised-button (click)="createService()" [disabled]="username && serviceName && selectedCategory && serviceDescription && selectedProvince && city && price && pay ? 'false': 'true'">Crear Servicio</button>
     &nbsp; &nbsp; &nbsp;
-    <button mat-raised-button (click)=onNoClick()>Cancelar</button>
+    <button class="boton_form" mat-raised-button (click)=onNoClick()>Cancelar</button>
   </div>
 
 </form>

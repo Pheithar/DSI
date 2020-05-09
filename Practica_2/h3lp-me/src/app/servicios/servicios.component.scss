@@ -1,5 +1,15 @@
+//Color oscuro
+$dark-blue: #002d6f;
+//Color de resalte.
+$light-blue: #4f9ae1;
+
 .all{
   min-height: 80%;
+}
+
+.load{
+  margin:30%;
+  margin-left: 45%;
 }
 
 .lista{
@@ -16,6 +26,14 @@
   align-items: center;
   // background-color: red;
 
+}
+
+.title{
+  font-size: 35px;
+  color: $dark-blue;
+  font-weight: 600;
+  margin-left: 5%;
+  margin-top: 2%;
 }
 
 .card{

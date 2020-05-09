@@ -1,13 +1,21 @@
-<h1>Selecciona el servicio que quieres que sea promocionado</h1>
+<div class="form">
 
-<div>
-  <div *ngFor="let service of services_ofrecidos; index as i">
-    <p>Nombre: {{service.name}}; Precio: {{service.price}}; Fecha de Creación: {{service.creation_date}} </p> <mat-slide-toggle [(ngModel)]="selected_services[i]"></mat-slide-toggle>
+  <h1 class="text_form">Selecciona el servicio que quieres que sea promocionado</h1>
+
+  <div>
+    <div *ngFor="let service of services_ofrecidos; index as i">
+      <p>Nombre: {{service.name}}; Precio: {{service.price}}; Fecha de Creación: {{service.creation_date}} </p> <mat-slide-toggle [(ngModel)]="selected_services[i]" class="elegir"></mat-slide-toggle>
+    </div>
   </div>
-</div>
-<h3 *ngIf="services_ofrecidos.length == 0">Parece que no puedes comprar ninguna promoción</h3>
+  <h3 *ngIf="services_ofrecidos.length == 0">Parece que no puedes comprar ninguna promoción</h3>
 
-<button mat-button (click)="makePromotion()">Obtener Promoción</button>
-<button mat-button (click)="onNoClick()">Cancelar</button>
-<mat-error *ngIf="noMoney">No tienes suficientes <i>h3lp coins</i></mat-error>
-<mat-error *ngIf="noSelected">No has seleccionado ningún servicio</mat-error>
+  <div class="form_row">
+    <button class="boton_form" mat-button (click)="makePromotion()">Obtener Promoción</button>
+    &nbsp; &nbsp;
+    <button class="boton_form" mat-button (click)="onNoClick()">Cancelar</button>
+  </div>
+
+  <mat-error class="text_error" *ngIf="noMoney">No tienes suficientes <i>h3lp coins</i></mat-error>
+  <mat-error class="text_error" *ngIf="noSelected">No has seleccionado ningún servicio</mat-error>
+
+</div>
