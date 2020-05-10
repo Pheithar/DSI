@@ -13,11 +13,13 @@ function createWindow () {
     y: 0,
     width: size.width,
     height: size.height,
-    icon: `file://${__dirname}/dist/assets/logo2.png`
+    icon: `file://${__dirname}/dist/h3lp-me/assets/logos/logo2.png`
   })
 
 
   win.loadURL(`file://${__dirname}/dist/h3lp-me/index.html`)
+
+
 
   //// uncomment below to open the DevTools.
   win.webContents.openDevTools()
