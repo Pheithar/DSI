@@ -1,7 +1,6 @@
 \babel@toc {spanish}{}
 \contentsline {section}{\numberline {1}Introducción}{3}%
 \contentsline {section}{\numberline {2}Tecnología Empleada}{3}%
-\contentsline {section}{\numberline {3}Productos Generados}{4}%
-\contentsline {section}{\numberline {4}Manual de Despliegue}{4}%
-\contentsline {section}{\numberline {5}Manual de Uso}{4}%
-\contentsline {section}{\numberline {6}Distribución del Trabajo}{4}%
+\contentsline {section}{\numberline {3}Manual de Despliegue}{4}%
+\contentsline {section}{\numberline {4}Manual de Uso}{4}%
+\contentsline {section}{\numberline {5}Distribución del Trabajo}{6}%
