@@ -44,3 +44,8 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+#programas electron
+/h3lp-me-darwin-x64
+/h3lp-me-linux-x64
+/h3lp-me-win32-x64

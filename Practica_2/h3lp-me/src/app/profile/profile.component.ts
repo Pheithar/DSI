@@ -68,7 +68,8 @@ export class ProfileComponent implements OnInit {
               private firestoreService: FirestoreService,
               private router: Router,
               private route: ActivatedRoute,
-              private global:GlobalService){
+              private global:GlobalService,
+              private _snackBar: MatSnackBar){
                 this.users=[];
                 this.loaded = false;
                 this.services_ofrecidos = [];
@@ -172,8 +173,23 @@ export class ProfileComponent implements OnInit {
       width: '50%',
       data: {user: this.user, cost: cost, time:time}
     });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result == 1) {
+        this._snackBar.open("Has promocionado " + result + " servicio", "+" + result * 10 + "XP", {
+          duration: 5000,
+        });
+        this.user.addXP(10*result);
+        this.firestoreService.updateUser(this.user);
+      }
+      if (result > 1) {
+        this._snackBar.open("Has promocionado " + result + " servicios", "+" + result * 10 + "XP", {
+          duration: 5000,
+        });
+        this.user.addXP(10*result);
+        this.firestoreService.updateUser(this.user);
+      }
+    });
   }
-
 }
 
 
@@ -448,7 +464,7 @@ export class Promocion implements OnInit{
           this.firestoreService.updateService(this.services_ofrecidos[i]);
         }
       }
-      this.onNoClick();
+      this.dialogRef.close(this.selected_services.length);
 
     }
     else if (this.user.coins < this.totalCost) {

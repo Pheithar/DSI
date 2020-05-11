@@ -58,6 +58,7 @@
     "codelyzer": "^5.1.2",
     "electron": "^8.2.5",
     "electron-nightly": "^10.0.0-nightly.20200501",
+    "electron-packager": "^14.2.1",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "^5.0.2",
