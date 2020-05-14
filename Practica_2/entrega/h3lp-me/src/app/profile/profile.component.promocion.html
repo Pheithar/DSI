@@ -1,0 +1,30 @@
+<div class="form">
+
+  <h1 class="text_form">Selecciona el servicio que quieres que sea promocionado</h1>
+
+  <div class="promotion">
+    <div class="linePromo" *ngFor="let service of services_ofrecidos; index as i">
+      <div class="textPromo">
+        <p>Nombre: <strong>{{service.name}}</strong></p>
+        <p>Precio: <strong>{{service.price}}</strong></p>
+        <p>Fecha de Creación: <strong>{{service.creation_date}}</strong></p>
+      </div>
+      <div class="sliderPromo">
+
+        <mat-slide-toggle [(ngModel)]="selected_services[i]" class="elegir"></mat-slide-toggle>
+        <p><strong>{{cost}}</strong> coins</p>
+      </div>
+    </div>
+  </div>
+  <h3 *ngIf="services_ofrecidos.length == 0">Parece que no puedes comprar ninguna promoción</h3>
+
+  <div class="form_row">
+    <button class="boton_form" mat-button (click)="makePromotion()">Obtener Promoción</button>
+    &nbsp; &nbsp;
+    <button class="boton_form" mat-button (click)="onNoClick()">Cancelar</button>
+  </div>
+
+  <mat-error class="text_error" *ngIf="noMoney">No tienes suficientes <i>h3lp coins</i></mat-error>
+  <mat-error class="text_error" *ngIf="noSelected">No has seleccionado ningún servicio</mat-error>
+
+</div>

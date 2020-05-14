@@ -1,0 +1,19 @@
+
+<button mat-button class="todos" (click)="goTo('')">Ver todos los servicios</button>
+
+<mat-form-field class="buscador">
+  <mat-label class="writeService">Busca un servicio</mat-label>
+  <input matInput type="text" [(ngModel)]="value">
+  <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
+<button mat-button (click)="search()" class="searcher">Buscar</button>
+<button mat-button (click)="goTo('Fotografía')" class="categories">Fotografía</button>
+<button mat-button (click)="goTo('Infomática')" class="categories">Informática</button>
+<button mat-button (click)="goTo('Cocina')" class="categories">Cocina</button>
+<button mat-button (click)="goTo('Hogar')" class="categories">Hogar</button>
+<button mat-button (click)="goTo('Otros')" class="categories">Otros</button>
+
+
+<hr>

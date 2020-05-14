@@ -1,0 +1,98 @@
+
+import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { FirestoreService } from '../services/firestore/firestore.service'
+import { Subscription } from 'rxjs';
+
+import { GlobalService } from '../services/globals/global.service';
+
+import { Advertisement } from '../advertisement'
+import { User } from '../user'
+
+
+@Component({
+  selector: 'app-servicios',
+  templateUrl: './servicios.component.html',
+  styleUrls: ['./servicios.component.scss']
+})
+export class ServiciosComponent implements OnInit {
+
+  public adds: Advertisement[]; //Array que almacena todos lo anuncios
+  public promo: Advertisement[]; //Array que almacena todos lo anuncios promocionados
+  public s_adds: Subscription; //Establecer conexion con la BBDD y registrar cambios
+
+  public filter:string;
+  public search:string;
+
+  public loaded:boolean;
+
+  constructor(public router: Router, public route: ActivatedRoute, private firestoreService: FirestoreService, private global:GlobalService){}
+
+  ngOnInit(): void {
+    this.route.paramMap.subscribe(async params=>{
+      this.filter = params['params']['filter'];
+      this.loaded = false;
+      this.adds = [];
+      this.promo = [];
+
+
+      this.s_adds = this.firestoreService.getServices().subscribe(data=>{
+        for (let i = 0; i < data.length; i++) {
+
+          let today = new Date();
+          let promotionDay = new Date(data[i].promotion);
+
+
+          // console.log(today <= promotionDay);
+          // console.log(today.toDateString());
+          // console.log(promotionDay.toDateString());
+
+
+          if (this.filter == undefined) {
+            this.search = params['params']['search'];
+            if (this.search != undefined && this.search != "") {
+              if (data[i].name.toLowerCase().startsWith(this.search.toLowerCase())) {
+                this.adds.push(new Advertisement(data[i].name, data[i].category, data[i].description, data[i].picture, data[i].owner_name, data[i].location, data[i].creation_date, data[i].requests, data[i].price, data[i].promotion));
+                this.adds[this.adds.length - 1].setId(data[i].id);
+              }
+            }
+            else{
+
+              if (promotionDay <= today || today.toDateString() == promotionDay.toDateString()) {
+                this.adds.push(new Advertisement(data[i].name, data[i].category, data[i].description, data[i].picture, data[i].owner_name, data[i].location, data[i].creation_date, data[i].requests, data[i].price, data[i].promotion));
+                this.adds[this.adds.length - 1].setId(data[i].id);
+              }
+              else{
+                this.promo.push(new Advertisement(data[i].name, data[i].category, data[i].description, data[i].picture, data[i].owner_name, data[i].location, data[i].creation_date, data[i].requests, data[i].price, data[i].promotion));
+                this.promo[this.promo.length - 1].setId(data[i].id);
+              }
+            }
+
+
+          }
+          else{
+            if (data[i].category == this.filter) {
+              if (promotionDay <= today || today.toDateString() == promotionDay.toDateString()) {
+                this.adds.push(new Advertisement(data[i].name, data[i].category, data[i].description, data[i].picture, data[i].owner_name, data[i].location, data[i].creation_date, data[i].requests, data[i].price, data[i].promotion));
+                this.adds[this.adds.length - 1].setId(data[i].id);
+              }
+              else{
+                this.promo.push(new Advertisement(data[i].name, data[i].category, data[i].description, data[i].picture, data[i].owner_name, data[i].location, data[i].creation_date, data[i].requests, data[i].price, data[i].promotion));
+                this.promo[this.promo.length - 1].setId(data[i].id);
+              }
+            }
+          }
+        }
+      });
+
+      this.loaded = true;
+    });
+  }
+
+  ngOnDestroy(){
+    this.s_adds.unsubscribe();
+  }
+
+
+
+}

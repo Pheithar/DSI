@@ -1,0 +1,51 @@
+<div class="all">
+
+  <div class="global">
+
+    <div class="service" *ngIf="loaded">
+      <div class="left">
+        <img class="icon" src="{{add_picture}}" alt="Imagen {{add.name}}">
+        <div class="text" id="precio">
+          <h2 class="subtitle" >Precio: </h2>
+          {{add.price}}
+        </div>
+        <div class="text" id="localizacion">
+          <h2 class="subtitle">Localización: </h2>
+          {{add.location}}
+        </div>
+      </div>
+      <div class="mid">
+        <div class="text_alt">
+          <h1 class="title" id="title">{{add.name}}</h1>
+          <h3 class="subtitle" id="category">{{add.category}}</h3>
+          <h2 class="subtitle" id="owner">{{add.owner_name}}</h2>
+          <p class="text" id="description">{{add.description}}</p>
+        </div>
+      </div>
+      <div class="right">
+        <p class="text" id="fecha">{{add.creation_date}}</p>
+      </div>
+
+
+    </div>
+    <div *ngIf="loaded">
+      <p *ngIf="correct">Se ha solicitado el servicio correctamente</p>
+      <p *ngIf="repeat">El servicio ya estaba solicitado</p>
+      <button class="button" *ngIf="global.getCurrentUser() == undefined || global.getCurrentUser().username != add.owner_name" mat-raised-button (click)="solicitar()" [disabled]="global.getCurrentUser()  ? 'false' : 'true'" >Solicitar Servicio</button>
+
+      <p *ngIf="global.getCurrentUser() == undefined">
+        Registrate o inicia sesión para poder solicitar servicios.
+      </p>
+      <div *ngIf="global.getCurrentUser() != undefined && global.getCurrentUser().username == add.owner_name">
+        <h2>Usuarios que han solicitado el servicio</h2>
+        <div *ngFor="let name of add.requests">
+          <p>{{name}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!loaded">
+
+    <mat-spinner></mat-spinner>
+  </div>
+</div>

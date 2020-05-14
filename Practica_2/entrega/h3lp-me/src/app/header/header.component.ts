@@ -1,0 +1,346 @@
+import {Component, OnInit, Inject} from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+
+import { Router, ActivatedRoute } from '@angular/router';
+import { FirestoreService } from '../services/firestore/firestore.service'
+import { Subscription } from 'rxjs';
+
+import { GlobalService } from '../services/globals/global.service';
+
+import { User } from '../user'
+
+import { CookieService } from 'ngx-cookie-service';
+
+export interface IniciarSesionData {
+  username: string;
+  password: string;
+}
+
+export interface Cambio {
+  user: User;
+}
+
+@Component({
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss']
+})
+
+export class HeaderComponent{
+
+  username: string;
+  password: string;
+
+
+  constructor(private firestoreService: FirestoreService, public dialog: MatDialog, public router: Router, public global:GlobalService, private cookieService: CookieService) {}
+
+  abrirIniciarSesion(): void {
+    const dialogRef = this.dialog.open(popUpIniciar, {
+      width: '20%',
+      data: {password: this.password, username: this.username}
+    });
+  }
+
+  abrirIniciarRegistro(): void {
+    const dialogRef = this.dialog.open(popUpRegistro, {
+      width: '20%',
+      data: {password: this.password, username: this.username}
+    });
+  }
+
+  getGlobalUser(){
+
+    return this.global.getCurrentUser();
+  }
+
+  cerrarSesion(){
+    this.global.deleteCurrentUser();
+    this.router.navigate([""]);
+
+    if (this.cookieService.check('currentUser')) {
+      this.cookieService.delete('currentUser');
+    }
+  }
+
+  irPerfil(){
+    let id = this.getGlobalUser().id;
+    this.router.navigate(['/profile', id]);
+  }
+
+  beH3lper(){
+    this.global.getCurrentUser().h3lper = true;
+    this.firestoreService.updateUser(this.global.getCurrentUser());
+    this.router.navigate(['/']);
+  }
+
+  changePassword(){
+    const dialogRef = this.dialog.open(popUpPassword, {
+      width: '20%',
+      data: {user: this.global.getCurrentUser()}
+    });
+  }
+
+  changeUser(){
+    const dialogRef = this.dialog.open(popUpUsername, {
+      width: '20%',
+      data: {user: this.global.getCurrentUser()}
+    });
+  }
+
+
+
+}
+
+
+// INICIAR SESIÓN
+
+
+@Component({
+  selector: 'pop-up-iniciar',
+  templateUrl: './header.component.pop-up-iniciar.html',
+  styleUrls: ['./header.component.scss']
+})
+export class popUpIniciar implements OnInit{
+
+  public users: User[];
+  public s_users: Subscription;
+
+  public wrong_user: boolean;
+
+  username: string;
+  password: string;
+
+  hide = true;
+
+  constructor(public dialog: MatDialog, public dialogRef: MatDialogRef<popUpIniciar>, @Inject(MAT_DIALOG_DATA) public data: IniciarSesionData, public router: Router, public route: ActivatedRoute, private firestoreService: FirestoreService, private global:GlobalService, private cookieService: CookieService){
+      this.users=[];
+    }
+
+    ngOnInit(){
+      this.s_users = this.firestoreService.getUsers().subscribe(data=>{
+        this.users = data;
+      });
+    }
+
+    ngOnDestroy(){
+      this.s_users.unsubscribe();
+    }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+
+
+  iniciarSesion(username:string, password:string){
+
+    this.wrong_user = false;
+
+    let user = this.comprobarDatosInicioSesion(this.users, username, password);
+
+    if(user){
+      let id = user.id;
+
+      //poner ese usuario como el que ha iniciado sesión
+      this.global.setCurrentUser(user);
+
+      //Navegar al perfil
+      this.router.navigate(['/profile', id]);     // En URL y participan en el routing.
+
+      this.cookieService.set("currentUser", id);
+
+      this.onNoClick();
+
+
+    }
+    else{
+        this.wrong_user = true;
+
+    }
+
+  }
+
+  comprobarDatosInicioSesion(users:User[], username:string, password:string){
+    for (let i = 0; i < users.length; i++) {
+      if (users[i].username == username && users[i].password == password) {
+        return users[i]
+      }
+    }
+    return undefined
+  }
+
+  abrirIniciarRegistro(): void {
+    const dialogRef = this.dialog.open(popUpRegistro, {
+      width: '20%',
+      data: {password: this.password, username: this.username}
+    });
+  }
+
+
+}
+
+// REGISTRO
+
+interface h3lperSelect {
+  value: boolean;
+  viewValue: string;
+}
+
+
+@Component({
+  selector: 'pop-up-registro',
+  templateUrl: './header.component.pop-up-registro.html',
+  styleUrls: ['./header.component.scss']
+})
+export class popUpRegistro implements OnInit{
+
+  public users: User[];
+  public s_users: Subscription;
+
+  public password_confirm:string;
+
+  public h3lper_selected:boolean;
+  public h3lper: h3lperSelect[] = [
+    {value: false, viewValue: 'No quiero ser h3lper'},
+    {value: true, viewValue: 'Quiero ser h3lper'},
+  ];
+
+  public used_name:boolean;
+
+
+  hide = true;
+
+  constructor(public dialogRef: MatDialogRef<popUpRegistro>, @Inject(MAT_DIALOG_DATA) public data: IniciarSesionData, public router: Router, public route: ActivatedRoute, private firestoreService: FirestoreService, private global:GlobalService){
+      this.users=[];
+    }
+
+    ngOnInit(){
+      this.s_users = this.firestoreService.getUsers().subscribe(data=>{
+        this.users = data;
+      });
+    }
+
+    ngOnDestroy(){popUpRegistro
+      this.s_users.unsubscribe();
+    }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+  async iniciarRegistro(username:string, password:string){
+
+    this.used_name = false;
+
+    let unused_name = this.checkUsername(this.users, username);
+
+    if (unused_name) {
+      if (this.password_confirm == password && password.length >= 6) {
+        //Crear el usuario
+        let id = await this.firestoreService.createUser(new User(username, password, 1, this.h3lper_selected, [], [], 0, 0, "user.svg", [], []));
+
+        //poner ese usuario como el que ha iniciado sesión
+        this.global.setCurrentUser(await this.firestoreService.getUser(id));
+
+        //Navegar al perfil
+        this.router.navigate(['/profile', id]);     // En URL y participan en el routing.
+        this.onNoClick();
+      }
+      else{
+      }
+    }
+    else{
+      this.used_name = true;
+    }
+  }
+
+  checkUsername(users:User[], username:string){
+    for (let i = 0; i < users.length; i++) {
+        if (users[i].username == username) {
+          return false;
+        }
+      }
+      return true;
+  }
+}
+
+@Component({
+  selector: 'pop-up-password',
+  templateUrl: './header.component.pop-up-password.html',
+  styleUrls: ['./header.component.scss']
+})
+export class popUpPassword implements OnInit{
+
+  password:string;
+  new_password:string;
+  repeat_new_password:string;
+  hide:boolean = true;
+
+
+  constructor(public dialogRef: MatDialogRef<popUpPassword>, @Inject(MAT_DIALOG_DATA) public data: Cambio, private firestoreService: FirestoreService, private global:GlobalService){
+  }
+
+  ngOnInit(){
+    this.password = this.data.user.password;
+  }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+  confirm(password:string){
+    this.data.user.password = password;
+    this.firestoreService.updateUser(this.data.user);
+    this.onNoClick();
+  }
+}
+
+@Component({
+  selector: 'pop-up-username',
+  templateUrl: './header.component.pop-up-username.html',
+  styleUrls: ['./header.component.scss']
+})
+export class popUpUsername implements OnInit{
+
+  public users: User[];
+  public s_users: Subscription;
+
+  public used_name: boolean;
+
+  username:string;
+  new_username:string;
+
+  constructor(public dialogRef: MatDialogRef<popUpUsername>, @Inject(MAT_DIALOG_DATA) public data: Cambio, private firestoreService: FirestoreService, private global:GlobalService, public router: Router, public route: ActivatedRoute){
+    this.users=[];
+    this.used_name = false;
+  }
+
+  ngOnInit(){
+    this.username = this.data.user.username;
+    this.s_users = this.firestoreService.getUsers().subscribe(data=>{
+      this.users = data;
+    });
+  }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+  confirm(username:string){
+    this.used_name = false;
+    for (let i = 0; i < this.users.length; i++) {
+        if (this.users[i].username == username) {
+          this.used_name = true;
+        }
+      }
+
+    if (!this.used_name && username.length >= 3) {
+      this.data.user.username = username;
+      this.firestoreService.updateUser(this.data.user);
+      this.onNoClick();
+
+      this.router.navigate(['/']);
+    }
+
+  }
+}

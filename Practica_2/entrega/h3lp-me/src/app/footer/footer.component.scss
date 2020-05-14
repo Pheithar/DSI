@@ -1,0 +1,111 @@
+//Color oscuro
+$dark-blue: #002d6f;
+//Color de resalte.
+$light-blue: #4f9ae1;
+
+// Tamaño de los iconos
+$icon-size: 30px;
+$small-icon-size: 10px;
+
+// Padding por defecto de los elementos
+$default-padding: 5px;
+
+// Número de autores
+$num-authors: 4;
+
+// Color de la fuente por defecto
+$fount-color: white;
+
+// Clase para todos los iconos del footer
+.icon{
+  width: $icon-size;
+  height: auto;
+  padding: $default-padding;
+}
+
+//Iconos que son mas pequeños de lo normal
+.small-icon{
+  @extend .icon;
+  width: $small-icon-size;
+}
+#logofooter{
+  width: 60px;
+  height: 60px;
+}
+// clase para los textos del footer
+.text{
+  padding: $default-padding;
+  color: $fount-color;
+}
+
+// Clase para todo el footer
+.footer{
+  text-align: center;
+  //Eliminar despues
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 110px;
+  background-color: $dark-blue;
+  clear: both;
+}
+
+// clase donde se encuentran los elementos principales del footer
+.bot-footer{
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+
+#bot-left{
+left: 0;
+margin-left: 1%;
+}
+
+#bot-right{
+right: 0;
+margin-right: 1%;
+}
+
+// cad uno de los componentes del footer
+.block-footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: auto;
+  // padding-left: 20%;
+  // padding-right: 20%;
+}
+
+// clase para los autores en el footer
+#authors{
+  // width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+// Clase para cada uno de los autores
+.author{
+  @extend .text;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // padding-left: 1%;
+  // padding-right: 1%;
+}
+
+// Clase para las referencias a otras páginas y a recursos usados
+.referency{
+  width: 100%;
+  text-align: left;
+}
