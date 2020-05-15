@@ -1,0 +1,282 @@
+\documentclass{uc3mpracticas}
+
+
+\usepackage{float}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                   Plantilla Prácticas UC3M                               %%%
+%%%                Universidad Carlos III de Madrid                          %%%
+%%%                   Alejandro Valverde Mahou                               %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Permitir cabeceras y pie de páginas personalizados
+\pagestyle{fancy}
+
+%Path por defecto de las imágenes
+\graphicspath{ {./images/} }
+
+%Declarar formato de encabezado y pie de página de las páginas del documento
+\fancypagestyle{doc}{
+  %Cabecera
+  \headerpr[1]{Fase de Análisis y Evaluación}{\textbf{}}{Diseño de Sistemas Interactivos}
+  %Pie de Página
+  \footerpr{\textbf{Universidad Carlos III de Madrid}}{}{{\thepage} de \pageref{LastPage}}
+}
+
+%Declarar formato de encabezado y pie del título e indice
+\fancypagestyle{titu}{%
+  %Cabecera
+  \headerpr{}{}{}
+  %Pie de Página
+  \footerpr{}{}{}
+}
+
+
+\appto\frontmatter{\pagestyle{titu}}
+\appto\mainmatter{\pagestyle{doc}}
+
+
+\begin{document}
+  %Comienzo formato título
+  \frontmatter
+
+
+  \centeredtitle{Images/logo_help.png}{Grado en Ingeniería Informática}{Curso 2020}{Diseño de Sistemas Interactivos}{Fase de Análisis y Evaluación: H3lp Me}
+
+    \vspace{2mm}
+
+    \begin{center}
+      \line(1, 0){450}
+    \end{center}
+
+    \authorsright{Alejandro Parrado Arribas}{100383453}{Adrián Sanz Gómez}{100383473}{Alejandro Valverde Mahou}{100383383}{Andrés Vinagre Blanco}{100383414}
+
+    \newpage
+
+
+    %Índice
+    \tableofcontents
+
+    \listoffigures
+
+  \newpage
+
+  %Comienzo formato documento general
+  \mainmatter
+
+  \section{Introducción}
+
+  La fase de análisis y evaluación es necesaria en todos los proyectos de desarrollo de software, apra conocer los fallos en funcionalidad o diseño que se haya producido en los mismos, y por tanto poder arreglarlos, de forma que el producto está en continuo cambio y crecimiento, suponiendo una mejora.
+
+  \vspace{3mm}
+
+  Para conocer estos posibles fallos, será necesario conocer la opinión de usuarios finales y de profesionales, de forma que cada uno aporte su punto de vista con respecto a la aplicación.
+
+  \vspace{4mm}
+
+  Los usuarios finales aportarán informaciónd esde el punto de vista práctico. Podrán informar de que es intuitivo o no. Que es lo que esperaban de la aplicación, y lo que han conseguido. Es importante recoger información de usuarios principiantes y de usuarios expertos, puesto que cada uno tienen una perspectiva diferente.
+
+  \vspace{2mm}
+
+  Los expertos aportarán información más técnica, pero igual de importante, sobre el diseo, implementación y demás aspectos de la aplicación, que los usuarios sulene pasar por alto, pero que afectan en gran medida al uso de la aplicación.
+
+  \vspace{7mm}
+
+  La aplicación a analizar y evaluar es la desarrollada en prácticas anteriores : \textit{H3lp Me}, accesible desde el link \url{https://h3lp-me.web.app}.
+
+  \vspace{3mm}
+
+  La aplicación permite a usuarios que quieran ofrecer servicios puntuales, como pueden ser cocina, cuidado de niños o fotografía, ponerse a contacto con aquellos que buscan estos servicios.
+
+  \vspace{2mm}
+
+  La aplicación consiste en tres páginas principales:
+
+  \vspace{2mm}
+  \begin{center}
+    \begin{figure}[H]
+      \caption{\textit{Página Principal}}
+      \vspace{2mm}
+      \imgcenter[160]{Images/main_page.png}
+    \end{figure}
+
+    \begin{figure}[H]
+      \caption{\textit{Página de Servicios}}
+      \vspace{2mm}
+      \imgcenter[160]{Images/services_page.png}
+    \end{figure}
+
+    \begin{figure}[H]
+      \caption{\textit{Página de Perfil}}
+      \vspace{2mm}
+      \imgcenter[160]{Images/profile_page.png}
+    \end{figure}
+  \end{center}
+
+  Cada una de estas tres pantallas cumple un propósito concreto: La página principal da la bienvenida a nuevos usuarios, informa de el objetivo de la página e informa de las distintas acciones que puede hacer un usuario. La página de servicios muestra los servicios que pueden ser contratados en la página. La página de perfil permite personalizar el perfil, visualizar los servicios contratados, y publicar nuevos servicios.
+
+
+  \section{Técnicas de Evaluación}
+
+  Para la evaluación se usarán tres ténicas diferentes, cada una con un propósito diferente.
+
+  \vspace{4mm}
+
+  \textbf{Verificación de requisitos}: Esto permitirá ver que se ha quedado en el tintero, y no ha podido ser realizado, a pesar de estar definido como requisito de la práctica.
+
+  \vspace{2mm}
+
+  \textbf{Estudios de usuarios}: Gracias a entrevistas \textit{online} a usuarios se podrán obtener la información necesaria de los usuarios para conocer la acepactión de los mismo hacía la aplicación.
+
+  \vspace{2mm}
+
+  \textbf{Inspección de expertos}: En este apartado se solicitará a otro grupo de la asignatura que realice un análisis como expertos de la aplicación, para obtener puntos de vista más técnicos.
+
+  \subsection{Verificación de Requisitos}
+
+  \subsubsection{Protocolo}
+
+  Esta evaluación tiene como propósito verificar que propósitos se han cumplido parcialmente, o no se han cumplido, para que en futuras actualizaciones de la página se solucionen.
+
+  \vspace{2mm}
+
+  Se llevará a cabo por los creadores de la aplicación, ya que no requiere de ningún usuario ni experto.
+
+  \vspace{2mm}
+
+  Esta verificaicón, como no puede ser de otra forma, se hará revisando los requisitos definidos en la \textbf{fase de análisis y estudio de campo}.
+
+  \vspace{2mm}
+
+  Los datos que se obtendrán de esta técnica serán de tipo cualitativos, e informarán de los puntos a tener en cuenta en las siguientes actualizaciones. También inormará de la completitud de la aplicación respecto a la previsión de la misma.
+
+  \subsubsection{Evaluación}
+
+  \textbf{Requisitos No Cumplidos}
+
+  \begin{itemize}
+    \item \textbf{RF-06: Convertirse en H3lper}
+
+    La aplicación no tiene forma de, una vez el usuario está registrado, cambiar su estado de no \textit{H3lper} a \textit{H3lper}.
+
+    \item \textbf{RF-08: Valoracion H3lper}
+
+    La aplicación no tiene forma de valorar a los \textit{h3lper} una vez el servicio ha sido realizado.
+
+    \item \textbf{RF-12: Comunicación entre Usuarios}
+
+    La aplicación no tiene forma de comunicar distintos usuarios de ninguna manera.
+
+    \item \textbf{RNF-01: Plataforma}
+
+    La aplicación no es responsive. Solo se visualiza correctamente en ordenadores.
+
+  \end{itemize}
+
+  \textbf{Requisitos Cumplidos Parcialmente}
+
+  \begin{itemize}
+    \item \textbf{RNF-02: Navegadores}
+
+    La aplicación muestra un estilo diferente en el navegador \textit{Safari}.
+
+    \item \textbf{RNF-04: Creación de cuentas}
+
+    No existe campo de \textit{email} en la creación de usuarios.
+  \end{itemize}
+
+  \subsection{Estudios de usuarios}
+
+  \subsubsection{Protocolo}
+
+  El objetivo de esta técnica es conocer el punto de vista de los usuarios, para poder saber los fallos a nivel usuario que existen en la aplicación. Esta técnica es muy útil y muy usada. Para que la técnica sea completa, se tiene que evaluar a varios usuarios.
+
+  \vspace{2mm}
+
+  Los usuarios serán entrevistados en persona si es posible, y si no, serán entrevistados \textit{online} a través de comunciación por voz con los evaluadores, mientras comparten panatlla para que los evaluadores puedan ver sus acciones.
+
+  \vspace{2mm}
+
+  Las preguntas que se harán serán las siguientes:
+
+  \begin{enumerate}
+    \item \textbf{¿De que piensas que va la página web?}
+
+    Esta pregunta se hará a los usuarios nada más acceder a la página y haber visto la página principal. Esto permitirá evaluar si la página principal expresa de forma correcta la intención de la página.
+
+    \item \textbf{Create una cuenta con categoría \textit{h3lper} y crea un servicio con categoría otros y con la imágen por defecto. Después vuelve a la página principal}
+
+    Para este apartado será necesario medir el tiempo que tarda el usuario en realizar esta tarea y el número de veces que se equivoca. De esta forma se podrá ver si la página tiene una interfaz sencilla y entendible para los usuarios nuevos.
+
+    \item \textbf{Busca un servicio llamado 'Sericio de Prueba' con categoría 'Informática' y solicitalo.}
+
+    Este apartado será tratado como el anterior, pues prueba la segunda funcionalidad de la aplicación.
+
+    \item \textbf{Cambia tu imagen de perfil}
+
+    Esto prueba una funcionalidad del perfil de usuario que quizá no queda claro como hacer a primera vista, por lo que es interesante saber si el usuario es capaz de hacerlo sin ayuda externa. Se deben anotar los fallos que cometan los usuarios.
+
+    \item \textbf{Cierra sesión}
+
+    Permite verificar que el usuario es capaz de encontrar el botón de cerrar sesión correctamente. Se deben anotar los fallos que cometan los usuarios.
+
+    \begin{center}
+      \line(1, 0){450}
+    \end{center}
+
+    \textbf{\textit{En este momento hay que otorgarle manualmente desde la base de datos monedas extra al usuario, antes de pasar a la siguiente pregunta}}
+
+    \begin{center}
+      \line(1, 0){450}
+    \end{center}
+
+    \item \textbf{Inicia Sesión y promociona el sevicio que habías creado anteriormnente para que se mantenga promocionado durante 3 días}
+
+    Esto permitira verificar otra funcionalidad de la aplicación, y al igual que en el resto de casos, será necesario apuntar el tiempo que tarda y el núemro de fallos que comete.
+
+    \begin{center}
+      \line(1, 0){450}
+    \end{center}
+
+    \textbf{\textit{Aquí terminan las preguntas técnicas y comienzan las subjetivas. Se le tiene que pedir al usuario que cierre la página}}
+
+    \begin{center}
+      \line(1, 0){450}
+    \end{center}
+
+    \item \textbf{En tu opinión, ¿qué le hace falta a la página?}
+
+    Esto permite a los usuarios expresar su opinión sobre que necesita la página para ser más completa.
+
+    \item \textbf{En tu opinión, ¿qué es lo que menos te ha gustado de la página?}
+
+    Esto permite expresar a los usuarios sus opiniones sobre la página. Es importate informarle de que puede expresarse sin miedo.
+
+    \item \textbf{En tu opinión, ¿qué es lo que más te ha gustado de la página?}
+
+    Permite resaltar los puntos fuertes de la página, para poder ser potenciados.
+
+    \item \textbf{¿Recuerdas el nombre de la página?}
+
+    Permite comprobar si se ha creado una senscaión de marca correctamente.
+
+
+
+  \end{enumerate}
+
+  Los miembros del equipo cumplirán las funciones de evaluadores, y deberán apoyar a los usaurios, pero sin dar pistas ni informar como deben realizar la tarea, ya que el diseño debe ser suficicentemente intuitivo como para que los usaurios sepan hacerlo. En caso de no saber hacer algo, simplemente se pasará a la siguiente pregunta, apuntando que el diseño ha fallado en ese caso. No se debe presionar a los usuarios para que completen las tareas lo más rápidamente posible ni juzgar sus fallos.
+
+  \vspace{4mm}
+
+  Los datos obtenidos de esta prueba son de suma importancia para saber si el diseño es correcto o no, y para conocer las perspectivas de los usuarios
+
+
+  \section{Análisis de Datos}
+
+  \section{Conclusión}
+
+
+
+
+
+\end{document}
