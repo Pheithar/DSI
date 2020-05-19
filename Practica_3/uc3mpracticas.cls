@@ -94,7 +94,7 @@
 
     \Large #3
 
-    \vspace{25mm}
+    \vspace{5mm}
 
     \textbf{\LARGE #4}
 

@@ -17,7 +17,7 @@ export class User{
 
   XPMultiply:number = 100;
 
-  constructor(username:string, password:string, level:number, h3lper:boolean, review_normal:number[], review_h3lper:number[], experience:number, coins:number, picture:string, ofrecidos:string[], solicitados:string[]){
+  constructor(username:string, password:string, level:number, h3lper:boolean, review_normal:number[], review_h3lper:number[], experience:number, coins:number, picture:string, solicitados:string[], ofrecidos:string[],){
     this.username = username;
     this.password = password;
     this.level = level;

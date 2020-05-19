@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.4.28)  15 MAY 2020 20:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.4.28)  18 MAY 2020 15:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -473,11 +473,11 @@ LaTeX Info: Redefining \nameref on input line 39.
 \@outlinefile=\write3
 \openout3 = `practica3.out'.
 
-<Images/logo_help.png, id=40, 231.11343pt x 246.1697pt>
+<Images/logo_help.png, id=40, 333.245pt x 453.695pt>
 File: Images/logo_help.png Graphic file (type png)
 <use Images/logo_help.png>
 Package pdftex.def Info: Images/logo_help.png  used on input line 44.
-(pdftex.def)             Requested size: 227.62204pt x 242.45415pt.
+(pdftex.def)             Requested size: 227.62204pt x 309.90001pt.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 16.41594pt on input line 44.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
@@ -599,25 +599,32 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 282.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 282.
 Package rerunfilecheck Info: File `practica3.out' has not changed.
 (rerunfilecheck)             Checksum: C07B3287D632AEB83CCAB78D514F3D9B;571.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 7639 strings out of 481239
- 113783 string characters out of 5920377
- 400743 words of memory out of 5000000
+ 7640 strings out of 481239
+ 113789 string characters out of 5920377
+ 400742 words of memory out of 5000000
  22716 multiletter control sequences out of 15000+600000
  563342 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,11n,49p,800b,412s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/
-fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/fonts/type1/public/c
-m-super/sftt1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uh
-vb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on practica3.pdf (7 pages, 472187 bytes).
+pdfTeX warning (dest): name{page.8} has been referenced but does not exist, r
+eplaced by a fixed one
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fo
+nts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/fonts/type1/public/cm-
+super/sftt1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb
+8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on practica3.pdf (7 pages, 485790 bytes).
 PDF statistics:
- 147 PDF objects out of 1000 (max. 8388607)
- 123 compressed objects within 2 object streams
- 32 named destinations out of 1000 (max. 500000)
+ 148 PDF objects out of 1000 (max. 8388607)
+ 124 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 500000)
  93 words of extra memory for PDF output out of 10000 (max. 10000000)
 
