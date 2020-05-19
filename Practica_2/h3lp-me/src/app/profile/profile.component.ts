@@ -101,7 +101,7 @@ export class ProfileComponent implements OnInit {
         this.router.navigate(['**']);
       }
       else{
-        this.user = new User(aux_user.username, aux_user.password, aux_user.level, aux_user.h3lper, aux_user.review_normal, aux_user.review_h3lper, aux_user.experience, aux_user.coins, aux_user.picture, aux_user.ofrecidos, aux_user.solicitados);
+        this.user = new User(aux_user.username, aux_user.password, aux_user.level, aux_user.h3lper, aux_user.review_normal, aux_user.review_h3lper, aux_user.experience, aux_user.coins, aux_user.picture, aux_user.solicitados, aux_user.ofrecidos);
         this.user.id = aux_user.id
 
         this.setPicture(this.user.picture);
