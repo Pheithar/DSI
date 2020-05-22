@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.4.28)  18 MAY 2020 15:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.4.28)  22 MAY 2020 23:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -546,85 +546,77 @@ File: Images/profile_page.png Graphic file (type png)
 <use Images/profile_page.png>
 Package pdftex.def Info: Images/profile_page.png  used on input line 112.
 (pdftex.def)             Requested size: 455.24408pt x 190.45096pt.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 11.39996pt on input line 132.
  [4pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.134 
+l.139 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.134 
+l.139 
        <./Images/services_page.png> <./Images/profile_page.png>]
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 135.
- [5]
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 207.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 204.
 LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
-(Font)              scaled to size 9.49997pt on input line 207.
-
-Overfull \hbox (2.9688pt too wide) in paragraph at lines 224--225
+(Font)              scaled to size 9.49997pt on input line 204.
+ [5]
+Overfull \hbox (2.9688pt too wide) in paragraph at lines 221--222
  | 
  []
 
 
-Overfull \hbox (2.9688pt too wide) in paragraph at lines 230--231
+Overfull \hbox (2.9688pt too wide) in paragraph at lines 227--228
  | 
  []
 
 
-Overfull \hbox (2.9688pt too wide) in paragraph at lines 238--239
+Overfull \hbox (2.9688pt too wide) in paragraph at lines 235--236
  | 
  []
 
 
-Overfull \hbox (2.9688pt too wide) in paragraph at lines 244--245
+Overfull \hbox (2.9688pt too wide) in paragraph at lines 241--242
  | 
  []
 
-[6] 
+[6] [7] 
 AED: lastpage setting LastPage
-[7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 282.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 282.
+[8]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 343.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 343.
  (./practica3.aux
 LaTeX Info: Redefining \. on input line 20.
 LaTeX Info: Redefining \% on input line 20.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 282.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 282.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 343.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 343.
 Package rerunfilecheck Info: File `practica3.out' has not changed.
 (rerunfilecheck)             Checksum: C07B3287D632AEB83CCAB78D514F3D9B;571.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 7640 strings out of 481239
- 113789 string characters out of 5920377
- 400742 words of memory out of 5000000
+ 7650 strings out of 481239
+ 113859 string characters out of 5920377
+ 399742 words of memory out of 5000000
  22716 multiletter control sequences out of 15000+600000
  563342 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,11n,49p,800b,412s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{page.8} has been referenced but does not exist, r
-eplaced by a fixed one
-
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fo
-nts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/fonts/type1/public/cm-
-super/sftt1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb
-8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on practica3.pdf (7 pages, 485790 bytes).
+ 42i,11n,49p,800b,416s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/
+fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/fonts/type1/public/c
+m-super/sftt1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uh
+vb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on practica3.pdf (8 pages, 490867 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 124 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
+ 166 PDF objects out of 1000 (max. 8388607)
+ 141 compressed objects within 2 object streams
+ 43 named destinations out of 1000 (max. 500000)
  93 words of extra memory for PDF output out of 10000 (max. 10000000)
 

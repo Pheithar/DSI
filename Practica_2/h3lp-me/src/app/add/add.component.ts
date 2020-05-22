@@ -67,7 +67,7 @@ export class AddComponent implements OnInit {
 
   async solicitar(){
     let aux_user = await this.firestoreService.getUser(this.global.getCurrentUser().id);
-    let user = new User(aux_user.username, aux_user.password, aux_user.level, aux_user.h3lper, aux_user.review_normal, aux_user.review_h3lper, aux_user.experience, aux_user.coins, aux_user.picture, aux_user.ofrecidos, aux_user.solicitados);
+    let user = new User(aux_user.username, aux_user.password, aux_user.level, aux_user.h3lper, aux_user.review_normal, aux_user.review_h3lper, aux_user.experience, aux_user.coins, aux_user.picture, aux_user.solicitados, aux_user.ofrecidos);
 
     user.id = aux_user.id;
 
@@ -91,7 +91,7 @@ export class AddComponent implements OnInit {
 
       for (let i = 0; i < this.users.length; i++) {
         if (this.users[i].username == this.add.owner_name) {
-          owner_user = new User(this.users[i].username, this.users[i].password, this.users[i].level, this.users[i].h3lper, this.users[i].review_normal, this.users[i].review_h3lper, this.users[i].experience, this.users[i].coins, this.users[i].picture, this.users[i].ofrecidos, this.users[i].solicitados);
+          owner_user = new User(this.users[i].username, this.users[i].password, this.users[i].level, this.users[i].h3lper, this.users[i].review_normal, this.users[i].review_h3lper, this.users[i].experience, this.users[i].coins, this.users[i].picture, this.users[i].solicitados, this.users[i].ofrecidos);
           owner_user.id = this.users[i].id;
         }
       }
