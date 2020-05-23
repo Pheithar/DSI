@@ -141,7 +141,7 @@
 
   \vspace{2mm}
 
-  Esta verificaicón, como no puede ser de otra forma, se hará revisando los requisitos definidos en la \textbf{fase de análisis y estudio de campo}.
+  Esta verificación, como no puede ser de otra forma, se hará revisando los requisitos definidos en la \textbf{fase de análisis y estudio de campo}.
 
   \vspace{2mm}
 
@@ -311,7 +311,7 @@
 
     \vspace{2mm}
 
-    El fallo más recrrente en esta tarea es que intentaban promocionar el servicio dentro del mismo, porque no encontraban el menú de la tienda dentro de su perfil.
+    El fallo más recurrente en esta tarea es que intentaban promocionar el servicio dentro del mismo, porque no encontraban el menú de la tienda dentro de su perfil.
 
     \item \textbf{Pregunta 7}
 
@@ -319,11 +319,11 @@
 
     \item \textbf{Pregunta 8}
 
-    Lo que menos les ha gustado a los usuarios es su atractivo visual, y la distirbución de los aprtados. Preferirían una división entre \textit{Servicios Solicitados},  \textit{Servicios Ofrecidos} y \textit{Tienda}, para no tener que hacer \textit{scroll} en la misma página.
+    Lo que menos les ha gustado a los usuarios es su atractivo visual, y la distribución de los apartados. Preferirían una división entre \textit{Servicios Solicitados},  \textit{Servicios Ofrecidos} y \textit{Tienda}, para no tener que hacer \textit{scroll} en la misma página.
 
     \item \textbf{Pregunta 9}
 
-    Practicamente todos los usuarios están de acuerdo en que la página es muy fácil de usar y muy intuitiva. Además, algunos usuarios, en contraposición a la respuesta anterior, dicen que es bonita y que tiene un buen diseño estético.
+    Prácticamente todos los usuarios están de acuerdo en que la página es muy fácil de usar y muy intuitiva. Además, algunos usuarios, en contraposición a la respuesta anterior, dicen que es bonita y que tiene un buen diseño estético.
 
     \item \textbf{Pregunta 10}
 
@@ -333,6 +333,79 @@
 
 
   \section{Análisis de Datos}
+
+  \subsection{Análisis cuantitativo}
+
+  \subsection{Análisis cualitativo}
+
+  Para analizar los datos cualitativos obtenidos en la fase de Técnicas de Evaluación vamos a utilizar la \textbf{Técnica del Incidente Crítico}. Esta técnica se define como un conjunto de procedimientos utilizados para la recolección de observaciones directas de la conducta humana que tienen una importancia crítica y que cumplen con definir criterios metódicamente.
+
+  Esta técnica se divide en cinco áreas: determinar y revisar el incidente, determinar los hechos, identificar los problemas, resolver los problemas y por último la evaluación de dicha solución.
+
+  En nuestro caso las dos primeras áreas se completan con las fases anteriores, donde a través de una evaluación de requisitos y de las preguntas a usuarios hemos determinado los incidentes y recolectado los hechos (datos). A continuación pasaremos a analizar la 3 áreas siguientes para cada uno de los incidentes encontrados.
+
+  \subsubsection{Evalución de Requisitos}
+
+  Para la parte de \textbf{Evaluación de Requisitos} la identificación de los problemas también se llevó a cabo en la fase anterior así que pasaremos a las dos últimas fases directamente:
+
+  \begin{enumerate}
+
+    \item \textbf{RF-06: Convertirse en H3lper}
+    Para solucionar el problema de poder cambiar el estado de no \textit{H3lper} a \textit{H3lper} una vez se ha creado la cuenta se podría implementar un botón dentro de los ajustes del perfil del usuario, de tal forma que trás confirmar que quiere convertirse en helper le sean visibles todas las opciones y menús que conlleva. Un ejemplo de esto podría ser las opciones de desarrollador de los smartphones, que una vez se activan te dejan acceder a menús que antes no eran visibles para el usuario.
+
+    \vspace{2mm}
+
+    Para comprobar si la solución ha solucionado el problema, valdría con crear una cuenta de prueba que no fuera H3lper y probar el botón añadido, para ver si a partir de ahí puede acceder a las características de los H3lpers.
+
+    \item \textbf{RF-08: Valoracion H3lper}
+    El problema era que la aplicación no daba opción a valorar al H3lper una vez el servicio había sido acabado. Una solución posible dada esta descripción sería introducir un pequeño cuestionario de valoración una vez se termina el servicio, como por ejemplo usan las aplicaciones de llamadas online al terminar la conversación.
+
+    \vspace{2mm}
+
+    Para comprobar si está solución es válida valdría con solicitar un servicio y ver si el cuestionario aparece una vez termine y si la valoración se añade a la actual del usuario que ofrece dicho servicio.
+
+    \item \textbf{RF-12: Comunicación entre Usuarios}
+    El problema en este requisito era que no existía método de comunicación entre usuarios. En el prototipo final de la aplicación existía un apartado para iniciar y continuar chats con los usuarios vinculados a los servicios, sin embargo era muy complicado de implementar y llevaba demasiado tiempo. La solución pues, sería terminar esa implementación utilizando \textbf{Firebase} para almacenar los datos de las conversaciones.
+
+    \vspace{2mm}
+
+    En la comprobación necesitaríamos dos usuarios de prueba, uno de ellos ofrecería un servicio y el otro lo contrataría. Una vez hecho esto se pemite iniciar un chat entre ambos y ahí se podría comprobar si los mensajes se están almacenando correctamente en la base de datos.
+
+    \item \textbf{RNF-01: Plataforma}
+    En este requisito no funcional el problema era que la aplicación no era responsive, es decir, no se ajustaba a todos los dispositivos. Dado que centramos el desarrollo a una interfaz desde PC, muchas de las ventanas e interfaces no se ven correctamente en dispositivos móviles. Esto se podría solucionar modificando algunos tamaños de elemntos de la página, para que todo fuera en porcentajes o también se podría añadir alguna cabecera predefinida para ajustar las dimensiones a otros dispositivos como tienen muchas páginas web actuales.
+
+    \vspace{2mm}
+
+    Para comprobar que este problema se ha solucionado deberemos entrar en la app desde diferentes dispositivos electrónicos y acceder a las diferentes funciones de la misma, de tal forma que se pueda corroborar que todas las interfaces han sido actualizadas correctamente.
+
+  \end{enumerate}
+
+    \subsubsection{Estudio de Usuarios}
+
+    En esta parte vamos a analizar los resultados obtenidos de las preguntas realizadas con valor cualitativo, es decir, aquellas que proveen información subjetiva acerca de la página. A partir de las respuestas de los usuario identificaremos los incidentes críticos y estudiaremos posibles mejoras.
+
+    \begin{enumerate}
+
+      \item \textbf{Pregunta 1}
+      Esta pregunta estaba enfocada a conocer si a primera vista se entiende el tema de la página y como funciona. Los resultados indicaron que la mayoría de los usuarios tenían la temática clara pero encontramos una incidencia en el objetivo de la misma, es decir, el usuario no tiene claro para que sirve la página. Este puede ser un problema mayor de lo que parece, ya que puede llevar a confusión y posterior pérdida de usuarios al entrar a la página. Una solución posible a este problema sería añadir una pequeña introducción en forma de pop-up para los nuevos usuarios (que no tengan cookies previas) donde se explique que puede obtener en la página.
+
+      \item \textbf{Pregunta 7}
+      Esta pregunta intenta destapar vulnerabilidades y fallos de diseño en la página. Gracias a las opiniones de los usuarios logramos indicar 3 incidencias críticas que pueden llevar a problemas en la web.
+      La primera de ellas es la falta de estructura profesional, este problema puede llevar a que algunos usuarios no se tomen en serio la página o no crea que sea lo suficicentemente útil. Para abarcar este problema se necesitaría una reestructuración estética de la página, si bien es cierto que el propio diseño fue escogido deliberadamente de esta forma para darle un aspecto más animado, puede ser positivo orientarlo a un área más profesional, para ello se necesitaría cambiar el formato de las cajas flex, el tipo de letra y los colores.
+
+      \vspace{2mm}
+
+      La segunda incidencia encontrada es
+
+    \end{enumerate}
+
+
+
+
+
+
+
+
 
   \section{Conclusión}
 
